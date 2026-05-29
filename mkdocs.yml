@@ -1,0 +1,70 @@
+site_name: KYC Portal
+site_description: Documentation and Terms of Use
+site_url: https://portal-ss.github.io/docs/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tracking
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: ru
+          default: true
+          name: Русский
+          build: true
+          nav:
+            - Главная: index.md
+            - Условия использования: terms.md
+            - FAQ: faq.md
+        - locale: uk
+          name: Українська
+          build: true
+          nav:
+            - Головна: index.md
+            - Умови використання: terms.md
+            - FAQ: faq.md
+        - locale: en
+          name: English
+          build: true
+          nav:
+            - Home: index.md
+            - Terms of Use: terms.md
+            - FAQ: faq.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra:
+  generator: false
