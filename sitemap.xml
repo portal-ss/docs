@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://portal-ss.github.io/docs/faq/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://portal-ss.github.io/docs/faq/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://portal-ss.github.io/docs/en/faq/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://portal-ss.github.io/docs/uk/faq/"/>
+    </url>
+    <url>
+        <loc>https://portal-ss.github.io/docs/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://portal-ss.github.io/docs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://portal-ss.github.io/docs/en/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://portal-ss.github.io/docs/uk/"/>
+    </url>
+    <url>
+        <loc>https://portal-ss.github.io/docs/terms/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://portal-ss.github.io/docs/terms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://portal-ss.github.io/docs/en/terms/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://portal-ss.github.io/docs/uk/terms/"/>
+    </url>
+    <url>
+        <loc>https://portal-ss.github.io/docs/uk/faq/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://portal-ss.github.io/docs/uk/faq/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://portal-ss.github.io/docs/en/faq/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://portal-ss.github.io/docs/faq/"/>
+    </url>
+    <url>
+        <loc>https://portal-ss.github.io/docs/uk/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://portal-ss.github.io/docs/uk/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://portal-ss.github.io/docs/en/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://portal-ss.github.io/docs/"/>
+    </url>
+    <url>
+        <loc>https://portal-ss.github.io/docs/uk/terms/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://portal-ss.github.io/docs/uk/terms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://portal-ss.github.io/docs/en/terms/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://portal-ss.github.io/docs/terms/"/>
+    </url>
+    <url>
+        <loc>https://portal-ss.github.io/docs/en/faq/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://portal-ss.github.io/docs/en/faq/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://portal-ss.github.io/docs/faq/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://portal-ss.github.io/docs/uk/faq/"/>
+    </url>
+    <url>
+        <loc>https://portal-ss.github.io/docs/en/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://portal-ss.github.io/docs/en/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://portal-ss.github.io/docs/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://portal-ss.github.io/docs/uk/"/>
+    </url>
+    <url>
+        <loc>https://portal-ss.github.io/docs/en/terms/</loc>
+        <lastmod>2026-05-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://portal-ss.github.io/docs/en/terms/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://portal-ss.github.io/docs/terms/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://portal-ss.github.io/docs/uk/terms/"/>
+    </url>
+</urlset>
