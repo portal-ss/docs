@@ -98,11 +98,3 @@
 
 ??? question "Can I withdraw money from the balance back out?"
     The cash balance is intended to pay for the Service's services. For questions about withdrawing funds outside the platform, contact support.
-
-## Support and Documents
-
-??? question "How do I contact support?"
-    Write on Telegram: <https://t.me/freidbase>
-
-??? question "Where can I read the Terms of Use?"
-    [Terms of Use](terms.md)
