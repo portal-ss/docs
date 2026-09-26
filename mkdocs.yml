@@ -21,6 +21,7 @@ theme:
         name: Switch to light mode
   features:
     - navigation.tracking
+    - navigation.indexes
     - navigation.top
     - search.suggest
     - search.highlight
@@ -38,6 +39,22 @@ plugins:
           build: true
           nav:
             - Главная: index.md
+            - Документация:
+                - guide/index.md
+                - Обзор платформы: guide/overview.md
+                - Начало работы: guide/getting-started.md
+                - Баланс и пополнение: guide/balance.md
+                - Заказы: guide/orders.md
+                - Загрузка аккаунтов: guide/upload.md
+                - Выполнение заказа и сроки: guide/lifecycle.md
+                - Отмена и возвраты: guide/cancel-refunds.md
+                - Реверификации: guide/reverify.md
+                - Risk Removal на MEXC: guide/risk-removal.md
+                - Исполнители и распределение: guide/sellers.md
+                - Своя команда: guide/team.md
+                - Подписка: guide/subscription.md
+                - Веб-версия: guide/web.md
+                - Реферальная программа: guide/referral.md
             - Условия использования: terms.md
             - FAQ: faq.md
         - locale: uk
@@ -45,6 +62,22 @@ plugins:
           build: true
           nav:
             - Головна: index.md
+            - Документація:
+                - guide/index.md
+                - Огляд платформи: guide/overview.md
+                - Початок роботи: guide/getting-started.md
+                - Баланс і поповнення: guide/balance.md
+                - Замовлення: guide/orders.md
+                - Завантаження акаунтів: guide/upload.md
+                - Виконання замовлення і терміни: guide/lifecycle.md
+                - Скасування та повернення: guide/cancel-refunds.md
+                - Реверифікації: guide/reverify.md
+                - Risk Removal на MEXC: guide/risk-removal.md
+                - Виконавці та розподіл: guide/sellers.md
+                - Своя команда: guide/team.md
+                - Підписка: guide/subscription.md
+                - Вебверсія: guide/web.md
+                - Реферальна програма: guide/referral.md
             - Умови використання: terms.md
             - FAQ: faq.md
         - locale: en
@@ -52,6 +85,22 @@ plugins:
           build: true
           nav:
             - Home: index.md
+            - Documentation:
+                - guide/index.md
+                - Platform overview: guide/overview.md
+                - Getting started: guide/getting-started.md
+                - Balance and top-ups: guide/balance.md
+                - Orders: guide/orders.md
+                - Uploading accounts: guide/upload.md
+                - Order execution and deadlines: guide/lifecycle.md
+                - Cancellations and refunds: guide/cancel-refunds.md
+                - Re-verifications: guide/reverify.md
+                - Risk Removal on MEXC: guide/risk-removal.md
+                - Executors and order distribution: guide/sellers.md
+                - Your own team: guide/team.md
+                - Subscription: guide/subscription.md
+                - Web app: guide/web.md
+                - Referral program: guide/referral.md
             - Terms of Use: terms.md
             - FAQ: faq.md
 
