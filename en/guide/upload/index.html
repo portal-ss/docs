@@ -614,6 +614,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Account checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#replacing-accounts-before-publishing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replacing accounts before publishing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Can the verification start now
+      
+    </span>
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -646,6 +674,56 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Re-uploading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-the-platform-asks-for-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When the platform asks for data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#while-the-slot-is-waiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        While the slot is waiting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to upload
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxy-swap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The exchange doesn't open through your proxy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1056,6 +1134,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Account checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#replacing-accounts-before-publishing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replacing accounts before publishing
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#can-verify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Can the verification start now
+      
+    </span>
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1088,6 +1194,56 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Re-uploading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#when-the-platform-asks-for-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When the platform asks for data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#while-the-slot-is-waiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        While the slot is waiting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-to-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to upload
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxy-swap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The exchange doesn't open through your proxy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1135,11 +1291,11 @@
 <li>Export them to <code>.txt</code>. The file must contain cookies for every profile; the proxy and user-agent are also taken from the file if they're included.</li>
 <li>Send the file to the bot ("📦 ADS Power (.txt)") or upload it in the web app ("ADS Power file").</li>
 </ol>
-<p>Each profile in the file fills one slot. If the file has more accounts than there are free slots in the order, the extra ones are skipped, and you get a separate message about it. While the platform is checking one file for an order, you can't send another file for the same order — wait for the result.</p>
+<p>Each profile in the file fills one slot. If the file has more accounts than there are free slots in the order, the extra ones are skipped, and you get a separate message about it. One upload takes at most <strong>200</strong> accounts — for a large order, split the file and send the parts one after another.</p>
 <h3 id="manually">Manually<a class="headerlink" href="#manually" title="Permanent link">&para;</a></h3>
 <p>You provide the proxy and cookies separately for each account:</p>
 <ul>
-<li>in the bot — "📁 Manual (proxy + cookies)": first a list of proxies (one per line), then a cookies file (<code>.json</code> or <code>.txt</code>) for each slot in turn;</li>
+<li>in the bot — "📁 Manual (proxy + cookies)": first a list of proxies (one per line), then a cookies file (<code>.json</code> or <code>.txt</code>) for each slot in turn. The bot checks the proxies right away and shows each one's country. If an account fails its check because of the proxy, you can send a new proxy for that slot as a single line at the cookies step;</li>
 <li>in the web app — "Manual": a card for each account, with a proxy line and a cookies field.</li>
 </ul>
 <p>Proxies and cookies are matched in order: the first proxy line goes to the first account, and so on.</p>
@@ -1159,13 +1315,30 @@
 </ul>
 <p>You don't have to specify the protocol — the platform detects it automatically. Local and internal addresses (such as <code>127.0.0.1</code> or <code>192.168.x.x</code>) aren't accepted.</p>
 <h2 id="account-checks">Account checks<a class="headerlink" href="#account-checks" title="Permanent link">&para;</a></h2>
-<p>Every upload — by file or manual — is sent as a batch. The platform checks each account on the exchange and reports the result for each one. The check may take a while: you can wait or come back later.</p>
-<p>If some accounts are accepted and others aren't, fix the rejected ones and resend only those — accepted slots aren't affected. If you need to start from scratch, the bot has "🔁 Start over (reset everything)".</p>
+<p>Every upload — by file or manual — is sent as a batch. The platform checks each account on the exchange and reports the result for each one. The check may take a while:</p>
+<ul>
+<li>it runs on the platform's side: in the web app you can close the page and come back later — the result is kept; in the bot, if the check takes long, the result arrives as a separate message;</li>
+<li>if a platform update interrupts the check, it resumes on its own, and accounts already accepted aren't lost. If the check does stop early, you'll see how many accounts were saved — send the rest again (in the web app, "Upload remaining");</li>
+<li>while the platform is checking one file for an order, you can't send another file for the same order — wait for the result.</li>
+</ul>
+<p>If some accounts are accepted and others aren't, send a file with only the rejected ones — accepted slots aren't affected. The error list gives each account's position in your file and its ADS Power profile name, so they're easy to find. If you lose track, start from scratch: "🔁 Start over (reset everything)" in the bot, "Start over" in the web app.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>"🔁 Start over (reset everything)" removes every accepted account from the order, and you'll have to redo the whole upload.</p>
+<p>"🔁 Start over (reset everything)" removes every accepted account from the order, and you'll have to redo the whole upload. In the web app, "Start over" clears the slots once the next file is accepted.</p>
 </div>
-<p>Until the order is published, you can open any slot and replace its account — or, in the bot, replace all of them at once with "✏️ Edit all slots". For publishing, see <a href="../orders/#publish">Orders</a>.</p>
+<h3 id="replacing-accounts-before-publishing">Replacing accounts before publishing<a class="headerlink" href="#replacing-accounts-before-publishing" title="Permanent link">&para;</a></h3>
+<p>Until the order is published, you can open any slot and replace its account: "✏️ Edit this slot" in the bot, or the "Edit slot" block on the slot card in the web app (where you can also change just the proxy). If the new account fails its check, the slot keeps the old one.</p>
+<p>"✏️ Edit all slots" in the bot and "Re-upload all accounts" in the web app start the upload from scratch: once the file is accepted, every slot is cleared and refilled from it in order. A slot whose account fails its check stays empty, and an order with an empty slot can't be published. For publishing, see <a href="../orders/#publish">Orders</a>.</p>
+<h2 id="can-verify">Can the verification start now<a class="headerlink" href="#can-verify" title="Permanent link">&para;</a></h2>
+<p>When you upload an account to an initial verification order, the platform asks the exchange whether a verification can start on that account right now. The account is accepted only if the exchange allows it — including after a rejected attempt, if the exchange allows another one. Otherwise the account is rejected, and the slot stays free for a different account. The reasons for a refusal:</p>
+<ul>
+<li>the account has already passed verification;</li>
+<li>the exchange no longer allows verification on this account;</li>
+<li>the account has used up its daily verification attempts — you can upload it again in about a day;</li>
+<li>a verification is already under review on the account — wait for its result.</li>
+</ul>
+<p>What can be known in advance depends on the exchange: KuCoin only reports that an account is already verified, so on KuCoin only such accounts are rejected. There's no such check when you <a href="#reupload">re-upload</a>.</p>
+<p>If the exchange stops allowing a verification after the order is published (for example, the account has used up its attempts) and no verification link has been issued to an executor for the slot yet, the slot is cancelled with a full refund, and the notification names the reason.</p>
 <h2 id="why-an-account-may-be-rejected">Why an account may be rejected<a class="headerlink" href="#why-an-account-may-be-rejected" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1182,24 +1355,9 @@
 <td>Replace it with a working proxy</td>
 </tr>
 <tr>
-<td>Session problem</td>
-<td>The cookies are invalid, or the exchange rejected them</td>
-<td>Log in to the account again and export fresh cookies</td>
-</tr>
-<tr>
-<td>Too many cookies</td>
-<td>The browser profile has collected cookies from unrelated sites</td>
-<td>Export a profile that has only this exchange open</td>
-</tr>
-<tr>
-<td>Different account</td>
-<td>The session belongs to a different account than the one already in the slot</td>
-<td>Upload a session from the same account</td>
-</tr>
-<tr>
-<td>Account already uploaded</td>
-<td>This account is already in another slot of this order, or in another order</td>
-<td>Use a different account, or find where it's already uploaded</td>
+<td>Exchange unreachable through the proxy</td>
+<td>The proxy works, but the provider's network blocks the exchange</td>
+<td>Use a proxy from a different provider or city</td>
 </tr>
 <tr>
 <td>No proxy</td>
@@ -1207,14 +1365,29 @@
 <td>Add a proxy</td>
 </tr>
 <tr>
-<td>Slot frozen</td>
-<td>Your subscription has expired</td>
-<td>Renew your <a href="../subscription/">subscription</a></td>
+<td>Session problem</td>
+<td>The cookies are invalid, or the exchange rejected them; with ADS Power, the profile may have been exported before the login was saved</td>
+<td>Log in to the account again and export fresh cookies</td>
 </tr>
 <tr>
-<td>Slot taken or closed</td>
-<td>The slot's state changed while the check was running; nothing was changed</td>
-<td>Try again if needed</td>
+<td>No cookies for this exchange</td>
+<td>The file has no cookies for the exchange you need — probably a different profile was exported</td>
+<td>Export the profile that's logged in to this exchange</td>
+</tr>
+<tr>
+<td>Too many cookies</td>
+<td>The browser profile has collected cookies from unrelated sites</td>
+<td>Export a profile that has only this exchange open</td>
+</tr>
+<tr>
+<td>Account already uploaded</td>
+<td>This account is already in another slot of this order, or in another active order</td>
+<td>Use a different account, or find where it's already uploaded (in the web app, under "Slots")</td>
+</tr>
+<tr>
+<td>Different account</td>
+<td>On a re-upload, the session belongs to a different account than the one in the slot</td>
+<td>Upload a session from the same account</td>
 </tr>
 <tr>
 <td>Already verified</td>
@@ -1222,9 +1395,24 @@
 <td>Upload a different account</td>
 </tr>
 <tr>
-<td>Exchange unreachable through the proxy</td>
-<td>The proxy works, but the exchange itself can't be reached through it</td>
-<td>Try a different proxy</td>
+<td>Verification blocked</td>
+<td>The exchange no longer allows verification on this account</td>
+<td>Upload a different account</td>
+</tr>
+<tr>
+<td>Attempts used up</td>
+<td>The account has used up its daily verification attempts on the exchange</td>
+<td>Try again in about a day, or upload a different account</td>
+</tr>
+<tr>
+<td>Verification already under review</td>
+<td>A verification is already under review on the account</td>
+<td>Wait for its result, or upload a different account</td>
+</tr>
+<tr>
+<td>Slot taken or closed</td>
+<td>The slot's state changed while the check was running; nothing was changed</td>
+<td>Try again if needed</td>
 </tr>
 <tr>
 <td>Exchange didn't respond</td>
@@ -1233,8 +1421,8 @@
 </tr>
 <tr>
 <td>Check failed</td>
-<td>A general check error</td>
-<td>Update the proxy and session, and try again</td>
+<td>The check didn't complete</td>
+<td>Send the same file again in a few minutes; if it happens again, contact support</td>
 </tr>
 </tbody>
 </table>
@@ -1245,42 +1433,63 @@
 <li><strong>KuCoin</strong> — browser profiles pick up unrelated cookies especially easily. Use a dedicated profile that has only ever opened KuCoin.</li>
 </ul>
 <h2 id="reupload">Re-uploading<a class="headerlink" href="#reupload" title="Permanent link">&para;</a></h2>
-<p>Sometimes, after the order is published, the platform needs fresh data for a slot: the session has expired, the proxy has stopped responding, or the exchange took too long to respond through your proxy. The slot moves to "⚠️ Data update required", and you get a notification — for a single slot or as a summary for several. While the slot is waiting for new data, its deadline is paused.</p>
-<p>Upload exactly what's requested:</p>
+<p>Once the order is published, you can't change a slot's account or proxy. The exceptions are when the platform itself asks for fresh data, and when you replace a proxy the exchange doesn't open through (<a href="#proxy-swap">see below</a>).</p>
+<h3 id="when-the-platform-asks-for-data">When the platform asks for data<a class="headerlink" href="#when-the-platform-asks-for-data" title="Permanent link">&para;</a></h3>
+<p>The platform works with the account only through your session and your proxy. If it turns out the session has expired or the proxy has stopped responding, the slot moves to "⚠️ Data update required", and the bot sends you a message — for a single slot or as a summary for several. If the data still hasn't arrived after <strong>6 hours</strong>, you get one reminder. These messages can't be turned off in the notification settings.</p>
+<p>Before asking for a new proxy, the platform checks whether the proxy works at all. If the proxy works and only the exchange won't open, no new data is requested.</p>
+<h3 id="while-the-slot-is-waiting">While the slot is waiting<a class="headerlink" href="#while-the-slot-is-waiting" title="Permanent link">&para;</a></h3>
+<p>The slot is paused:</p>
+<ul>
+<li>no clock runs: not your <a href="../lifecycle/#deadline">deadline</a>, not the executor's time, and not the MEXC face-check deadline;</li>
+<li>the slot isn't cancelled and doesn't move to another executor automatically;</li>
+<li>you can't check the slot's status. Cancelling a re-verification becomes available after the update, and cancelling a frozen slot that already had a verification link issued waits for the update — only then does the platform check the exchange.</li>
+</ul>
+<p>If you had an open request to cancel a re-verification and the pause dropped it, the data-update message says so — you can send the request again after the update.</p>
+<h3 id="what-to-upload">What to upload<a class="headerlink" href="#what-to-upload" title="Permanent link">&para;</a></h3>
+<p>Upload exactly what's requested. In the bot, tap "🔄 Re-upload" on the slot card or the button in the message itself ("↩️ Update proxy", "↩️ Re-upload session", "↩️ Update slot"), then choose a method — ADS Power or manual.</p>
 <table>
 <thead>
 <tr>
 <th>What's needed</th>
-<th>How to update</th>
+<th>In the bot</th>
+<th>In the web app</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Proxy</td>
-<td>"🔌 Update proxy" — one new proxy</td>
+<td>One new proxy</td>
+<td>"Replace proxy"</td>
 </tr>
 <tr>
 <td>Cookies</td>
-<td>"🔄 Re-upload" — no need to change the saved proxy</td>
+<td>Fresh cookies; the saved proxy stays</td>
+<td>"Re-upload cookies"</td>
 </tr>
 <tr>
 <td>Proxy and cookies</td>
-<td>"🔄 Re-upload" — a new proxy and a fresh session</td>
+<td>A new proxy and a fresh session</td>
+<td>"Re-upload proxy &amp; cookies"</td>
 </tr>
 </tbody>
 </table>
 <p>Re-upload requirements:</p>
 <ul>
 <li>the session must be from <strong>the same account</strong> that was in the slot — a session from a different account will be rejected;</li>
-<li>you update one slot at a time: one proxy, and for ADS Power uploads, a file with exactly one account.</li>
+<li>you update one slot at a time: one proxy (a list of several lines isn't accepted), and for ADS Power uploads, an export with exactly one account;</li>
+<li>the bot handles one upload at a time: if you start updating another slot, the previous upload is cancelled, and the bot tells you so.</li>
 </ul>
-<p>Once the update succeeds, work on the slot resumes immediately. You can't cancel the slot until its data is updated.</p>
+<p>If the slot came to need more while you were getting the data ready — for example, you sent a new proxy and it turned out the session had expired too — the slot asks for both the proxy and the cookies. Send them together.</p>
+<p>Once the update succeeds, work on the slot resumes immediately, from where it stopped: the slot returns to its previous status, and its clocks to the time they had left before the pause. If the slot was left without an executor during the pause, it goes back to the queue for executors.</p>
+<h3 id="proxy-swap">The exchange doesn't open through your proxy<a class="headerlink" href="#proxy-swap" title="Permanent link">&para;</a></h3>
+<p>Sometimes the proxy works, but the provider's network blocks the exchange. If "🔍 Check status" answered "🌐 Your proxy works, but the exchange doesn't open through it…", you can replace the proxy yourself: "🔌 Replace proxy" on the slot card (in the web app, "Replace proxy" under the check's answer). The slot pauses until the new proxy arrives — tap "🔄 Re-upload" and send the proxy.</p>
+<p>If the same thing comes up while re-uploading cookies, the bot offers to take a new proxy too, and the web app shows a "Send a new proxy too" switch.</p>
 <h2 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Keep a separate browser profile for each exchange, and close the ADS Power profile before exporting it.</li>
 <li>Don't use the same proxy for two different accounts.</li>
 <li>Export cookies shortly before uploading, especially for Bybit.</li>
-<li>Don't upload an account that has already passed the verification you're ordering.</li>
+<li>Don't upload an account that has already passed the verification you're ordering, or one that already has a verification under review.</li>
 </ul>
 
 

@@ -683,6 +683,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#refund-visible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where to see a refund
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1036,6 +1047,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#refund-visible" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where to see a refund
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1055,7 +1077,8 @@
 
 <h1 id="cancellations-and-refunds">Cancellations and refunds<a class="headerlink" href="#cancellations-and-refunds" title="Permanent link">&para;</a></h1>
 <p>All refunds go to your internal balance, split between the main and referral balance in the same proportion as the original payment. Money can't be withdrawn from the platform (see <a href="../balance/">Balance and top-ups</a>).</p>
-<p>The main rule: before refunding anything, the platform checks the actual result on the exchange. If it turns out the verification has already passed, the slot counts as completed and there's no refund.</p>
+<p>A refund is always the full price of the slot — there are no partial refunds. Subscription payments are not refunded.</p>
+<p>The main rule: if a verification link has already been issued to an executor for a slot, the platform checks the actual result on the exchange before refunding anything. If the verification has passed, the slot counts as completed and there's no refund. If it hasn't, the money is refunded. If the exchange is still reviewing the verification or its answer is unclear, nothing is refunded automatically: the slot waits for the exchange's answer or for a manual review. If no link was ever issued, there's nothing to check — the money is refunded right away.</p>
 <h2 id="what-you-can-cancel-yourself">What you can cancel yourself<a class="headerlink" href="#what-you-can-cancel-yourself" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1073,43 +1096,48 @@
 </tr>
 <tr>
 <td>Frozen slots</td>
-<td>Your subscription has expired and the slots haven't started</td>
+<td>Your subscription has expired and no executor is working on the slot</td>
 <td>Right away, or after an exchange check</td>
 </tr>
 <tr>
 <td>A re-verification</td>
 <td>After 24 hours (see below)</td>
-<td>After an exchange check, if the verification hasn't passed</td>
+<td>Right away, or after an exchange check</td>
 </tr>
 </tbody>
 </table>
 <p>You can't cancel initial-verification slots in a published order yourself: they're either fulfilled or closed by the platform with an automatic refund (see <a href="#auto-refunds">below</a>).</p>
 <h3 id="unpublished-order">Unpublished order<a class="headerlink" href="#unpublished-order" title="Permanent link">&para;</a></h3>
-<p>Until an order is published, you can cancel it as a whole: "🗑 Cancel order" → "✅ Yes, cancel the order" in the workspace bot, or the same button on the order card in the web app. The full amount goes back to your balance right away. This also works for an order with frozen slots. Re-verifications can't be cancelled this way — they have their own rules.</p>
+<p>Until an order is published, you can cancel it as a whole: "🗑 Cancel order" → "✅ Yes, cancel the order" in the workspace bot, or "Cancel order · refund $…" → "Yes, cancel the order" on the order card in the web app. The full amount goes back to your balance right away. Re-verifications can't be cancelled this way — they have their own rules.</p>
 <h3 id="frozen">Frozen slots<a class="headerlink" href="#frozen" title="Permanent link">&para;</a></h3>
-<p>When your <a href="../subscription/#expiry">subscription</a> expires, wholesale and team order slots that haven't started yet are frozen. You can cancel them with "🗑 Cancel … and refund …" → "✅ Yes, cancel":</p>
+<p>When your <a href="../subscription/#expiry">subscription</a> expires, the slots of published wholesale and team orders that no executor is currently working on are frozen: while you have no subscription, they aren't offered to executors. Frozen slots are never cancelled on their own — they wait for a renewal for as long as it takes.</p>
+<p>You can cancel them on the order card: "Cancel frozen" → "Yes, cancel" — in the workspace bot and in the web app. Before you confirm, the card shows how much comes back right away and how many slots need an exchange check first:</p>
 <ul>
-<li>for slots where no verification link has been issued to an executor yet, the money is refunded right away;</li>
-<li>if a link has already been issued for a slot, the platform checks the exchange first and refunds the money if the verification hasn't passed. If the exchange can't be checked, the slot goes to an additional review, and you'll be notified of the result.</li>
+<li>if no verification link was ever issued for a slot, it's cancelled and the money is refunded right away;</li>
+<li>if a link has already been issued, the platform checks the exchange first: not passed — the money is refunded; already passed — the slot is completed and its money isn't refunded. If the exchange is still reviewing the verification or can't be checked, the slot waits for the exchange's answer or for a manual review — you'll be notified of the result;</li>
+<li>if such a slot is waiting for a data update, the exchange is checked once you renew access to the account.</li>
 </ul>
-<p>Cancelled slots won't come back when you renew your subscription. If you neither renew your subscription nor cancel the slots within <strong>6 hours</strong> of it ending, the platform cancels them itself, under the same refund rules.</p>
+<p>Cancelled slots won't come back when you renew your subscription. A cancellation you've already requested stays in force after a renewal too.</p>
 <h3 id="reverify">Re-verification<a class="headerlink" href="#reverify" title="Permanent link">&para;</a></h3>
-<p>The "❌ Cancel re-verification" button on the slot card becomes available:</p>
-<ul>
-<li><strong>24 hours</strong> after the executor took the slot;</li>
-<li>if no executor ever took the slot, 24 hours after the order was created.</li>
-</ul>
-<p>This timer is paused while the exchange is reviewing the verification. The slot card shows when cancellation becomes available.</p>
+<p>The "❌ Cancel re-verification" button on the slot card ("Cancel re-verification" in the web app) works <strong>24 hours</strong> after the current attempt started — from the moment the slot went to the executor. That usually happens right after payment. If the slot was never assigned to an executor, it's 24 hours after the order was placed.</p>
+<p>Time while the exchange is reviewing the verification or the slot is waiting for a data update doesn't count towards these 24 hours. The slot card shows when cancellation becomes available; in the workspace bot the button is shown from the start, and tapping it early tells you how long is left.</p>
+<p>The exception is a team order: if the executor the re-verification is pinned to is no longer on your team and isn't working on the slot right now, you can cancel the slot right away. Add the executor back to your team and the slot becomes available to them again.</p>
 <p>What happens after you confirm:</p>
 <ul>
-<li><strong>The executor hasn't started the check yet</strong> — the slot is cancelled and the money is refunded right away.</li>
-<li><strong>The executor's check is active</strong> — cancellation takes up to <strong>10 minutes</strong>. If the verification passes during that time, the slot counts as completed. If not, it's cancelled with a refund.</li>
-<li><strong>A link was issued for the slot earlier</strong> — the platform checks the status on the exchange: if it hasn't passed, you get a refund; if it has, the slot is completed.</li>
-<li><strong>The exchange couldn't be checked</strong> — the cancellation doesn't go through, or it goes to an additional review; the platform may ask you to update the slot's data. You'll be notified of the result.</li>
+<li><strong>No link was ever issued for the slot</strong> — the slot is cancelled and the money is refunded right away.</li>
+<li><strong>A link was issued</strong> (now or earlier) — the cancellation is accepted, and <strong>10 minutes</strong> later the platform checks the exchange. Not passed — the slot is cancelled with a refund. Passed — the slot is completed with no refund, and you'll get a "ℹ️ Cancellation not applied" notification. The slot card shows when the check will run.</li>
+<li><strong>The exchange is still reviewing the verification</strong> — the cancellation waits for its answer; if the verification doesn't pass, the money comes back.</li>
+<li><strong>The exchange couldn't be checked</strong> — if the proxy is down or the session has expired, the bot asks you to update exactly that; otherwise the cancellation goes to a manual review. You'll be notified of the result.</li>
+<li><strong>An administrator is already closing the slot</strong> — no separate cancellation is needed; you'll be told the result.</li>
 </ul>
-<p>You can't cancel a re-verification while the slot is waiting for a data update ("⚠️ Data update required") — upload a new session first. Once an appeal has been filed with MEXC, a Risk Removal can't be cancelled (see <a href="../risk-removal/#cancel">Risk Removal on MEXC</a>).</p>
+<p>If the account's data needs updating while a cancellation is in progress, the cancellation waits for the update. If the message asking you to update the data says your cancel request was dropped, you can send it again once the data is updated.</p>
+<p>You can't cancel a re-verification yourself:</p>
+<ul>
+<li>while the slot is waiting for a data update ("⚠️ Data update required") — upload a new session first;</li>
+<li>for Risk Removal — once the first face check has passed, or at all if MEXC doesn't require a face check for that account. Only support can cancel such a slot (see <a href="../risk-removal/#cancel">Risk Removal on MEXC</a>).</li>
+</ul>
 <h2 id="auto-refunds">Automatic refunds<a class="headerlink" href="#auto-refunds" title="Permanent link">&para;</a></h2>
-<p>The platform cancels a slot and refunds the money on its own if:</p>
+<p>The platform closes a slot with a full refund on its own if:</p>
 <table>
 <thead>
 <tr>
@@ -1120,7 +1148,7 @@
 <tbody>
 <tr>
 <td>⌛ Deadline expired</td>
-<td>The executor missed the <a href="../lifecycle/#deadline">deadline</a>, and the exchange check didn't confirm the verification</td>
+<td>The <a href="../lifecycle/#deadline">fulfillment deadline</a> you chose for the order has passed, and the exchange check didn't confirm the verification. A MEXC slot is closed the same way if the additional face check isn't passed within 12 hours (see <a href="../lifecycle/#mexc-hold">MEXC observation period</a>)</td>
 </tr>
 <tr>
 <td>🚫 Wrong country verified</td>
@@ -1131,25 +1159,33 @@
 <td>The exchange has closed verification for this account</td>
 </tr>
 <tr>
-<td>⚠️ Cancelled — the exchange won't verify this account</td>
-<td>The account is blocked or already verified under a different country</td>
+<td>⚠️ Already verified before</td>
+<td>The account turned out to be verified already, and no link had been issued for the slot yet</td>
 </tr>
 <tr>
-<td>⏸ Cancelled — subscription not renewed</td>
-<td>A frozen slot was cancelled 6 hours after the subscription ended</td>
+<td>⚠️ Cancelled — the exchange won't verify this account …</td>
+<td>Work on the slot hadn't started, and the exchange won't let a verification begin: the account is blocked or already verified under a different country, its daily attempt limit is used up, or another check is already in progress on it</td>
 </tr>
 <tr>
-<td>ℹ️ No check was needed</td>
-<td>The exchange didn't request the check that the re-verification was ordered for</td>
-</tr>
-<tr>
-<td>↩️ Cancelled by you</td>
-<td>You cancelled a re-verification or a frozen slot</td>
+<td>ℹ️ No check was needed — refunded</td>
+<td>The exchange didn't request the check that the re-verification was ordered for, and no link had been issued for the slot yet</td>
 </tr>
 </tbody>
 </table>
-<p>In addition, on MEXC an initial-verification slot is cancelled with a refund if the executor doesn't pass the additional face check within 12 hours (see <a href="../lifecycle/">MEXC observation period</a>).</p>
-<p>If a cancellation affects a slot for which a link has already been issued, the refund goes through only after an exchange check — just as with a manual cancellation.</p>
+<p>If the deadline passes and a link has already been issued for the slot, it's closed only after an exchange check — just as with a manual cancellation. While the exchange is reviewing the verification, the slot isn't cancelled.</p>
+<p>The platform closes a re-verification on its own in only two of the cases in the table: wrong country and "no check was needed". An exchange refusal (for example, a blocked account) doesn't close a re-verification and doesn't refund it automatically — support decides what happens to such a slot.</p>
+<p>Other cancellation outcomes on the slot card:</p>
+<ul>
+<li><strong>↩️ Cancelled by you — refunded</strong> — you cancelled an order before publishing, a frozen slot or a re-verification.</li>
+<li><strong>🚫 Cancelled by an administrator</strong> — support cancelled the slot. Support decides whether to refund it; if there's a refund, the amount is in the notification.</li>
+</ul>
+<h2 id="refund-visible">Where to see a refund<a class="headerlink" href="#refund-visible" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Workspace bot notification.</strong> When a slot is cancelled, you get a notification with the reason; if money came back, it includes the line "💵 …$ has been returned to your balance." ("💵 Refunded: …$" for a re-verification). If nothing was refunded, there's no money line.</li>
+<li><strong>Order card.</strong> The line "💸 Refunded to your balance: $…" ("Refunded to your balance: $…" in the web app) shows how much has come back for the order in total.</li>
+<li><strong>Order summary.</strong> The notification about a finished order shows "💰 Paid" and "💵 Refunded".</li>
+<li><strong>Transaction history.</strong> In the web app, under "Transactions", a refund appears as a "Refund" transaction; you can filter them with "Refunds".</li>
+</ul>
 
 
 

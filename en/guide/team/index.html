@@ -782,7 +782,7 @@
   <a href="#idle-return" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Slot auto-return
+        Worker's time per slot
       
     </span>
   </a>
@@ -790,7 +790,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#statistics" class="md-nav__link">
+  <a href="#subscription-lapse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When your subscription ends
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stats" class="md-nav__link">
     <span class="md-ellipsis">
       
         Statistics
@@ -1028,7 +1039,7 @@
   <a href="#idle-return" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Slot auto-return
+        Worker's time per slot
       
     </span>
   </a>
@@ -1036,7 +1047,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#statistics" class="md-nav__link">
+  <a href="#subscription-lapse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When your subscription ends
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stats" class="md-nav__link">
     <span class="md-ellipsis">
       
         Statistics
@@ -1064,43 +1086,71 @@
 
 
 <h1 id="your-own-team">Your own team<a class="headerlink" href="#your-own-team" title="Permanent link">&para;</a></h1>
-<p>Your own team is made up of executors you've invited personally. They fulfill your team orders, and you set the price per slot yourself. You can manage your team in the workspace bot <a href="https://t.me/kycportal_bot">@kycportal_bot</a> ("👨‍💻 My team") and in the web app (the "Sellers" screen).</p>
-<p>You can build and set up a team without a subscription, but team orders can only be created with an active <a href="../subscription/">subscription</a>. Without a subscription, team members don't see your orders.</p>
+<p>Your own team is made up of executors you've invited personally. They fulfill your team orders, and you set the price per slot yourself. You can manage your team in the workspace bot <a href="https://t.me/kycportal_bot">@kycportal_bot</a> ("👨‍💻 My team") and in the web app (the "Sellers" screen, "My team" section).</p>
+<p>You can build and set up a team without a subscription, but team orders can only be created with an active <a href="../subscription/">subscription</a>. Without a subscription, members don't get new slots of your orders — see <a href="#subscription-lapse">When your subscription ends</a>.</p>
 <h2 id="invitations">Invitations<a class="headerlink" href="#invitations" title="Permanent link">&para;</a></h2>
-<p>You have a personal invite link: an executor opens it in Telegram and joins your team.</p>
+<p>You have a personal invite link: in the workspace bot it's on the "👨‍💻 My team" screen, in the web app it's in the "Invite link" block. An executor opens it in Telegram and lands in the executors' bot. A new executor goes through a short registration there and joins your team right away.</p>
 <ul>
-<li>A team can have up to <strong>100</strong> members.</li>
-<li>You can reissue the link, and the old one stops working immediately.</li>
+<li>A team can have up to <strong>100</strong> members, including paused ones.</li>
+<li>The link doesn't expire. You can reissue it ("🔄 New link" in the bot, "New link" in the web app), and the old one stops working immediately.</li>
 <li>If a member you've paused follows the link again, the pause isn't lifted — only you can bring them back.</li>
 </ul>
 <h2 id="member-settings">Member settings<a class="headerlink" href="#member-settings" title="Permanent link">&para;</a></h2>
 <p>For each member, you can set:</p>
 <ul>
-<li><strong>limits</strong> — how many slots they can take from one order and how many they can have in progress at the same time (or no limit);</li>
+<li><strong>limits</strong> — how many slots they can take from one order and how many they can have in progress at the same time (or no limit). Re-verifications don't count toward the limits;</li>
 <li><strong>allowed countries</strong> — the countries for which they can take your orders (any country by default).</li>
 </ul>
+<p>In the workspace bot, use the "📊 Limits" and "🌍 Countries" buttons on the member's card; in the web app, the "Slot limits" and "Allowed countries" blocks.</p>
 <h2 id="pausing-and-removing">Pausing and removing<a class="headerlink" href="#pausing-and-removing" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Pause</strong> — the member temporarily can't see or take your team orders. Slots they've already taken are fulfilled as usual. A pause can only be lifted manually.</li>
-<li><strong>Removal</strong> — the member can no longer take your orders, and the current invite link stops working so they can't rejoin through it. Slots they're already working on aren't cancelled.</li>
+<li><strong>Pause</strong> ("⏸ Disable" in the bot, "Pause" in the web app) — the member temporarily can't see or take new slots of your team orders. They fulfill the slots they've already taken as usual, and re-verifications of accounts they verified still go to them. A pause can only be lifted manually: "▶️ Enable" in the bot or "Resume" in the web app.</li>
+<li><strong>Removal</strong> ("🗑 Remove from team") — the member can no longer take your team orders, and the current invite link stops working so they can't rejoin through it. In the bot, a new link appears on the "👨‍💻 My team" screen; in the web app, click "Create link". Slots the member has already taken aren't cancelled — they can finish them.</li>
 </ul>
+<p>Re-verifications of accounts verified by a removed member wait for them: only they can do them. While they're off your team, such a re-verification, if nobody has taken it yet, can be cancelled right away, without waiting for the usual period (see <a href="../cancel-refunds/#reverify">Cancellations and refunds</a>). If you add them back to the team, the waiting re-verifications go to them right away.</p>
 <h2 id="team-orders">Team orders<a class="headerlink" href="#team-orders" title="Permanent link">&para;</a></h2>
-<p>A team order is visible only to members of your team, subject to their limits and allowed countries. Executors from the shared pool don't see it.</p>
+<p>A team order is visible only to active members of your team (not paused), subject to their limits and allowed countries. Executors from the shared pool don't see it.</p>
 <p>How to create one:</p>
 <ul>
 <li>in the workspace bot — "➕ New order" → "For my team";</li>
 <li>in the web app — "Create order" → "Team".</li>
 </ul>
-<p>You choose the exchange and the country — any country, not just those in the catalog — and set the price per slot and the quantity. The full price per slot goes to the executor. You need an active subscription and at least one active team member.</p>
-<h2 id="idle-return">Slot auto-return<a class="headerlink" href="#idle-return" title="Permanent link">&para;</a></h2>
-<p>If a member takes a team slot and then makes no progress on it for a long time, the platform can return the slot to the pool so that another member can take it:</p>
-<ol>
-<li>after the first timer runs out, the member gets a warning;</li>
-<li>after the second timer runs out, the slot goes back to your team's pool.</li>
-</ol>
-<p>You can adjust the timers or turn the feature off: "⚙️ Settings" → "🔄 Slot auto-return" in the workspace bot, or "Settings" → "Slot auto-return" in the web app. When auto-return is off, the slot stays with the member until it's completed or the <a href="../lifecycle/#deadline">slot deadline</a> runs out. This setting applies only to team orders.</p>
-<h2 id="statistics">Statistics<a class="headerlink" href="#statistics" title="Permanent link">&para;</a></h2>
-<p>The team page shows the number of active members, the number of slots in progress, the share of slots passed successfully and the total number completed, across the whole team. Detailed team analytics are available in the web app, in the "Analytics" section.</p>
+<p>You choose the exchange and the country — any country, not just those in the catalog — and set the price per slot and the quantity. The full price per slot goes to the executor. When buying, you can optionally set a <a href="../lifecycle/#deadline">slot deadline</a>. You need an active subscription and at least one active team member. If less than a day of your subscription is left, you'll see a warning before buying.</p>
+<p>Re-verifications of accounts from team orders are done by the same member who did the first verification — see <a href="../reverify/">Re-verifications</a>.</p>
+<h2 id="idle-return">Worker's time per slot<a class="headerlink" href="#idle-return" title="Permanent link">&para;</a></h2>
+<p>Each time a member takes a slot of a team order, they have a limited amount of time to pass the verification. If they don't make it, the slot goes back to your team's pool and another member can take it. That member can't take this particular slot again, but can take the order's other slots.</p>
+<ul>
+<li>The default is <strong>4 hours</strong>. You can choose 1, 2, 3, 4, 6, 8, 12 or 24 hours, or "No limit".</li>
+<li>The time doesn't run while the slot is waiting for you to update its data or while the exchange is reviewing the verification.</li>
+<li>30 minutes before the time runs out, the member gets a reminder.</li>
+<li>If the member has already issued a verification link, the platform first waits 10 minutes and checks the exchange: a passed verification counts.</li>
+<li>Returning a slot to the pool doesn't count as a failure for the member.</li>
+<li>A new value applies to slots members take after the change; the time on slots already taken doesn't change.</li>
+</ul>
+<p>Where to set it: "⚙️ Settings" → "⏱ Worker's time" in the workspace bot, or "Settings" → "Worker's time per slot" in the web app (for no limit, turn off the "Enabled" switch). With no limit, the slot stays with the member until they complete it or until the slot deadline runs out, if you set one when buying.</p>
+<p>This setting applies only to team orders. In standard and wholesale orders, the executor's time is set by the platform — see <a href="../sellers/#worker-time">Executors and order distribution</a>.</p>
+<h2 id="subscription-lapse">When your subscription ends<a class="headerlink" href="#subscription-lapse" title="Permanent link">&para;</a></h2>
+<p>Your team's members and settings are kept. Here's what happens to team orders:</p>
+<ul>
+<li>slots members have already taken are fulfilled as usual — nothing is taken away from executors;</li>
+<li>slots nobody has taken yet are frozen: members don't see them until you renew the subscription. If a member returns a slot to the pool after the subscription has ended (for example, they ran out of time), that slot is frozen too, and the bot will let you know;</li>
+<li>the slot deadline of a frozen slot doesn't run — after renewal, it's moved forward by the time the slot was frozen;</li>
+<li>you can still upload accounts and publish an order without a subscription — the slots will simply wait for renewal;</li>
+<li>frozen slots can be cancelled — see <a href="../cancel-refunds/#frozen">Frozen slots</a>;</li>
+<li>new team orders can't be created without a subscription;</li>
+<li>re-verifications already created are never frozen.</li>
+</ul>
+<p>After renewal, frozen slots are offered to your team members again. See <a href="../subscription/#expiry">When your subscription ends</a> for details.</p>
+<h2 id="stats">Statistics<a class="headerlink" href="#stats" title="Permanent link">&para;</a></h2>
+<p>In the web app, on the "Sellers" screen in the "My team" section, you'll see:</p>
+<ul>
+<li>"Members" — active and total;</li>
+<li>"In progress" — how many slots members are working on right now;</li>
+<li>"Success rate" and "Passed" — how many of the team's graded slots passed, as a percentage and as a count;</li>
+<li>for each member — allowed countries, load (slots in progress against their limit), record and status.</li>
+</ul>
+<p>The record covers only your team orders, for all time. How graded slots are counted is described in <a href="../sellers/#record">Executor's record</a>.</p>
+<p>In the workspace bot, the "👨‍💻 My team" screen shows the total number of members and how many of them are active. Detailed team analytics are available in the web app, in the "Analytics" section.</p>
 
 
 

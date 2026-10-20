@@ -1026,45 +1026,30 @@
 <li><strong>Wholesale prices</strong> — on the same catalog verifications, lower than the standard prices.</li>
 <li><strong>Team orders</strong> — orders for <a href="../team/">your team</a>: any country and your own price per slot, all of which goes to the executor.</li>
 </ul>
-<p>There's no limit on the number of orders: while your subscription is active, you can create as many wholesale and team orders as you like. Your subscription also affects the price of <a href="../reverify/">re-verifications</a> for accounts from wholesale and team orders.</p>
+<p>There's no limit on the number of orders: while your subscription is active, you can create as many wholesale and team orders as you like. Your subscription also affects <a href="../reverify/">re-verifications</a> of accounts from wholesale and team orders: without one, re-verifying an account from a wholesale order costs the standard price, and re-verifying one from a team order isn't available.</p>
 <h2 id="plans">Plans<a class="headerlink" href="#plans" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Plan</th>
-<th>Duration</th>
-<th>Price</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Pro</td>
-<td>30 days</td>
-<td>$30</td>
-</tr>
-<tr>
-<td>Pro</td>
-<td>90 days</td>
-<td>$75</td>
-</tr>
-</tbody>
-</table>
-<p>The plans differ only in duration — the access is the same.</p>
+<p>The current plans, with their durations and prices, are shown in the workspace bot under "💳 Subscription" and in the web app under "Subscription". The plans differ only in duration — the access is the same.</p>
 <h2 id="how-to-buy-or-renew">How to buy or renew<a class="headerlink" href="#how-to-buy-or-renew" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Workspace bot</strong> — "💳 Subscription" → "📋 Plans". If your subscription is active, the button is called "➕ Extend subscription"; if it has expired and you have frozen slots, it's "➕ Renew and unfreeze". Choose a plan, check the confirmation card (plan, duration, price, balance, end date) and confirm.</li>
-<li><strong>Web app</strong> — the "Subscription" section, with the same plan choice and confirmation.</li>
+<li><strong>Workspace bot</strong> — "💳 Subscription", then the plans button: "📋 Plans" if you've never had a subscription, "➕ Extend subscription" if it's active, or "➕ Renew" if it has expired. Choose a plan, tap "✅ Subscribe", check the confirmation card (plan, duration, price, balance, end date) and confirm.</li>
+<li><strong>Web app</strong> — the "Subscription" section: choose a plan under "Plans" ("Buy" or "Extend") and tap "Confirm &amp; pay".</li>
 </ul>
-<p>The payment is deducted from your balance. If you buy a plan while your current subscription is still active, the days are <strong>added to your current term</strong>. Subscription purchases are non-refundable.</p>
+<p>The payment is deducted from your balance. If you buy a plan while your current subscription is still active, the days are <strong>added to your current term</strong>. If your subscription has already expired, the new term starts from the moment you pay. Subscription purchases are non-refundable.</p>
 <h2 id="expiry">When your subscription ends<a class="headerlink" href="#expiry" title="Permanent link">&para;</a></h2>
-<p>Before your subscription ends, you get two reminders: <strong>3 days</strong> and <strong>24 hours</strong> in advance.</p>
-<p>When the subscription expires, wholesale and team order slots that <strong>haven't started yet</strong> are frozen: uploading, publishing and taking them into work all stop. Slots that an executor has already started are fulfilled as usual.</p>
-<p>With frozen slots, you can:</p>
+<p>Before your subscription ends, the workspace bot sends you two reminders: <strong>3 days</strong> and <strong>24 hours</strong> in advance. In the web app, during the last 3 days, a "Your subscription ends in …" strip with a "Renew" button appears at the top of the screen.</p>
+<p>If your subscription ends in less than <strong>24 hours</strong>, the bot and the web app warn you about it when you buy a wholesale or team order. It's only a warning — you can still place the order.</p>
+<p>When the subscription ends, you get a "🚫 Your subscription has ended" notification. You can't buy new wholesale or team orders until you renew. Here's what happens to the orders you've already bought:</p>
 <ul>
-<li><strong>renew your subscription</strong> — the slots unfreeze automatically;</li>
-<li><strong>cancel them</strong> with a refund — see <a href="../cancel-refunds/#frozen">Frozen slots</a>.</li>
+<li><strong>Slots an executor has already taken</strong> are fulfilled as usual.</li>
+<li><strong>Slots of published wholesale and team orders that nobody has taken</strong> are frozen: until you renew, the platform doesn't offer them to executors. If an executor hands a slot back after your subscription has ended, that slot is frozen too, and you get a separate notification about it.</li>
+<li><strong>Unpublished orders</strong> aren't frozen. But if you publish one without a subscription, its slots are frozen right away — the order card warns you about this.</li>
 </ul>
-<p>If you do neither within <strong>6 hours</strong> of your subscription ending, the platform cancels the frozen slots itself and refunds the money to your balance.</p>
+<p>Freezing only stops the slots from being offered to executors; everything else works as usual: you can upload accounts, update slot data when the platform asks for it and publish the order. Frozen slots are never cancelled on their own — they wait until you renew or cancel them. If the order has a <a href="../orders/#deadline">slot deadline</a>, it doesn't run while a slot is frozen: after renewal, it's moved forward by the time the slot spent frozen.</p>
+<p>You can see how many slots are frozen on the subscription screen and on the order card (the "❄️ Frozen: N" line). With frozen slots, you can:</p>
+<ul>
+<li><strong>renew your subscription</strong> — in the "💳 Subscription" section or with the "Renew subscription" button on the order card. Frozen slots are offered to executors again right away, and the bot tells you how many;</li>
+<li><strong>cancel them</strong> — with the "Cancel frozen" button on the order card; see <a href="../cancel-refunds/#frozen">Frozen slots</a> for how the refund works. Cancelled slots don't come back after renewal.</li>
+</ul>
 <p>Freezing doesn't apply to:</p>
 <ul>
 <li><strong>standard orders</strong> — they don't depend on a subscription;</li>

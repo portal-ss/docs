@@ -1102,38 +1102,39 @@
 <h2 id="signing-in">Signing in<a class="headerlink" href="#signing-in" title="Permanent link">&para;</a></h2>
 <ol>
 <li>In the workspace bot <a href="https://t.me/kycportal_bot">@kycportal_bot</a>, tap "🌐 Open in browser" or send <code>/browser</code>. This only works in a private chat with the bot.</li>
-<li>The bot sends you a one-time link. It's valid for a few minutes.</li>
+<li>The bot sends you a one-time link. It's valid for 3 minutes.</li>
 <li>Tap the link to copy it, then paste it into the browser you normally use. The button under the message opens the app right away, but on a phone it opens in Telegram's built-in browser — and you'll stay signed in only there.</li>
-<li>Once you've signed in, the browser remembers you, so you don't need a new link every time.</li>
+<li>The first time you sign in on a browser, the app shows which account you've signed in to. Check that it's yours and tap "Continue as …"; if it isn't your account, tap "Sign out".</li>
+<li>Once you've signed in, the browser remembers you, so you don't need a new link every time. A sign-in lasts up to 7 days, and ends sooner if you don't open the app for 48 hours. After that, you'll need a new link from the bot.</li>
 </ol>
 <p>If you open the link in a browser that's already signed in, the app warns you and lets you choose: "Stay signed in as …" or "Continue with the new link". If you didn't request the link yourself, stay in your current account.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The sign-in link works only once and is issued to you personally — don't forward it.</p>
 </div>
-<p>To sign out, go to "Settings" → "Session": "Log out" signs you out of the current browser, and "Log out all devices" signs you out everywhere at once. To sign in again, you'll need a new link from the bot.</p>
+<p>To sign out, use "Log out" in the account menu or go to "Settings" → "Session": "Log out" signs you out of the current browser, and "Log out all devices" signs you out everywhere at once. To sign in again, you'll need a new link from the bot.</p>
 <h2 id="sections">Sections<a class="headerlink" href="#sections" title="Permanent link">&para;</a></h2>
-<p><strong>Dashboard</strong> — an overview: your subscription status, slots waiting for your action, recent orders, your balance, the team card and your referral link.</p>
+<p><strong>Dashboard</strong> — the verification catalog: exchanges, countries and prices, with a "Buy" button (with an active subscription, it shows wholesale prices). Alongside it: your subscription status, a warning when slots are waiting for your action (a re-upload, a proxy or new screenshots), recent orders, your balance with "Top up" and "Transactions" buttons, key figures (slots in progress and waiting for an executor, verifications done, spend over 30 days) and your referral link.</p>
 <p><strong>Analytics</strong> — metrics for your orders over 7, 30 or 90 days or all time, broken down into "All", "Team" and "Global" (the shared pool): verification success rate, average time waiting for an executor and average time to complete, failure reasons, verification trends, pass rates by exchange and country, and team productivity.</p>
 <h3 id="verifications">Verifications<a class="headerlink" href="#verifications" title="Permanent link">&para;</a></h3>
-<p><strong>Create order</strong> — catalog purchases (at the standard or wholesale price), team orders and re-verifications. After payment, the account upload opens right away — using an ADS Power file or manually. See <a href="../orders/">Orders</a>, <a href="../upload/">Uploading accounts</a> and <a href="../reverify/">Re-verifications</a>.</p>
-<p><strong>Orders</strong> — all your orders, with filters by status, exchange, country, type and period, and search by order or slot number. An order card shows its slots, the full event history and actions: upload, publish, cancel and re-upload.</p>
-<p><strong>Slots</strong> — a single list of all your accounts, regardless of the order they belong to. A slot card shows the status, outcome, deadline and actions: check the status, update the proxy or session, cancel a re-verification. See <a href="../lifecycle/">Order execution and deadlines</a>.</p>
+<p><strong>Create order</strong> — three modes: "Catalog" (an exchange and a country at catalog prices; with an active subscription you choose the wholesale or the standard price), "Team" and "Reverification". For catalog and team orders you can set a slot deadline: "No deadline", a preset from 4 to 72 hours, or "Other…" — any whole number of hours within that range. The deadline can't be changed after purchase — see <a href="../lifecycle/#deadline">Fulfillment deadline</a>. After payment, the "Upload accounts" button opens the upload — using an ADS Power file or manually. See <a href="../orders/">Orders</a>, <a href="../upload/">Uploading accounts</a> and <a href="../reverify/">Re-verifications</a>.</p>
+<p><strong>Orders</strong> — all your orders, with filters by status, exchange, country, type and period, and search by order or slot number. An order card shows its slots, the full event history and actions: uploading and re-uploading accounts, publishing, cancelling an unpublished order, and — when slots are frozen — renewing the subscription or cancelling those slots.</p>
+<p><strong>Slots</strong> — a single list of all your accounts, regardless of the order they belong to. A slot card shows the status, outcome, time left and the actions available at that moment: check the status, replace the proxy or update the session, send new deposit screenshots for Risk Removal, cancel a re-verification and, on a completed slot, "Create a re-verification". See <a href="../lifecycle/">Order execution and deadlines</a>.</p>
 <h3 id="team">Team<a class="headerlink" href="#team" title="Permanent link">&para;</a></h3>
-<p><strong>Sellers</strong> — two sections: your <a href="../team/">team</a> and "Marketplace", where you prioritize and block executors (see <a href="../sellers/">Executors and order distribution</a>).</p>
-<p><strong>Subscription</strong> — buying and renewing, a price comparison and the state of your frozen orders. See <a href="../subscription/">Subscription</a>.</p>
+<p><strong>Sellers</strong> — two sections: "My team" (see <a href="../team/">Your own team</a>) and "Marketplace", where you prioritize and block executors (see <a href="../sellers/">Executors and order distribution</a>).</p>
+<p><strong>Subscription</strong> — buying and renewing and a price comparison; after a subscription ends, how many slots are waiting for the renewal. See <a href="../subscription/">Subscription</a>.</p>
 <h3 id="money">Money<a class="headerlink" href="#money" title="Permanent link">&para;</a></h3>
 <p><strong>Balance</strong> — your deposit address, the minimum amount, networks and deposit history. See <a href="../balance/">Balance and top-ups</a>.</p>
 <p><strong>Transactions</strong> — the full history of operations: top-ups, payments, refunds and bonuses, with filters and a detail card for each operation.</p>
 <p><strong>Affiliate</strong> — your referral link, statistics and bonus history. See <a href="../referral/">Referral program</a>.</p>
 <h3 id="help-and-settings">Help and settings<a class="headerlink" href="#help-and-settings" title="Permanent link">&para;</a></h3>
-<p><strong>Help &amp; Support</strong> — video guides (uploading via ADS Power, manual upload and a video walkthrough of the process), the FAQ and terms of use, and a link to support. There's also a "Got an idea?" form for suggestions — you won't get a reply to it.</p>
+<p><strong>Help &amp; Support</strong> — video guides ("Uploading from ADS Power", "Manual upload", "Video guide"), documents ("Documentation", "FAQ", "Terms of Use") and a "Chat with support" button. There's also a "Got an idea?" form for suggestions — you won't get a reply to it.</p>
 <p><strong>Settings</strong> (in the account menu):</p>
 <ul>
-<li>"Appearance" — language and theme: light, dark or system;</li>
-<li>"Slot deadline" — your own fulfillment deadline (see <a href="../lifecycle/#deadline">Custom deadline</a>);</li>
-<li>"Slot auto-return" — for team orders (see <a href="../team/#idle-return">Slot auto-return</a>);</li>
-<li>"Notifications" — separate settings for slots, orders, top-ups and referral bonuses;</li>
+<li>"Account" — which Telegram account you're signed in with;</li>
+<li>"Appearance" — theme (light, dark or system) and language;</li>
+<li>"Notifications" — which notifications to push to Telegram: "Per slot", "Per order", "Deposits" and "Referral bonuses", each on its own;</li>
+<li>"Worker's time per slot" — for team orders: from 1 to 24 hours or no limit (see <a href="../getting-started/#settings">Getting started</a> and <a href="../team/#idle-return">Your own team</a>);</li>
 <li>"Session" — sign out of the current browser or all devices.</li>
 </ul>
 <h2 id="bot-or-web-app">Bot or web app<a class="headerlink" href="#bot-or-web-app" title="Permanent link">&para;</a></h2>
@@ -1155,6 +1156,11 @@
 <td>Wholesale and team orders</td>
 <td>Yes</td>
 <td>Yes</td>
+</tr>
+<tr>
+<td>Slot deadline at purchase</td>
+<td>Presets: 4, 8, 12, 24, 48 or 72 h</td>
+<td>Presets or any whole number of hours from 4 to 72</td>
 </tr>
 <tr>
 <td>Re-verifications, including Risk Removal</td>
@@ -1197,6 +1203,11 @@
 <td>Yes</td>
 </tr>
 <tr>
+<td>Worker's time per slot</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
 <td>Prioritizing and blocking executors</td>
 <td>—</td>
 <td>Yes</td>
@@ -1208,11 +1219,6 @@
 </tr>
 <tr>
 <td>Referral program</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Custom deadline and slot auto-return</td>
 <td>Yes</td>
 <td>Yes</td>
 </tr>

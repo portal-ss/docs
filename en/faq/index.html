@@ -1089,7 +1089,7 @@
 </details>
 <details class="question">
 <summary>Which exchanges are supported?</summary>
-<p>Currently — Bybit, Mexc, and Kucoin. The list is being expanded; the current selection is always visible in the bot's catalog.</p>
+<p>Currently — Bybit, MEXC, and KuCoin. The list is being expanded; the current selection is always visible in the bot's catalog.</p>
 </details>
 <details class="question">
 <summary>The geo I need is not in the catalog — what should I do?</summary>
@@ -1139,7 +1139,7 @@
 </details>
 <details class="question">
 <summary>What happens to my orders if the subscription expires?</summary>
-<p>Orders bound to the subscription are automatically frozen: no new slots can be uploaded or claimed. Executors who are already working are given a grace period to check the verification status — if during this window the exchange confirms successful verification, the slot is completed properly.</p>
+<p>Slots of wholesale and team orders that no executor has taken yet are frozen: while there is no subscription, they are not offered to executors. Slots already in progress are completed as usual. Frozen slots are not cancelled automatically — once the subscription is renewed, they are offered to executors again.</p>
 </details>
 <details class="question">
 <summary>Can I extend my subscription in advance?</summary>
@@ -1160,11 +1160,11 @@
 </details>
 <details class="question">
 <summary>How do I know that the verification has passed?</summary>
-<p>The bot will send a notification when the status changes. The status is also always visible in the slot card.</p>
+<p>The bot will send a notification when a slot is completed or cancelled. The status is also always visible in the slot card.</p>
 </details>
 <details class="question">
 <summary>The exchange rejected the verification with no option to retry — what next?</summary>
-<p>With a "BLOCKED" status, funds for the slot are returned automatically. The order can be created again using a different account.</p>
+<p>If the exchange has closed verification on the account ("🚫 KYC no longer available"), the money for the slot is returned to your balance automatically. You can create a new order with a different account.</p>
 </details>
 <h2 id="re-verification">Re-verification<a class="headerlink" href="#re-verification" title="Permanent link">&para;</a></h2>
 <details class="question">
@@ -1177,7 +1177,7 @@
 </details>
 <details class="question">
 <summary>Can I cancel a re-verification?</summary>
-<p>Yes — within an established window after order creation.</p>
+<p>Yes — 24 hours after the slot was taken into work. If a verification link has already been issued for the slot, the platform checks the exchange before refunding: if the verification has passed, there is no refund.</p>
 </details>
 <h2 id="account-security">Account Security<a class="headerlink" href="#account-security" title="Permanent link">&para;</a></h2>
 <details class="question">
@@ -1191,7 +1191,7 @@
 <h2 id="refunds">Refunds<a class="headerlink" href="#refunds" title="Permanent link">&para;</a></h2>
 <details class="question">
 <summary>In what cases is a refund possible?</summary>
-<p>Before the slot is taken into work — a full refund on request. After — if the exchange has closed the possibility of further verification attempts on the account, as well as in case of Executor inactivity beyond the established period.</p>
+<p>You can cancel with a refund yourself: an unpublished order, frozen slots and a re-verification. A published slot is cancelled with a refund by the platform automatically — if the deadline you chose at purchase has passed, or the exchange has closed verification on the account. If the verification has passed through an issued link after all, there is no refund.</p>
 </details>
 <details class="question">
 <summary>Where do refunded funds go?</summary>

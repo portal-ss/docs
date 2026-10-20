@@ -1039,7 +1039,7 @@
 <tbody>
 <tr>
 <td>Shop bot <a href="https://t.me/kyctrade_bot">@kyctrade_bot</a></td>
-<td>Browsing the catalog and buying at standard prices, topping up your balance, your referral link</td>
+<td>Browsing the catalog and buying at standard prices, your standard orders, topping up your balance, your referral link</td>
 </tr>
 <tr>
 <td>Workspace bot <a href="https://t.me/kycportal_bot">@kycportal_bot</a></td>
@@ -1062,11 +1062,11 @@
 <h2 id="how-an-order-works">How an order works<a class="headerlink" href="#how-an-order-works" title="Permanent link">&para;</a></h2>
 <ol>
 <li><strong>Top-up.</strong> You top up your internal balance in USDT or USDC — <a href="../balance/">Balance and top-ups</a>.</li>
-<li><strong>Purchase.</strong> You choose the exchange, country and quantity, and pay from your balance — <a href="../orders/">Orders</a>.</li>
-<li><strong>Upload.</strong> For each slot, you provide the account's session and proxy; the platform checks them on the exchange — <a href="../upload/">Uploading accounts</a>.</li>
-<li><strong>Publishing.</strong> Once every slot has an account, you publish the order and it becomes available to executors.</li>
+<li><strong>Purchase.</strong> You choose the exchange, country and quantity, optionally set a slot deadline, and pay from your balance — <a href="../orders/">Orders</a>.</li>
+<li><strong>Upload.</strong> For each slot, you provide the account's session and proxy; the platform checks them on the exchange and accepts an account only if a verification can be started on it right now — <a href="../upload/">Uploading accounts</a>.</li>
+<li><strong>Publishing.</strong> Once every slot has an account, you publish the order and it becomes available to executors. If you set a deadline, it counts from this moment — <a href="../lifecycle/#deadline">Fulfillment deadline</a>.</li>
 <li><strong>Fulfillment.</strong> An executor takes a slot and completes the verification; you get notifications as the work progresses — <a href="../lifecycle/">Order execution and deadlines</a>.</li>
-<li><strong>Result.</strong> The slot either completes successfully or is cancelled, with the money refunded to your balance — <a href="../cancel-refunds/">Cancellations and refunds</a>.</li>
+<li><strong>Result.</strong> The slot either completes successfully or is cancelled. For when the money for a slot returns to your balance, see <a href="../cancel-refunds/">Cancellations and refunds</a>.</li>
 </ol>
 
 

@@ -729,6 +729,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#worker-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executor's time and returning a slot to the pool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-an-executor-doesnt-succeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If an executor doesn't succeed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#quality-control" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -740,10 +762,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#priority-and-blocking" class="md-nav__link">
+  <a href="#priority-block" class="md-nav__link">
     <span class="md-ellipsis">
       
         Priority and blocking
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#record" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executor's record
       
     </span>
   </a>
@@ -981,6 +1014,28 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#worker-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executor's time and returning a slot to the pool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-an-executor-doesnt-succeed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If an executor doesn't succeed
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#quality-control" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -992,10 +1047,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#priority-and-blocking" class="md-nav__link">
+  <a href="#priority-block" class="md-nav__link">
     <span class="md-ellipsis">
       
         Priority and blocking
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#record" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executor's record
       
     </span>
   </a>
@@ -1021,20 +1087,36 @@
 
 <h1 id="executors-and-order-distribution">Executors and order distribution<a class="headerlink" href="#executors-and-order-distribution" title="Permanent link">&para;</a></h1>
 <p>The verifications on the exchange are carried out by real people: executors (called "Sellers" in the interface). An executor passes the identity check through a link that the platform generates inside your session. Executors don't have your account's login details.</p>
+<p>You can see who is working on a slot in its card: "👨‍💻 Executor: #…" in the workspace bot and "Worker" in the web app. The executor appears under the same number in the <a href="#priority-block">"Marketplace"</a> section.</p>
 <h2 id="confirmed-country">Confirmed country<a class="headerlink" href="#confirmed-country" title="Permanent link">&para;</a></h2>
-<p>When an executor registers, the platform compares the country of their phone number with their actual location. If the two match, the executor gets a confirmed country. As a result, your orders are fulfilled by people who are actually in the order's country, which improves the account's chances of passing future re-verifications.</p>
+<p>When an executor registers, the platform compares the country of their phone number with their actual location. If the two match, the executor gets a confirmed country. As a result, your orders go first to people who are actually in the order's country, which improves the account's chances of passing future re-verifications.</p>
 <h2 id="how-an-order-finds-an-executor">How an order finds an executor<a class="headerlink" href="#how-an-order-finds-an-executor" title="Permanent link">&para;</a></h2>
-<p>Standard and wholesale orders are distributed among local executors whose confirmed country matches the order:</p>
+<p>Standard and wholesale orders go first to local executors whose confirmed country matches the order:</p>
 <ol>
 <li>First, the order is shown to your <strong>priority</strong> executors from that country.</li>
 <li>Then it's shown to all executors whose confirmed country matches the order.</li>
 </ol>
-<p>Executors you've blocked don't see your orders.</p>
+<p>A slot that <a href="#worker-time">returns to the pool</a> goes through the same order again.</p>
+<p>Executors you've blocked don't see your standard and wholesale orders.</p>
 <p>Team orders are visible only to members of <a href="../team/">your team</a>. A re-verification goes only to the executor who did the account's first verification (see <a href="../reverify/">Re-verifications</a>).</p>
+<h2 id="worker-time">Executor's time and returning a slot to the pool<a class="headerlink" href="#worker-time" title="Permanent link">&para;</a></h2>
+<p>When an executor takes an initial verification slot, they have <strong>4 hours</strong> of their own time to pass it. The time doesn't run while the slot is waiting for you to update its data or while the exchange is reviewing the verification. For team orders, you set this time yourself — see <a href="../team/#idle-return">Worker's time per slot</a>.</p>
+<p>The slot card shows the time by which the executor has to finish: "⏳ The worker has until …" in the workspace bot, "Back to the pool by … at the latest" in the web app. If the <a href="../lifecycle/#deadline">slot deadline</a> comes first, the card shows that instead.</p>
+<p>A slot goes back to the pool if the executor runs out of time or gives the slot up themselves:</p>
+<ul>
+<li>if they've already issued a verification link, the slot doesn't leave right away: the platform waits 10 minutes and checks the exchange — a passed verification counts;</li>
+<li>after it's returned, the slot waits for an executor again; the previous executor can't take this particular slot again, but can take the order's other slots;</li>
+<li>you don't pay anything extra, and the slot deadline, if you set one, doesn't start over;</li>
+<li>if the account still passes through the link the previous executor issued, the slot goes back to them and counts as completed.</li>
+</ul>
+<p>You can't swap the executor on a taken slot yourself: if they don't make it in time, the slot goes back to the pool on its own.</p>
+<p>Re-verifications don't go back to the pool: they have no such time limit, and only the executor assigned to the account can do them.</p>
+<h2 id="if-an-executor-doesnt-succeed">If an executor doesn't succeed<a class="headerlink" href="#if-an-executor-doesnt-succeed" title="Permanent link">&para;</a></h2>
+<p>If the exchange rejects an attempt, the executor retries on the same slot — nothing is needed from you. If the exchange gives a final refusal on the executor's attempt (for example, the document's country doesn't match the order's country), the slot is closed with a full refund — see <a href="../cancel-refunds/#auto-refunds">Automatic refunds</a>. Such a case counts as a failure for the executor.</p>
 <h2 id="quality-control">Quality control<a class="headerlink" href="#quality-control" title="Permanent link">&para;</a></h2>
-<p>The platform monitors how well executors handle re-verifications. If an executor's re-verification success rate drops below the acceptable level, they automatically stop receiving new orders from the shared pool. This doesn't affect slots they've already taken or re-verifications assigned to them.</p>
-<h2 id="priority-and-blocking">Priority and blocking<a class="headerlink" href="#priority-and-blocking" title="Permanent link">&para;</a></h2>
-<p>In the web app, the "Sellers" screen has a "Marketplace" section. It lists executors who have recently fulfilled your orders, along with those you've already prioritized or blocked. For each executor, you see only your own history with them — how many slots they've completed and what share of them passed. The platform doesn't show an overall executor rating.</p>
+<p>The platform monitors how well executors handle re-verifications. If an executor's re-verification success rate drops below the acceptable level, they automatically stop receiving new orders from the shared pool. This doesn't affect slots they've already taken, re-verifications assigned to them or team orders — you manage your own team yourself.</p>
+<h2 id="priority-block">Priority and blocking<a class="headerlink" href="#priority-block" title="Permanent link">&para;</a></h2>
+<p>In the web app, the "Sellers" screen has a "Marketplace" section. It lists executors who have taken slots of your standard and wholesale orders in the last 90 days, plus everyone you've already prioritized or blocked — even if they haven't worked for you in a long time. Members of your team aren't shown here. You can filter the list: "All", "Priority", "Blocked".</p>
 <table>
 <thead>
 <tr>
@@ -1053,7 +1135,7 @@
 </tr>
 <tr>
 <td>"Block"</td>
-<td>The executor no longer sees your orders from the shared pool. Slots they've already taken and team orders aren't affected</td>
+<td>The executor no longer sees your standard and wholesale orders. Slots they've already taken, team orders and re-verifications of accounts they verified aren't affected</td>
 </tr>
 <tr>
 <td>"Unblock"</td>
@@ -1061,10 +1143,15 @@
 </tr>
 </tbody>
 </table>
+<p>An executor can be either prioritized or blocked, not both.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Priority and blocking are available only in the <a href="../web/">web app</a>.</p>
 </div>
+<h2 id="record">Executor's record<a class="headerlink" href="#record" title="Permanent link">&para;</a></h2>
+<p>For each executor, you see only your own history with them, for all time: how many of your graded slots they passed and what share that is — for example, "12/13" and "92%". The platform doesn't show an overall executor rating.</p>
+<p>Only finished slots are graded: those that passed and those closed through the executor's fault. Slots still in progress, slots returned to the pool, slots the executor gave up and closures that weren't their fault — for example, a slot deadline that ran out shortly after they took the slot — don't count. Until there are graded slots, the record shows "no slots yet".</p>
+<p>The "Marketplace" counts all your orders except team orders; the "My team" section counts only team orders (see <a href="../team/#stats">Team statistics</a>).</p>
 
 
 

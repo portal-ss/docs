@@ -524,6 +524,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Workspace bot @kycportal_bot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commands
+      
+    </span>
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1022,6 +1050,34 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Workspace bot @kycportal_bot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commands
+      
+    </span>
+  </a>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1065,7 +1121,7 @@
 
 <h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
 <h2 id="first-launch">First launch<a class="headerlink" href="#first-launch" title="Permanent link">&para;</a></h2>
-<p>You don't need to register — your Telegram account is your account. Open the shop bot <a href="https://t.me/kyctrade_bot">@kyctrade_bot</a> or the workspace bot <a href="https://t.me/kycportal_bot">@kycportal_bot</a> and send <code>/start</code>. On first launch, the bot asks you to choose a language: Russian, Ukrainian or English. You can change it later in the "🌐 Language" menu.</p>
+<p>You don't need to register — your Telegram account is your account. Open the shop bot <a href="https://t.me/kyctrade_bot">@kyctrade_bot</a> or the workspace bot <a href="https://t.me/kycportal_bot">@kycportal_bot</a> and send <code>/start</code>. On first launch, the bot asks you to choose a language: Russian, Ukrainian or English. The language is shared by both bots and the web app. You can change it in the shop bot ("👤 Profile" → "🌐 Language"), in the workspace bot ("⚙️ Settings" → "🌐 Language") or in the web app's "Settings".</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you came through a referral link, you're linked to the person who invited you when you first start the bot. See <a href="../referral/">Referral program</a>.</p>
@@ -1073,7 +1129,7 @@
 <h2 id="quick-start">Quick start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Top up your balance in USDT or USDC — <a href="../balance/">Balance and top-ups</a>.</li>
-<li>Buy a verification from the catalog in the shop bot or the web app — <a href="../orders/">Orders</a>.</li>
+<li>Buy a verification from the catalog in the shop bot or the web app. When you buy, you can set a slot deadline or leave the order without one — <a href="../orders/">Orders</a>.</li>
 <li>Upload a session and proxy for each slot — <a href="../upload/">Uploading accounts</a>.</li>
 <li>Publish the order and wait for notifications about the result — <a href="../lifecycle/">Order execution and deadlines</a>.</li>
 </ol>
@@ -1082,7 +1138,7 @@
 <ul>
 <li>"🛍 Catalog" — choose an exchange and a country, view the product card and buy.</li>
 <li>"👤 Profile" — your balance, referral link and summary, plus "📋 My Orders", "💳 Top up balance", "🌐 Language" and "💸 Withdraw referral balance".</li>
-<li>"ℹ️ Info" — help, partnerships, reviews and the terms of use.</li>
+<li>"ℹ️ Info" — "👨‍💻 Help", "🤝 Cooperation", "📖 Documentation", "⭐ Reviews" and "📘 Terms of Use".</li>
 </ul>
 <h2 id="workspace-bot-kycportal_bot">Workspace bot @kycportal_bot<a class="headerlink" href="#workspace-bot-kycportal_bot" title="Permanent link">&para;</a></h2>
 <p>Your workspace: this is where you upload accounts and track progress. Main menu:</p>
@@ -1124,11 +1180,11 @@
 </tr>
 <tr>
 <td>"ℹ️ Info"</td>
-<td>Help, FAQ, video overview, terms of use</td>
+<td>Help, documentation, FAQ, video guide, terms of use</td>
 </tr>
 <tr>
 <td>"⚙️ Settings"</td>
-<td>Language, "⏰ Slot deadline" (<a href="../lifecycle/#deadline">details</a>), "🔄 Slot auto-return" (<a href="../team/#idle-return">details</a>)</td>
+<td>Language and the worker's time for team orders — <a href="#settings">details</a></td>
 </tr>
 <tr>
 <td>"🌐 Open in browser"</td>
@@ -1137,10 +1193,60 @@
 </tbody>
 </table>
 <p>The balance button shows your current balance.</p>
+<h3 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h3>
+<p>"⚙️ Settings" shows the current values right away. There are two items:</p>
+<ul>
+<li>"🌐 Language" — the interface language.</li>
+<li>"⏱ Worker's time" — team orders only: how many hours of their own time a team member gets for each slot they take. The options are 1, 2, 3, 4, 6, 8, 12 or 24 hours, or "No limit"; the default is 4 hours. The time stops while the slot is waiting for you or the exchange. If the member runs out of time, the slot goes back to the pool, and that member can't take this particular slot again. See <a href="../team/#idle-return">Your own team</a>.</li>
+</ul>
+<p>The slot deadline isn't a setting: you choose it when you buy each order — see <a href="../lifecycle/#deadline">Fulfillment deadline</a>.</p>
+<h2 id="commands">Commands<a class="headerlink" href="#commands" title="Permanent link">&para;</a></h2>
+<p>Besides the menu buttons, the bots understand these commands:</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Bot</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/start</code></td>
+<td>Both</td>
+<td>Opens the main menu and closes any dialog you've started</td>
+</tr>
+<tr>
+<td><code>/catalog</code></td>
+<td>Shop bot</td>
+<td>Opens the catalog</td>
+</tr>
+<tr>
+<td><code>/balance</code></td>
+<td>Shop bot</td>
+<td>Shows your current balance</td>
+</tr>
+<tr>
+<td><code>/status</code></td>
+<td>Workspace bot</td>
+<td>Opens "📋 My orders"</td>
+</tr>
+<tr>
+<td><code>/browser</code></td>
+<td>Workspace bot</td>
+<td>Sends a sign-in link for the <a href="../web/">web app</a></td>
+</tr>
+<tr>
+<td><code>/cancel</code></td>
+<td>Workspace bot</td>
+<td>Leaves the current dialog, such as an upload. Accounts you've already uploaded stay in the order</td>
+</tr>
+</tbody>
+</table>
 <h2 id="web-app">Web app<a class="headerlink" href="#web-app" title="Permanent link">&para;</a></h2>
 <p>Everything in the workspace bot is also available in a browser — plus catalog purchases, full transaction history, analytics and choosing executors. To sign in, tap "🌐 Open in browser" in the workspace bot or send <code>/browser</code>, and the bot will send you a one-time link. See <a href="../web/">Web app</a>.</p>
 <h2 id="support">Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
-<p>If you need help, contact support at <a href="https://t.me/freidbase">@freidbase</a>. In the bots, you can reach support with the "👨‍💻 Help" button in the "ℹ️ Info" section. If your question is about a specific order, include its number, which looks like <code>1234-5678</code>.</p>
+<p>If you need help, contact support at <a href="https://t.me/freidbase">@freidbase</a>. In the bots, you can reach support with the "👨‍💻 Help" button in the "ℹ️ Info" section; in the web app, use the "Chat with support" button in "Help &amp; Support". If your question is about a specific order or slot, include its number, which looks like <code>1234-5678</code>.</p>
 
 
 
