@@ -1,6 +1,6 @@
 # Terms of Use
 
-_Effective from: September 23, 2026_
+_Effective from: October 20, 2026_
 
 These Terms constitute an agreement between you and the **KYC Portal** service (the "Service"). By using the Service, you confirm that you have read and agree to these Terms. If you do not agree with any provision, discontinue use of the Service.
 
@@ -31,6 +31,8 @@ Prices for services are displayed in the Service at the moment of order placemen
 
 The Buyer is solely responsible for ensuring that the data and access provided for the performance of an order are accurate, current, and fit for use. The Service is not liable for inability to perform an order, delays, or exchange restrictions caused by such data being unfit for use.
 
+If, during the performance of an order, the data or access provided cease to be fit for use, the Buyer undertakes to update them; until they are updated, the performance of the item and the running of its time limits are suspended.
+
 By providing access to an exchange account, the Buyer consents to any actions with that account that are necessary to perform the order.
 
 In a team order, the Buyer selects the Executors from the persons they have invited and sets the price of their work. The Service provides only the technical infrastructure for this and is not responsible for the quality, timeliness, or good faith of the order's performance by members of the Buyer's team.
@@ -51,11 +53,11 @@ Balance funds are intended for paying for services within the Service. The Servi
 
 A subscription gives access to wholesale prices and team orders for the paid period. Paying for a subscription before the current period ends extends it.
 
-When a subscription ends, items of wholesale and team orders whose performance has not yet started are suspended. While they are suspended, the Buyer may cancel them with the cost returned to the balance; if the subscription is not renewed within the period specified in the interface, such items are cancelled and refunded automatically. Renewing the subscription resumes suspended orders. Work started before the subscription ended is completed in the usual way.
+When a subscription ends, items of wholesale and team orders that are not in work with an Executor are suspended until the subscription is renewed and are not cancelled automatically. While they are suspended, the Buyer may cancel them; any refund is made in accordance with Section 6. Items in work with an Executor are performed in the usual way.
 
 ## 6. Refunds
 
-Refunds are issued in accordance with the Service's current refund policy. A refund is available in cases expressly provided for by the policy: before actual performance of the order has begun, and upon inactivity of the Executor beyond the established period. Refunded funds are credited to the Buyer's balance in the Service.
+Refunds are issued in accordance with the Service's current refund policy in the cases provided for by the policy and the Service's interface, in particular: cancellation of an order before it is published, failure of the ordered verification to pass within the deadline chosen by the Buyer, or refusal by the exchange to allow it on the account provided. After an order is published, the Buyer may cancel an item only in the cases provided for by the Service's interface. If the exchange check shows that the verification has passed, the item is deemed performed and is not refundable. Refunded funds are credited to the Buyer's balance in the Service.
 
 The subscription fee **is not refundable**.
 
@@ -125,7 +127,9 @@ The software, design, the KYC Portal name, and related branding are the property
 
 The Service's official channels:
 
-- the KYC Portal bot — [@kycportal_bot](https://t.me/kycportal_bot);
+- the KYC Portal shop bot — [@kyctrade_bot](https://t.me/kyctrade_bot);
+- the KYC Portal workspace bot — [@kycportal_bot](https://t.me/kycportal_bot);
+- the KYC Portal web app — [app.kycportal.org](https://app.kycportal.org);
 - support — [@freidbase](https://t.me/freidbase).
 
 The Service is not liable for the actions of persons impersonating the Service or its staff, or for the consequences of interacting with them.

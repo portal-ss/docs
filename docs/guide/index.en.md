@@ -7,7 +7,7 @@ If you're new here, start with the [platform overview](overview.md), then go thr
 ## Basics
 
 - [Platform overview](overview.md) — what KYC Portal is, which exchanges are supported and what an order is made of.
-- [Getting started](getting-started.md) — first launch, bot menus, settings and a quick start.
+- [Getting started](getting-started.md) — first launch, bot menus, settings, commands and a quick start.
 - [Balance and top-ups](balance.md) — how to top up your balance with crypto and how it's spent.
 
 ## Orders

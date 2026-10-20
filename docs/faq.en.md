@@ -6,7 +6,7 @@
     Pick a platform, region, and verification type in the bot, then confirm the order. The cost is deducted from your internal balance, which you top up in advance with cryptocurrency.
 
 ??? question "Which exchanges are supported?"
-    Currently — Bybit, Mexc, and Kucoin. The list is being expanded; the current selection is always visible in the bot's catalog.
+    Currently — Bybit, MEXC, and KuCoin. The list is being expanded; the current selection is always visible in the bot's catalog.
 
 ??? question "The geo I need is not in the catalog — what should I do?"
     If a country is not displayed, there are currently not enough Executors for it. The catalog is updated as new Executors become available.
@@ -47,7 +47,7 @@
     Access to wholesale prices and the ability to create team orders. The subscription lasts a fixed number of days.
 
 ??? question "What happens to my orders if the subscription expires?"
-    Orders bound to the subscription are automatically frozen: no new slots can be uploaded or claimed. Executors who are already working are given a grace period to check the verification status — if during this window the exchange confirms successful verification, the slot is completed properly.
+    Slots of wholesale and team orders that no executor has taken yet are frozen: while there is no subscription, they are not offered to executors. Slots already in progress are completed as usual. Frozen slots are not cancelled automatically — once the subscription is renewed, they are offered to executors again.
 
 ??? question "Can I extend my subscription in advance?"
     Yes. Purchasing a new subscription while the previous one is still active extends its term.
@@ -64,10 +64,10 @@
     No. All orders go into a common pool and are picked up by Executors based on their availability; the Service does not provide priority processing for individual slots.
 
 ??? question "How do I know that the verification has passed?"
-    The bot will send a notification when the status changes. The status is also always visible in the slot card.
+    The bot will send a notification when a slot is completed or cancelled. The status is also always visible in the slot card.
 
 ??? question "The exchange rejected the verification with no option to retry — what next?"
-    With a "BLOCKED" status, funds for the slot are returned automatically. The order can be created again using a different account.
+    If the exchange has closed verification on the account ("🚫 KYC no longer available"), the money for the slot is returned to your balance automatically. You can create a new order with a different account.
 
 ## Re-verification
 
@@ -78,7 +78,7 @@
     For standard and wholesale slots the catalog price of the corresponding type applies; for team slots — the price you set yourself. The exact amount is shown before confirming the order.
 
 ??? question "Can I cancel a re-verification?"
-    Yes — within an established window after order creation.
+    Yes — 24 hours after the slot was taken into work. If a verification link has already been issued for the slot, the platform checks the exchange before refunding: if the verification has passed, there is no refund.
 
 ## Account Security
 
@@ -91,7 +91,7 @@
 ## Refunds
 
 ??? question "In what cases is a refund possible?"
-    Before the slot is taken into work — a full refund on request. After — if the exchange has closed the possibility of further verification attempts on the account, as well as in case of Executor inactivity beyond the established period.
+    You can cancel with a refund yourself: an unpublished order, frozen slots and a re-verification. A published slot is cancelled with a refund by the platform automatically — if the deadline you chose at purchase has passed, or the exchange has closed verification on the account. If the verification has passed through an issued link after all, there is no refund.
 
 ??? question "Where do refunded funds go?"
     To the internal balance, to the same debit sources from which the payment was made (proportionally between the main and referral balances).
