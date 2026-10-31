@@ -34,7 +34,7 @@ Any method can return these. A method's own errors are on its page.
 | 411 | `length_required` | A form with a file was sent in chunks — `Content-Length` is required |
 | 413 | `payload_too_large` | The body is larger than [allowed](#request-size) |
 | 415 | `unsupported_media_type` | A method with files expects `multipart/form-data` |
-| 422 | `validation_error` | The request doesn't match the documentation; `field` shows where the first error is: `body.quantity`, `query.limit`, `header.Idempotency-Key`. A request without a required `Idempotency-Key` gets the same response |
+| 422 | `validation_error` | The request doesn't match the documentation; `field` shows where the first error is: `body.quantity`, `query.limit`, `header.Idempotency-Key`, `path.order_id` or `path.slot_id` (a number not in the `8402-9173` form). A request without a required `Idempotency-Key` gets the same response |
 | 422 | `invalid_idempotency_key` | `Idempotency-Key` isn't in the right [format](#idempotency) |
 | 422 | `idempotency_key_reused` | This `Idempotency-Key` has already been used for a different request — new action, new key |
 | 409 | `idempotency_in_progress` | A request with this `Idempotency-Key` is still running — retry in a few seconds with the same key |
@@ -60,7 +60,7 @@ Any method can return these. A method's own errors are on its page.
 - A request counts against the general counter (read or write) and against its own counter, if it has one: `GET /orders` counts as one read and one list request.
 - The window is fixed: it starts with the first request in the window. Rejected requests count too.
 - Over the limit, you get `429 rate_limited` with a `Retry-After` header: the seconds until the window ends.
-- After 30 `invalid_api_key` responses within 60 seconds from one IP, all requests from that IP get `429 rate_limited` until the end of the window — even with a valid key.
+- After 30 `invalid_api_key` responses within 60 seconds from one IP, requests with an unknown key from that IP get `429 rate_limited` until the end of the window. A valid key from that IP keeps working.
 
 ### Concurrent operations
 

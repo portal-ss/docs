@@ -34,7 +34,7 @@
 | 411 | `length_required` | Форма с файлом отправлена частями — нужен `Content-Length` |
 | 413 | `payload_too_large` | Тело больше [допустимого](#request-size) |
 | 415 | `unsupported_media_type` | Метод с файлами ждёт `multipart/form-data` |
-| 422 | `validation_error` | Запрос не соответствует описанию; `field` — где первая ошибка: `body.quantity`, `query.limit`, `header.Idempotency-Key`. Так же отвечает запрос без обязательного `Idempotency-Key` |
+| 422 | `validation_error` | Запрос не соответствует описанию; `field` — где первая ошибка: `body.quantity`, `query.limit`, `header.Idempotency-Key`, `path.order_id` или `path.slot_id` (номер не в виде `8402-9173`). Так же отвечает запрос без обязательного `Idempotency-Key` |
 | 422 | `invalid_idempotency_key` | `Idempotency-Key` не в [формате](#idempotency) |
 | 422 | `idempotency_key_reused` | Этот `Idempotency-Key` уже использован для другого запроса — новое действие, новый ключ |
 | 409 | `idempotency_in_progress` | Запрос с этим `Idempotency-Key` ещё выполняется — повторите через несколько секунд с тем же ключом |
@@ -60,7 +60,7 @@
 - Запрос тратит общий счётчик (чтение или запись) и свой, если он есть: `GET /orders` — одно чтение и один список.
 - Окно фиксированное: отсчёт идёт от первого запроса в окне. Отклонённые запросы тоже считаются.
 - Сверх лимита — `429 rate_limited` с заголовком `Retry-After`: секунды до конца окна.
-- После 30 ответов `invalid_api_key` за 60 секунд с одного IP все запросы с этого IP получают `429 rate_limited` до конца окна — даже с верным ключом.
+- После 30 ответов `invalid_api_key` за 60 секунд с одного IP запросы с неизвестным ключом с этого IP получают `429 rate_limited` до конца окна. Верный ключ с этого IP продолжает работать.
 
 ### Одновременные операции
 
