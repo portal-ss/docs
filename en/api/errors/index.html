@@ -1508,7 +1508,7 @@
 <tr>
 <td>422</td>
 <td><code>validation_error</code></td>
-<td>The request doesn't match the documentation; <code>field</code> shows where the first error is: <code>body.quantity</code>, <code>query.limit</code>, <code>header.Idempotency-Key</code>. A request without a required <code>Idempotency-Key</code> gets the same response</td>
+<td>The request doesn't match the documentation; <code>field</code> shows where the first error is: <code>body.quantity</code>, <code>query.limit</code>, <code>header.Idempotency-Key</code>, <code>path.order_id</code> or <code>path.slot_id</code> (a number not in the <code>8402-9173</code> form). A request without a required <code>Idempotency-Key</code> gets the same response</td>
 </tr>
 <tr>
 <td>422</td>
@@ -1604,7 +1604,7 @@
 <li>A request counts against the general counter (read or write) and against its own counter, if it has one: <code>GET /orders</code> counts as one read and one list request.</li>
 <li>The window is fixed: it starts with the first request in the window. Rejected requests count too.</li>
 <li>Over the limit, you get <code>429 rate_limited</code> with a <code>Retry-After</code> header: the seconds until the window ends.</li>
-<li>After 30 <code>invalid_api_key</code> responses within 60 seconds from one IP, all requests from that IP get <code>429 rate_limited</code> until the end of the window — even with a valid key.</li>
+<li>After 30 <code>invalid_api_key</code> responses within 60 seconds from one IP, requests with an unknown key from that IP get <code>429 rate_limited</code> until the end of the window. A valid key from that IP keeps working.</li>
 </ul>
 <h3 id="concurrent-operations">Concurrent operations<a class="headerlink" href="#concurrent-operations" title="Permanent link">&para;</a></h3>
 <p>The refusal lifts once the operation already running finishes. Only <code>cooldown</code> comes with <code>Retry-After</code>.</p>

@@ -1508,7 +1508,7 @@
 <tr>
 <td>422</td>
 <td><code>validation_error</code></td>
-<td>Запит не відповідає опису; <code>field</code> — де перша помилка: <code>body.quantity</code>, <code>query.limit</code>, <code>header.Idempotency-Key</code>. Таку саму відповідь отримує запит без обов'язкового <code>Idempotency-Key</code></td>
+<td>Запит не відповідає опису; <code>field</code> — де перша помилка: <code>body.quantity</code>, <code>query.limit</code>, <code>header.Idempotency-Key</code>, <code>path.order_id</code> або <code>path.slot_id</code> (номер не у вигляді <code>8402-9173</code>). Таку саму відповідь отримує запит без обов'язкового <code>Idempotency-Key</code></td>
 </tr>
 <tr>
 <td>422</td>
@@ -1604,7 +1604,7 @@
 <li>Запит витрачає спільний лічильник (читання або запис) і свій, якщо він є: <code>GET /orders</code> — одне читання й один список.</li>
 <li>Вікно фіксоване: відлік іде від першого запиту у вікні. Відхилені запити теж враховуються.</li>
 <li>Понад ліміт — <code>429 rate_limited</code> із заголовком <code>Retry-After</code>: секунди до кінця вікна.</li>
-<li>Після 30 відповідей <code>invalid_api_key</code> за 60 секунд з однієї IP-адреси всі запити з цієї адреси отримують <code>429 rate_limited</code> до кінця вікна — навіть із правильним ключем.</li>
+<li>Після 30 відповідей <code>invalid_api_key</code> за 60 секунд з однієї IP-адреси запити з невідомим ключем з цієї адреси отримують <code>429 rate_limited</code> до кінця вікна. Правильний ключ з цієї адреси працює далі.</li>
 </ul>
 <h3 id="_2">Одночасні операції<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Відмова знімається, коли закінчиться те, що вже триває. <code>Retry-After</code> є лише в <code>cooldown</code>.</p>

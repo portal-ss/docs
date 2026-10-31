@@ -1508,7 +1508,7 @@
 <tr>
 <td>422</td>
 <td><code>validation_error</code></td>
-<td>Запрос не соответствует описанию; <code>field</code> — где первая ошибка: <code>body.quantity</code>, <code>query.limit</code>, <code>header.Idempotency-Key</code>. Так же отвечает запрос без обязательного <code>Idempotency-Key</code></td>
+<td>Запрос не соответствует описанию; <code>field</code> — где первая ошибка: <code>body.quantity</code>, <code>query.limit</code>, <code>header.Idempotency-Key</code>, <code>path.order_id</code> или <code>path.slot_id</code> (номер не в виде <code>8402-9173</code>). Так же отвечает запрос без обязательного <code>Idempotency-Key</code></td>
 </tr>
 <tr>
 <td>422</td>
@@ -1604,7 +1604,7 @@
 <li>Запрос тратит общий счётчик (чтение или запись) и свой, если он есть: <code>GET /orders</code> — одно чтение и один список.</li>
 <li>Окно фиксированное: отсчёт идёт от первого запроса в окне. Отклонённые запросы тоже считаются.</li>
 <li>Сверх лимита — <code>429 rate_limited</code> с заголовком <code>Retry-After</code>: секунды до конца окна.</li>
-<li>После 30 ответов <code>invalid_api_key</code> за 60 секунд с одного IP все запросы с этого IP получают <code>429 rate_limited</code> до конца окна — даже с верным ключом.</li>
+<li>После 30 ответов <code>invalid_api_key</code> за 60 секунд с одного IP запросы с неизвестным ключом с этого IP получают <code>429 rate_limited</code> до конца окна. Верный ключ с этого IP продолжает работать.</li>
 </ul>
 <h3 id="_2">Одновременные операции<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>Отказ снимается, когда закончится то, что уже идёт. <code>Retry-After</code> есть только у <code>cooldown</code>.</p>
