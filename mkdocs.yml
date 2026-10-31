@@ -55,6 +55,17 @@ plugins:
                 - Подписка: guide/subscription.md
                 - Веб-версия: guide/web.md
                 - Реферальная программа: guide/referral.md
+            - API:
+                - Начало работы: api/index.md
+                - Аккаунт и баланс: api/account.md
+                - Заказы и слоты: api/orders.md
+                - Загрузка и публикация: api/upload.md
+                - Действия со слотом: api/slot-actions.md
+                - Реверификация: api/reverify.md
+                - Отмены: api/cancel.md
+                - Лента событий: api/events.md
+                - Статусы и коды: api/codes.md
+                - Ошибки и лимиты: api/errors.md
             - Условия использования: terms.md
             - FAQ: faq.md
         - locale: uk
@@ -69,7 +80,7 @@ plugins:
                 - Баланс і поповнення: guide/balance.md
                 - Замовлення: guide/orders.md
                 - Завантаження акаунтів: guide/upload.md
-                - Виконання замовлення і терміни: guide/lifecycle.md
+                - Виконання замовлення й строки: guide/lifecycle.md
                 - Скасування та повернення: guide/cancel-refunds.md
                 - Реверифікації: guide/reverify.md
                 - Risk Removal на MEXC: guide/risk-removal.md
@@ -78,6 +89,17 @@ plugins:
                 - Підписка: guide/subscription.md
                 - Вебверсія: guide/web.md
                 - Реферальна програма: guide/referral.md
+            - API:
+                - Початок роботи: api/index.md
+                - Акаунт і баланс: api/account.md
+                - Замовлення й слоти: api/orders.md
+                - Завантаження й публікація: api/upload.md
+                - Дії зі слотом: api/slot-actions.md
+                - Реверифікація: api/reverify.md
+                - Скасування: api/cancel.md
+                - Стрічка подій: api/events.md
+                - Статуси й коди: api/codes.md
+                - Помилки й ліміти: api/errors.md
             - Умови використання: terms.md
             - FAQ: faq.md
         - locale: en
@@ -101,6 +123,17 @@ plugins:
                 - Subscription: guide/subscription.md
                 - Web app: guide/web.md
                 - Referral program: guide/referral.md
+            - API:
+                - Getting started: api/index.md
+                - Account and balance: api/account.md
+                - Orders and slots: api/orders.md
+                - Uploading and publishing: api/upload.md
+                - Slot actions: api/slot-actions.md
+                - Re-verification: api/reverify.md
+                - Cancellations: api/cancel.md
+                - Event feed: api/events.md
+                - Statuses and codes: api/codes.md
+                - Errors and limits: api/errors.md
             - Terms of Use: terms.md
             - FAQ: faq.md
 
@@ -114,6 +147,12 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+
+extra_css:
+  - assets/api.css
+
+extra_javascript:
+  - assets/api.js
 
 extra:
   generator: false

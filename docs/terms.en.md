@@ -1,6 +1,6 @@
 # Terms of Use
 
-_Effective from: October 20, 2026_
+_Effective from: October 31, 2026_
 
 These Terms constitute an agreement between you and the **KYC Portal** service (the "Service"). By using the Service, you confirm that you have read and agree to these Terms. If you do not agree with any provision, discontinue use of the Service.
 
@@ -8,7 +8,7 @@ These Terms constitute an agreement between you and the **KYC Portal** service (
 
 ## 1. About the Service and the Parties
 
-KYC Portal is a service available through Telegram bots and a web application that facilitates the conclusion and performance of transactions between Buyers of services and Executors (Sellers of services). Except for manual orders (Section 3), the Service does not provide services itself and acts as a technical platform that supplies the infrastructure for interaction between the parties and the settlement of payments between them.
+KYC Portal is a service available through Telegram bots, a web application, and an application programming interface (the "API") that facilitates the conclusion and performance of transactions between Buyers of services and Executors (Sellers of services). Except for manual orders (Section 3), the Service does not provide services itself and acts as a technical platform that supplies the infrastructure for interaction between the parties and the settlement of payments between them.
 
 A User is any person who uses the Service, including Buyers and Executors.
 
@@ -33,7 +33,9 @@ The Buyer is solely responsible for ensuring that the data and access provided f
 
 If, during the performance of an order, the data or access provided cease to be fit for use, the Buyer undertakes to update them; until they are updated, the performance of the item and the running of its time limits are suspended.
 
-By providing access to an exchange account, the Buyer consents to any actions with that account that are necessary to perform the order.
+If a service includes an additional stage after verification, as stated in the Service's interface, the item is deemed performed once that stage is completed. The Buyer undertakes to keep access to the email linked to the exchange account and to pass on to the Service the codes the exchange sends to that email within the time limit set by the Service. If the Buyer does not pass on a code within that time limit, the item is deemed performed without completion of the additional stage and is not refundable.
+
+By providing access to an exchange account, the Buyer consents to actions with that account that are necessary to perform the order, including the Service changing the account's security settings required for this (in particular, turning off face login) and entering the codes passed on by the Buyer.
 
 In a team order, the Buyer selects the Executors from the persons they have invited and sets the price of their work. The Service provides only the technical infrastructure for this and is not responsible for the quality, timeliness, or good faith of the order's performance by members of the Buyer's team.
 
@@ -57,7 +59,7 @@ When a subscription ends, items of wholesale and team orders that are not in wor
 
 ## 6. Refunds
 
-Refunds are issued in accordance with the Service's current refund policy in the cases provided for by the policy and the Service's interface, in particular: cancellation of an order before it is published, failure of the ordered verification to pass within the deadline chosen by the Buyer, or refusal by the exchange to allow it on the account provided. After an order is published, the Buyer may cancel an item only in the cases provided for by the Service's interface. If the exchange check shows that the verification has passed, the item is deemed performed and is not refundable. Refunded funds are credited to the Buyer's balance in the Service.
+Refunds are issued in accordance with the Service's current refund policy in the cases provided for by the policy and the Service's interface, in particular: cancellation of an order before it is published, failure of the ordered verification to pass within the deadline chosen by the Buyer, refusal by the exchange to allow it on the account provided, or failure, through the Executor's fault, to complete the additional stage (Section 3) within the time limit set by the Service. After an order is published, the Buyer may cancel an item only in the cases provided for by the Service's interface. If the exchange check shows that the verification has passed, the item is deemed performed and is not refundable, except for services with an additional stage (Section 3). Refunded funds are credited to the Buyer's balance in the Service.
 
 The subscription fee **is not refundable**.
 
@@ -88,12 +90,16 @@ The User is prohibited from:
 - circumventing or attempting to circumvent the Service's anti-fraud mechanisms;
 - disrupting the operation of the Service, obtaining unauthorized access to its infrastructure, exploiting identified vulnerabilities, and taking any other actions aimed at compromising the operation or security of the Service;
 - copying, decompiling, or otherwise examining the Service's software in order to reproduce its functionality;
-- automating interaction with the Service or collecting data from it by automated means without the Service's written consent;
+- automating interaction with the Service or collecting data from it by automated means without the Service's written consent, other than using the API with keys issued by the Service, within the rights of those keys;
 - taking actions contrary to the terms of use of the exchanges on which verification is performed.
+
+The Buyer undertakes to keep API keys secret. Actions taken with an API key are deemed to be the Buyer's own actions, including spending the balance.
 
 ## 10. Suspension and Blocking
 
 The Service is entitled to restrict, suspend, or block the User upon breach of these Terms, reasonable suspicion of breach, or for the purposes of an investigation.
+
+API access is granted at the Service's discretion. The Service is entitled at any time to refuse, restrict, suspend, or terminate API access, to revoke any API key, and to set limits on the number of requests.
 
 The Service is entitled to temporarily withhold payouts until an investigation is completed, and to temporarily suspend payouts for technical or operational reasons.
 
@@ -130,6 +136,7 @@ The Service's official channels:
 - the KYC Portal shop bot — [@kyctrade_bot](https://t.me/kyctrade_bot);
 - the KYC Portal workspace bot — [@kycportal_bot](https://t.me/kycportal_bot);
 - the KYC Portal web app — [app.kycportal.org](https://app.kycportal.org);
+- the KYC Portal API — `https://app.kycportal.org/api/v1`;
 - support — [@freidbase](https://t.me/freidbase).
 
 The Service is not liable for the actions of persons impersonating the Service or its staff, or for the consequences of interacting with them.
