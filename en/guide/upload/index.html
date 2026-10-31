@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -37,10 +37,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -58,6 +58,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../assets/api.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -618,10 +620,32 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#replacing-accounts-before-publishing" class="md-nav__link">
+  <a href="#can-verify" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Replacing accounts before publishing
+        Can the verification start
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-an-account-is-rejected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why an account is rejected
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replacing before publishing
       
     </span>
   </a>
@@ -630,28 +654,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#can-verify" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Can the verification start now
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-an-account-may-be-rejected" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why an account may be rejected
-      
-    </span>
-  </a>
   
 </li>
       
@@ -679,43 +681,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#when-the-platform-asks-for-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When the platform asks for data
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#while-the-slot-is-waiting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        While the slot is waiting
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#what-to-upload" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What to upload
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#proxy-swap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The exchange doesn't open through your proxy
+        The exchange doesn't open through the proxy
       
     </span>
   </a>
@@ -724,17 +693,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1012,6 +970,345 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Account and balance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orders and slots
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading and publishing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/slot-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slot actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Re-verification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/cancel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cancellations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event feed
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statuses and codes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Errors and limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../terms/" class="md-nav__link">
         
@@ -1138,10 +1435,32 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#replacing-accounts-before-publishing" class="md-nav__link">
+  <a href="#can-verify" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Replacing accounts before publishing
+        Can the verification start
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-an-account-is-rejected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why an account is rejected
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Replacing before publishing
       
     </span>
   </a>
@@ -1150,28 +1469,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#can-verify" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Can the verification start now
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-an-account-may-be-rejected" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why an account may be rejected
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1199,43 +1496,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#when-the-platform-asks-for-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When the platform asks for data
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#while-the-slot-is-waiting" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        While the slot is waiting
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#what-to-upload" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What to upload
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#proxy-swap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The exchange doesn't open through your proxy
+        The exchange doesn't open through the proxy
       
     </span>
   </a>
@@ -1244,17 +1508,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1276,221 +1529,97 @@
 
 
 <h1 id="uploading-accounts">Uploading accounts<a class="headerlink" href="#uploading-accounts" title="Permanent link">&para;</a></h1>
-<p>For the platform to carry out a verification, you need to upload the following to each slot in the order:</p>
-<ul>
-<li><strong>the account's session</strong> — cookies from a browser that is logged in to the exchange account;</li>
-<li><strong>a proxy</strong> — a separate one for each account.</li>
-</ul>
-<p>The verification runs inside your session: the executor doesn't log in to the account separately and never receives the login details. Uploading works the same way in the workspace bot <a href="https://t.me/kycportal_bot">@kycportal_bot</a> (the "📤 Upload accounts" or "📤 Upload all accounts" button on the order card) and in the web app.</p>
+<p>Each slot needs the exchange account's cookies — an export from a browser that's logged in — and a separate proxy. To start uploading, tap "📤 Upload accounts" on the order card in the workspace bot <a href="https://t.me/kycportal_bot">@kycportal_bot</a> or in the web app.</p>
 <h2 id="upload-methods">Upload methods<a class="headerlink" href="#upload-methods" title="Permanent link">&para;</a></h2>
 <h3 id="ads-power">ADS Power<a class="headerlink" href="#ads-power" title="Permanent link">&para;</a></h3>
-<p>If you manage your accounts in ADS Power:</p>
 <ol>
-<li>Log in to the accounts you need in ADS Power.</li>
-<li>Close the profiles you're going to export.</li>
-<li>Export them to <code>.txt</code>. The file must contain cookies for every profile; the proxy and user-agent are also taken from the file if they're included.</li>
-<li>Send the file to the bot ("📦 ADS Power (.txt)") or upload it in the web app ("ADS Power file").</li>
+<li>In each profile, log in to the exchange account and check that the profile has a proxy set.</li>
+<li>Close the profiles and export them to <code>.txt</code> — the cookies, proxy and user-agent are taken from the file.</li>
+<li>Send the file: in the bot — "📦 ADS Power (.txt)", in the web app — "ADS Power file".</li>
 </ol>
-<p>Each profile in the file fills one slot. If the file has more accounts than there are free slots in the order, the extra ones are skipped, and you get a separate message about it. One upload takes at most <strong>200</strong> accounts — for a large order, split the file and send the parts one after another.</p>
+<p>One profile fills one slot; profiles beyond the free slots are skipped. A file with more than 200 profiles isn't accepted.</p>
 <h3 id="manually">Manually<a class="headerlink" href="#manually" title="Permanent link">&para;</a></h3>
-<p>You provide the proxy and cookies separately for each account:</p>
 <ul>
-<li>in the bot — "📁 Manual (proxy + cookies)": first a list of proxies (one per line), then a cookies file (<code>.json</code> or <code>.txt</code>) for each slot in turn. The bot checks the proxies right away and shows each one's country. If an account fails its check because of the proxy, you can send a new proxy for that slot as a single line at the cookies step;</li>
-<li>in the web app — "Manual": a card for each account, with a proxy line and a cookies field.</li>
+<li>In the bot — "📁 Manual (proxies + cookies)": a list of proxies, one per line, then a cookies file (<code>.json</code> or <code>.txt</code>) for each slot in turn.</li>
+<li>In the web app — "Manual": a proxy line and a cookies text field for each account.</li>
 </ul>
-<p>Proxies and cookies are matched in order: the first proxy line goes to the first account, and so on.</p>
-<p><strong>Cookie formats:</strong></p>
-<ul>
-<li>a JSON array of cookie objects — the standard export from a browser extension;</li>
-<li>a JSON object <code>{"name": "value"}</code> or a <code>{"cookies": [...]}</code> wrapper;</li>
-<li>a string in Cookie header format: <code>name=value; name2=value2</code>;</li>
-<li>a single token like <code>xxx.yyy.zzz</code>.</li>
-</ul>
-<p><strong>Proxy formats:</strong></p>
-<ul>
-<li><code>host:port</code></li>
-<li><code>host:port:user:pass</code></li>
-<li><code>user:pass@host:port</code></li>
-<li><code>scheme://[user:pass@]host:port</code></li>
-</ul>
-<p>You don't have to specify the protocol — the platform detects it automatically. Local and internal addresses (such as <code>127.0.0.1</code> or <code>192.168.x.x</code>) aren't accepted.</p>
+<p>Proxies and cookies are matched in order: the first proxy goes to the first account.</p>
+<p><strong>Cookies:</strong> JSON from an extension (Cookie-Editor: Export → JSON), a <code>cookies.txt</code> file in Netscape format, or a <code>name=value; name2=value2</code> string; for Bybit, a token like <code>xxx.yyy.zzz</code>. A password-protected export, HAR, a screenshot or text from the page won't work.</p>
+<p><strong>Proxies:</strong> <code>host:port</code>, <code>host:port:user:pass</code>, <code>user:pass:host:port</code>, <code>user:pass@host:port</code> or <code>host:port@user:pass</code>, optionally with an <code>http://</code> or <code>socks5://</code> scheme. HTTP, HTTPS and SOCKS work. One proxy per line, no spaces; the port is required; Latin characters only. Local addresses (<code>127.0.0.1</code>, <code>192.168.x.x</code>) aren't accepted.</p>
 <h2 id="account-checks">Account checks<a class="headerlink" href="#account-checks" title="Permanent link">&para;</a></h2>
-<p>Every upload — by file or manual — is sent as a batch. The platform checks each account on the exchange and reports the result for each one. The check may take a while:</p>
+<p>The platform checks each account on the exchange and reports the result for each one; you can close the web page — the result is kept. While one file is being checked, you can't send another for the same order.</p>
 <ul>
-<li>it runs on the platform's side: in the web app you can close the page and come back later — the result is kept; in the bot, if the check takes long, the result arrives as a separate message;</li>
-<li>if a platform update interrupts the check, it resumes on its own, and accounts already accepted aren't lost. If the check does stop early, you'll see how many accounts were saved — send the rest again (in the web app, "Upload remaining");</li>
-<li>while the platform is checking one file for an order, you can't send another file for the same order — wait for the result.</li>
+<li>Some were rejected — send a file with only the rejected ones; accepted slots aren't affected.</li>
+<li>The check was interrupted — send the rest again (in the web app, "Upload remaining").</li>
+<li>"🔁 Start over (reset everything)" in the bot removes every accepted account from the order; "Start over" in the web app clears the slots once the next file is accepted.</li>
 </ul>
-<p>If some accounts are accepted and others aren't, send a file with only the rejected ones — accepted slots aren't affected. The error list gives each account's position in your file and its ADS Power profile name, so they're easy to find. If you lose track, start from scratch: "🔁 Start over (reset everything)" in the bot, "Start over" in the web app.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>"🔁 Start over (reset everything)" removes every accepted account from the order, and you'll have to redo the whole upload. In the web app, "Start over" clears the slots once the next file is accepted.</p>
-</div>
-<h3 id="replacing-accounts-before-publishing">Replacing accounts before publishing<a class="headerlink" href="#replacing-accounts-before-publishing" title="Permanent link">&para;</a></h3>
-<p>Until the order is published, you can open any slot and replace its account: "✏️ Edit this slot" in the bot, or the "Edit slot" block on the slot card in the web app (where you can also change just the proxy). If the new account fails its check, the slot keeps the old one.</p>
-<p>"✏️ Edit all slots" in the bot and "Re-upload all accounts" in the web app start the upload from scratch: once the file is accepted, every slot is cleared and refilled from it in order. A slot whose account fails its check stays empty, and an order with an empty slot can't be published. For publishing, see <a href="../orders/#publish">Orders</a>.</p>
-<h2 id="can-verify">Can the verification start now<a class="headerlink" href="#can-verify" title="Permanent link">&para;</a></h2>
-<p>When you upload an account to an initial verification order, the platform asks the exchange whether a verification can start on that account right now. The account is accepted only if the exchange allows it — including after a rejected attempt, if the exchange allows another one. Otherwise the account is rejected, and the slot stays free for a different account. The reasons for a refusal:</p>
-<ul>
-<li>the account has already passed verification;</li>
-<li>the exchange no longer allows verification on this account;</li>
-<li>the account has used up its daily verification attempts — you can upload it again in about a day;</li>
-<li>a verification is already under review on the account — wait for its result.</li>
-</ul>
-<p>What can be known in advance depends on the exchange: KuCoin only reports that an account is already verified, so on KuCoin only such accounts are rejected. There's no such check when you <a href="#reupload">re-upload</a>.</p>
-<p>If the exchange stops allowing a verification after the order is published (for example, the account has used up its attempts) and no verification link has been issued to an executor for the slot yet, the slot is cancelled with a full refund, and the notification names the reason.</p>
-<h2 id="why-an-account-may-be-rejected">Why an account may be rejected<a class="headerlink" href="#why-an-account-may-be-rejected" title="Permanent link">&para;</a></h2>
+<h3 id="can-verify">Can the verification start<a class="headerlink" href="#can-verify" title="Permanent link">&para;</a></h3>
+<p>When you upload to an initial verification order, the platform asks the exchange whether a verification can start on the account right now. If not, the account is rejected and the slot stays free.</p>
+<h3 id="why-an-account-is-rejected">Why an account is rejected<a class="headerlink" href="#why-an-account-is-rejected" title="Permanent link">&para;</a></h3>
+<p>For each rejected account, the bot and the web app give the reason and what to do. Common cases:</p>
 <table>
 <thead>
 <tr>
 <th>Reason</th>
-<th>What happened</th>
 <th>What to do</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Proxy not working</td>
-<td>The proxy doesn't respond</td>
-<td>Replace it with a working proxy</td>
+<td>The proxy doesn't respond, rejected the login or password, or won't connect</td>
+<td>Check the proxy with your provider or send another one</td>
 </tr>
 <tr>
-<td>Exchange unreachable through the proxy</td>
-<td>The proxy works, but the provider's network blocks the exchange</td>
-<td>Use a proxy from a different provider or city</td>
+<td>The exchange doesn't open through the proxy</td>
+<td>Send a proxy from a different provider or city</td>
 </tr>
 <tr>
-<td>No proxy</td>
-<td>No proxy was provided for the account</td>
-<td>Add a proxy</td>
+<td>The login has expired or the account isn't logged in</td>
+<td>Log in to the account, export the cookies right away and don't log out</td>
 </tr>
 <tr>
-<td>Session problem</td>
-<td>The cookies are invalid, or the exchange rejected them; with ADS Power, the profile may have been exported before the login was saved</td>
-<td>Log in to the account again and export fresh cookies</td>
+<td>Wrong cookies: from another exchange, from the wrong tab, with extra sites, password-protected, damaged</td>
+<td>Export again on the exchange tab where you're logged in, without a password</td>
 </tr>
 <tr>
-<td>No cookies for this exchange</td>
-<td>The file has no cookies for the exchange you need — probably a different profile was exported</td>
-<td>Export the profile that's logged in to this exchange</td>
-</tr>
-<tr>
-<td>Too many cookies</td>
-<td>The browser profile has collected cookies from unrelated sites</td>
-<td>Export a profile that has only this exchange open</td>
-</tr>
-<tr>
-<td>Account already uploaded</td>
-<td>This account is already in another slot of this order, or in another active order</td>
-<td>Use a different account, or find where it's already uploaded (in the web app, under "Slots")</td>
-</tr>
-<tr>
-<td>Different account</td>
-<td>On a re-upload, the session belongs to a different account than the one in the slot</td>
-<td>Upload a session from the same account</td>
-</tr>
-<tr>
-<td>Already verified</td>
-<td>The account has already passed verification on the exchange and can't pass it again</td>
-<td>Upload a different account</td>
-</tr>
-<tr>
-<td>Verification blocked</td>
-<td>The exchange no longer allows verification on this account</td>
-<td>Upload a different account</td>
+<td>The account is already uploaded or already verified, or the exchange won't let verification start</td>
+<td>Use a different account</td>
 </tr>
 <tr>
 <td>Attempts used up</td>
-<td>The account has used up its daily verification attempts on the exchange</td>
-<td>Try again in about a day, or upload a different account</td>
+<td>Upload again in about a day</td>
 </tr>
 <tr>
-<td>Verification already under review</td>
-<td>A verification is already under review on the account</td>
-<td>Wait for its result, or upload a different account</td>
-</tr>
-<tr>
-<td>Slot taken or closed</td>
-<td>The slot's state changed while the check was running; nothing was changed</td>
-<td>Try again if needed</td>
-</tr>
-<tr>
-<td>Exchange didn't respond</td>
-<td>The proxy and cookies are fine, but the exchange didn't respond</td>
-<td>Try again in a few minutes</td>
-</tr>
-<tr>
-<td>Check failed</td>
-<td>The check didn't complete</td>
-<td>Send the same file again in a few minutes; if it happens again, contact support</td>
+<td>The exchange didn't respond, the check failed</td>
+<td>Send again in a few minutes; if it happens again, contact support</td>
 </tr>
 </tbody>
 </table>
+<h3 id="replace">Replacing before publishing<a class="headerlink" href="#replace" title="Permanent link">&para;</a></h3>
+<p>To replace a slot's account: "✏️ Edit this slot" in the bot, "Edit slot" in the web app (where you can also change just the proxy). If the new account fails its check, the old one stays.</p>
+<p>"✏️ Edit all slots" in the bot and "Re-upload all accounts" in the web app refill the order from a new file from scratch; a slot whose account is rejected stays empty.</p>
 <h2 id="exchange-specifics">Exchange specifics<a class="headerlink" href="#exchange-specifics" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>MEXC</strong> — if the exchange's main domain doesn't open for you, log in through an alternative domain (for example, <code>mexc.fm</code>). The platform detects which domain the cookies came from and works through that domain.</li>
-<li><strong>Bybit</strong> — sessions only last a limited time, so export the cookies right before uploading.</li>
-<li><strong>KuCoin</strong> — browser profiles pick up unrelated cookies especially easily. Use a dedicated profile that has only ever opened KuCoin.</li>
+<li><strong>MEXC</strong> — if the main domain doesn't open, log in through <code>mexc.co</code> or <code>mexc.fm</code>.</li>
+<li><strong>Bybit</strong> — a cookie login lasts a few days: export the cookies right before uploading.</li>
+<li><strong>KuCoin</strong> — export from a browser profile that has only ever opened KuCoin.</li>
+<li><strong>BingX</strong> — you need access to the account's mailbox: after KYC, a code for the <a href="../lifecycle/#bingx">second stage</a> arrives there. Use accounts where actions are confirmed with the email code only: if BingX also asks for a Google Authenticator code or a phone code, the slot goes to support review.</li>
 </ul>
 <h2 id="reupload">Re-uploading<a class="headerlink" href="#reupload" title="Permanent link">&para;</a></h2>
-<p>Once the order is published, you can't change a slot's account or proxy. The exceptions are when the platform itself asks for fresh data, and when you replace a proxy the exchange doesn't open through (<a href="#proxy-swap">see below</a>).</p>
-<h3 id="when-the-platform-asks-for-data">When the platform asks for data<a class="headerlink" href="#when-the-platform-asks-for-data" title="Permanent link">&para;</a></h3>
-<p>The platform works with the account only through your session and your proxy. If it turns out the session has expired or the proxy has stopped responding, the slot moves to "⚠️ Data update required", and the bot sends you a message — for a single slot or as a summary for several. If the data still hasn't arrived after <strong>6 hours</strong>, you get one reminder. These messages can't be turned off in the notification settings.</p>
-<p>Before asking for a new proxy, the platform checks whether the proxy works at all. If the proxy works and only the exchange won't open, no new data is requested.</p>
-<h3 id="while-the-slot-is-waiting">While the slot is waiting<a class="headerlink" href="#while-the-slot-is-waiting" title="Permanent link">&para;</a></h3>
-<p>The slot is paused:</p>
-<ul>
-<li>no clock runs: not your <a href="../lifecycle/#deadline">deadline</a>, not the executor's time, and not the MEXC face-check deadline;</li>
-<li>the slot isn't cancelled and doesn't move to another executor automatically;</li>
-<li>you can't check the slot's status. Cancelling a re-verification becomes available after the update, and cancelling a frozen slot that already had a verification link issued waits for the update — only then does the platform check the exchange.</li>
-</ul>
-<p>If you had an open request to cancel a re-verification and the pause dropped it, the data-update message says so — you can send the request again after the update.</p>
-<h3 id="what-to-upload">What to upload<a class="headerlink" href="#what-to-upload" title="Permanent link">&para;</a></h3>
-<p>Upload exactly what's requested. In the bot, tap "🔄 Re-upload" on the slot card or the button in the message itself ("↩️ Update proxy", "↩️ Re-upload session", "↩️ Update slot"), then choose a method — ADS Power or manual.</p>
-<table>
-<thead>
-<tr>
-<th>What's needed</th>
-<th>In the bot</th>
-<th>In the web app</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Proxy</td>
-<td>One new proxy</td>
-<td>"Replace proxy"</td>
-</tr>
-<tr>
-<td>Cookies</td>
-<td>Fresh cookies; the saved proxy stays</td>
-<td>"Re-upload cookies"</td>
-</tr>
-<tr>
-<td>Proxy and cookies</td>
-<td>A new proxy and a fresh session</td>
-<td>"Re-upload proxy &amp; cookies"</td>
-</tr>
-</tbody>
-</table>
-<p>Re-upload requirements:</p>
-<ul>
-<li>the session must be from <strong>the same account</strong> that was in the slot — a session from a different account will be rejected;</li>
-<li>you update one slot at a time: one proxy (a list of several lines isn't accepted), and for ADS Power uploads, an export with exactly one account;</li>
-<li>the bot handles one upload at a time: if you start updating another slot, the previous upload is cancelled, and the bot tells you so.</li>
-</ul>
-<p>If the slot came to need more while you were getting the data ready — for example, you sent a new proxy and it turned out the session had expired too — the slot asks for both the proxy and the cookies. Send them together.</p>
-<p>Once the update succeeds, work on the slot resumes immediately, from where it stopped: the slot returns to its previous status, and its clocks to the time they had left before the pause. If the slot was left without an executor during the pause, it goes back to the queue for executors.</p>
-<h3 id="proxy-swap">The exchange doesn't open through your proxy<a class="headerlink" href="#proxy-swap" title="Permanent link">&para;</a></h3>
-<p>Sometimes the proxy works, but the provider's network blocks the exchange. If "🔍 Check status" answered "🌐 Your proxy works, but the exchange doesn't open through it…", you can replace the proxy yourself: "🔌 Replace proxy" on the slot card (in the web app, "Replace proxy" under the check's answer). The slot pauses until the new proxy arrives — tap "🔄 Re-upload" and send the proxy.</p>
-<p>If the same thing comes up while re-uploading cookies, the bot offers to take a new proxy too, and the web app shows a "Send a new proxy too" switch.</p>
-<h2 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Keep a separate browser profile for each exchange, and close the ADS Power profile before exporting it.</li>
-<li>Don't use the same proxy for two different accounts.</li>
-<li>Export cookies shortly before uploading, especially for Bybit.</li>
-<li>Don't upload an account that has already passed the verification you're ordering, or one that already has a verification under review.</li>
-</ul>
+<p>After publishing, a slot's data changes in two cases: the platform asked for it, or the exchange doesn't open through your proxy (<a href="#proxy-swap">below</a>).</p>
+<p>If the login to the account has expired or the proxy has stopped responding, the slot moves to "⚠️ Data update required" and the bot sends a message, plus one reminder after 6 hours with no response. While the slot waits for data, every clock is paused — your <a href="../lifecycle/#deadline">deadline</a>, the executor's time, the MEXC face check, your time for the BingX codes; the slot isn't cancelled and doesn't go to another executor.</p>
+<ol>
+<li>Tap "🔄 Re-upload" on the slot card or the button in the message. In the web app — "Replace proxy", "Upload cookies again" or "Upload proxy &amp; cookies again".</li>
+<li>Send what's requested: one proxy as a single line, fresh cookies from <strong>the same account</strong>, or both. From ADS Power — an export with exactly one account.</li>
+</ol>
+<p>After the update, the work and the clocks resume from where they stopped; at the BingX second stage, after new cookies the bot asks for a new code.</p>
+<h3 id="proxy-swap">The exchange doesn't open through the proxy<a class="headerlink" href="#proxy-swap" title="Permanent link">&para;</a></h3>
+<p>If "🔍 Check status" answered "🌐 Your proxy works, but the exchange doesn't open through it…":</p>
+<ol>
+<li>Tap "🔌 Replace proxy" on the slot card (in the web app, "Replace proxy" under the check's answer).</li>
+<li>Upload a proxy from a different provider or city (in the bot, via "🔄 Re-upload").</li>
+</ol>
+<p>If this comes up while you're re-uploading cookies, send a new proxy at the same step (in the web app, the "Send a new proxy too" switch).</p>
 
 
 
@@ -1541,10 +1670,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../../assets/api.js"></script>
       
     
   </body>

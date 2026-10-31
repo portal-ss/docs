@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -37,10 +37,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -58,6 +58,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../assets/api.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -514,7 +516,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Из чего складывается баланс
+        Пополнение
       
     </span>
   </a>
@@ -525,29 +527,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как пополнить баланс
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Если депозит не пришёл
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Где смотреть баланс и операции
       
     </span>
   </a>
@@ -884,6 +864,345 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Аккаунт и баланс
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Заказы и слоты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Загрузка и публикация
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/slot-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Действия со слотом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реверификация
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/cancel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отмены
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лента событий
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Статусы и коды
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ошибки и лимиты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../terms/" class="md-nav__link">
         
@@ -962,7 +1281,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Из чего складывается баланс
+        Пополнение
       
     </span>
   </a>
@@ -973,29 +1292,7 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Как пополнить баланс
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      
         Если депозит не пришёл
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Где смотреть баланс и операции
       
     </span>
   </a>
@@ -1020,34 +1317,20 @@
 
 
 <h1 id="_1">Баланс и пополнение<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>Все покупки на платформе — верификации, реверификации и подписка — оплачиваются с внутреннего баланса в долларах США. Прямой оплаты заказа картой или криптовалютой нет: сначала пополняется баланс, затем с него списывается оплата.</p>
-<h2 id="_2">Из чего складывается баланс<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Основной</strong> — ваши пополнения криптовалютой.</li>
-<li><strong>Реферальный</strong> — бонусы за приглашённых клиентов (см. <a href="../referral/">Реферальная программа</a>).</li>
-</ul>
-<p>При оплате сначала списываются реферальные средства, затем основные. Если заказ или слот отменяется, деньги возвращаются на баланс в той же пропорции, в какой были списаны (см. <a href="../cancel-refunds/">Отмена и возвраты</a>).</p>
-<p>Вывести основной баланс нельзя — он предназначен для оплаты услуг платформы. О выводе реферального баланса — в разделе <a href="../referral/#withdraw">Реферальная программа</a>.</p>
-<h2 id="_3">Как пополнить баланс<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>Все покупки оплачиваются с баланса в долларах. <strong>Основной</strong> баланс — ваши пополнения, вывести его нельзя. <strong>Реферальный</strong> — бонусы за приглашённых (<a href="../referral/#withdraw">вывод</a>); при оплате он списывается первым.</p>
+<h2 id="_2">Пополнение<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Откройте пополнение:<ul>
-<li>в боте-магазине — «👤 Профиль» → «💳 Пополнить баланс»;</li>
-<li>в рабочем боте — «💵 Баланс (…$)» → «💳 Пополнить баланс»;</li>
-<li>в веб-версии — раздел «Баланс».</li>
-</ul>
-</li>
+<li>Откройте пополнение: «👤 Профиль» → «💳 Пополнить баланс» в боте-магазине, «💵 Баланс (…$)» → «💳 Пополнить баланс» в рабочем боте или «Баланс» в веб-версии.</li>
 <li>Выберите сеть: <strong>BEP20 (BSC)</strong>, <strong>Polygon</strong> или <strong>Arbitrum One</strong>.</li>
-<li>Скопируйте адрес. Он постоянный и закреплён за вами — во всех трёх сетях это один и тот же адрес, поэтому пополнять можно на него каждый раз.</li>
-<li>Отправьте на этот адрес <strong>USDT</strong> или <strong>USDC</strong> в выбранной сети. Минимальная сумма пополнения — <strong>1 USDT/USDC</strong>; перевод меньше минимума не зачисляется.</li>
-<li>Когда транзакция появится в сети, придёт уведомление «💸 Депозит обнаружен».</li>
-<li>После нужного числа подтверждений сети придёт второе уведомление — «✅ Зачислено … на баланс».</li>
+<li>Скопируйте адрес с экрана — перед каждым переводом: адрес может смениться.</li>
+<li>Отправьте <strong>USDT</strong> или <strong>USDC</strong>, не меньше <strong>1</strong>. Меньшая сумма не зачисляется.</li>
+<li>Дождитесь уведомления «✅ Зачислено … на баланс». 1 USDT или USDC = $1.</li>
 </ol>
-<p>Сумма зачисляется один к одному: 1 USDT или 1 USDC — это $1 на балансе. Сколько подтверждений нужно, написано и на экране с адресом:</p>
 <table>
 <thead>
 <tr>
 <th>Сеть</th>
-<th>Подтверждений до зачисления</th>
+<th>Подтверждений</th>
 </tr>
 </thead>
 <tbody>
@@ -1067,24 +1350,16 @@
 </table>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Принимаются только USDT и USDC в перечисленных сетях. Другой токен или перевод в другой сети будет потерян безвозвратно. Перед отправкой сверяйте токен, сеть и адрес.</p>
+<p>Другой токен или другая сеть — деньги потеряны безвозвратно. Сверяйте токен, сеть и адрес.</p>
 </div>
-<p>Уведомления о депозите приходят в тот бот, где вы в последний раз открывали адрес для пополнения; если это было в веб-версии — в рабочий бот. Выключить их можно в веб-версии: «Настройки» → «Уведомления» → «Пополнения». В веб-версии депозит виден в разделе «Баланс» → «История» ещё до зачисления: сначала со статусом «Ожидает подтверждений», затем — «Зачислен».</p>
-<p>Иногда пополнения ненадолго приостанавливаются — тогда вместо выбора сети бот покажет «⚠️ Пополнения временно приостановлены.», а веб-версия — «Пополнения временно приостановлены.» Попробуйте позже.</p>
-<h2 id="_4">Если депозит не пришёл<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>Сначала проверьте:</p>
-<ul>
-<li>отправлены USDT или USDC в одной из трёх перечисленных сетей;</li>
-<li>сумма не меньше минимума;</li>
-<li>виден ли депозит в веб-версии в разделе «Баланс» → «История» — если уведомления о пополнениях выключены, сообщений в боте не будет.</li>
-</ul>
-<p>Если всё верно, а деньги так и не зачислены, напишите в поддержку <a href="https://t.me/freidbase">@freidbase</a> и приложите хэш транзакции (TxID).</p>
-<h2 id="_5">Где смотреть баланс и операции<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Рабочий бот</strong> — «💵 Баланс (…$)»: основной, реферальный и итоговый баланс.</li>
-<li><strong>Бот-магазин</strong> — «👤 Профиль»: текущий баланс (вместе с реферальным) и отдельно реферальный; в «📋 Мои заказы» — ваши заказы, в карточке заказа — его сумма.</li>
-<li><strong>Веб-версия</strong> — раздел «Баланс» с историей пополнений и последними операциями и раздел «Транзакции»: полная история операций (пополнения, оплаты, возвраты, бонусы) с фильтрами. Полная история есть только в веб-версии.</li>
-</ul>
+<p>Уведомления приходят в бот, где вы последний раз открывали адрес, из веб-версии — в рабочий бот. Отключаются в веб-версии: «Настройки» → «Уведомления» → «Пополнения».</p>
+<h2 id="_3">Если депозит не пришёл<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Проверьте токен, сеть и сумму.</li>
+<li>Найдите депозит в веб-версии: «Баланс» → «История». Он виден там до зачисления.</li>
+<li>Всё верно, но деньги не зачислены — напишите <a href="https://t.me/freidbase">@freidbase</a> и приложите хэш транзакции (TxID).</li>
+</ol>
+<p>Полная история операций — в веб-версии, раздел «Транзакции». Баланс и адрес для пополнения есть и <a href="../../api/account/#get-balance">в API</a>.</p>
 
 
 
@@ -1135,10 +1410,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../assets/api.js"></script>
       
     
   </body>

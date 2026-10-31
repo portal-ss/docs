@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -37,10 +37,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -58,6 +58,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../assets/api.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -651,10 +653,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#re-verification-types" class="md-nav__link">
+  <a href="#types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Re-verification types
+        Types
       
     </span>
   </a>
@@ -681,34 +683,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How to order">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#in-the-workspace-bot-kycportal_bot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        In the workspace bot @kycportal_bot
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#in-the-web-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        In the web app
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -723,21 +697,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#who-fulfills-it" class="md-nav__link">
+  <a href="#executor-and-timing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Who fulfills it
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#statuses-and-timing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Statuses and timing
+        Executor and timing
       
     </span>
   </a>
@@ -945,6 +908,345 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Account and balance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orders and slots
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading and publishing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/slot-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slot actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Re-verification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/cancel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cancellations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event feed
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statuses and codes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Errors and limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../terms/" class="md-nav__link">
         
@@ -1020,10 +1322,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#re-verification-types" class="md-nav__link">
+  <a href="#types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Re-verification types
+        Types
       
     </span>
   </a>
@@ -1050,34 +1352,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="How to order">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#in-the-workspace-bot-kycportal_bot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        In the workspace bot @kycportal_bot
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#in-the-web-app" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        In the web app
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -1092,21 +1366,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#who-fulfills-it" class="md-nav__link">
+  <a href="#executor-and-timing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Who fulfills it
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#statuses-and-timing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Statuses and timing
+        Executor and timing
       
     </span>
   </a>
@@ -1142,117 +1405,45 @@
 
 
 <h1 id="re-verifications">Re-verifications<a class="headerlink" href="#re-verifications" title="Permanent link">&para;</a></h1>
-<p>A re-verification is a repeat check of an account that was already verified through the platform. Exchanges periodically require one for accounts that have already passed: for example, a repeat face check, an identity check before a withdrawal or before creating an API key, or the removal of restrictions. A re-verification is done by the same executor who completed the account's first verification.</p>
-<h2 id="re-verification-types">Re-verification types<a class="headerlink" href="#re-verification-types" title="Permanent link">&para;</a></h2>
-<p>The types are named after the matching features on the exchange itself, which makes it easier to match a platform screen with the exchange's own screen.</p>
-<table>
-<thead>
-<tr>
-<th>Exchange</th>
-<th>Type</th>
-<th>What it is</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>MEXC</td>
-<td><strong>Face Security</strong></td>
-<td>A repeat face check requested by the exchange</td>
-</tr>
-<tr>
-<td>MEXC</td>
-<td><strong>Face Withdraw</strong></td>
-<td>A face check the exchange requests before a withdrawal</td>
-</tr>
-<tr>
-<td>MEXC</td>
-<td><strong>Face API Key</strong></td>
-<td>A face check the exchange requests before an API key can be created</td>
-</tr>
-<tr>
-<td>MEXC</td>
-<td><strong>Risk Removal</strong></td>
-<td>Lifting a Risk Control restriction — see <a href="../risk-removal/">Risk Removal on MEXC</a></td>
-</tr>
-<tr>
-<td>Bybit</td>
-<td><strong>Claim Rewards</strong></td>
-<td>Claiming the rewards available on the account</td>
-</tr>
-</tbody>
-</table>
-<p>The available types depend on the exchange and may change; the current list and prices are shown when you place the order.</p>
-<p><strong>Face API Key.</strong> The executor only passes the face check — the platform doesn't create the API key and never sees its details. Once the slot is completed, create the key in MEXC yourself, with the code from your email and your 2FA. Don't put it off: if MEXC asks for a face check again before you've created the key, you'll need a new order.</p>
-<h2 id="eligibility">Which accounts are eligible<a class="headerlink" href="#eligibility" title="Permanent link">&para;</a></h2>
-<p>You can order a re-verification for an account that has a completed and successfully passed initial-verification slot on the platform. In addition:</p>
+<p>A re-verification is a repeat check of an account already verified through the platform, when the exchange requires one again. It's done by the executor of the initial verification.</p>
+<h2 id="types">Types<a class="headerlink" href="#types" title="Permanent link">&para;</a></h2>
 <ul>
-<li>the exchange must actually require the chosen check right now — the platform checks this before you pay;</li>
-<li>the account mustn't already have another re-verification in progress or be busy with another active order.</li>
+<li><strong>MEXC:</strong> Face Security — a repeat face check; Face Withdraw — before a withdrawal; Face API Key — before creating an API key; <a href="../risk-removal/">Risk Removal</a> — lifting a Risk Control restriction.</li>
+<li><strong>Bybit:</strong> Claim Rewards — claiming rewards on the account.</li>
 </ul>
-<p>The exception is MEXC: if the initial-verification slot was cancelled because the additional face check wasn't passed within 12 hours, you can only order <strong>Face Withdraw</strong> for that account.</p>
-<p>Accounts that aren't eligible are skipped during the check, with the reason shown, and you aren't charged for them.</p>
+<p>After Face API Key, create the key in MEXC yourself without delay: if MEXC asks for a face check again, you'll need a new order.</p>
+<h2 id="eligibility">Which accounts are eligible<a class="headerlink" href="#eligibility" title="Permanent link">&para;</a></h2>
+<p>The account passed its initial verification through the platform, the exchange currently requires the chosen check, and the account has no other re-verification or active order. On MEXC, if the initial slot was cancelled because the face check wasn't passed within 12 hours, only Face Withdraw is available.</p>
+<p>The platform checks this for free before payment; ineligible accounts are skipped with the reason and aren't charged.</p>
 <h2 id="create">How to order<a class="headerlink" href="#create" title="Permanent link">&para;</a></h2>
-<p>Re-verifications are ordered in batches: you can upload several accounts at once — up to 120 per batch — and see a plan with prices before you pay. Checking the accounts is free; you're only charged after you confirm.</p>
-<h3 id="in-the-workspace-bot-kycportal_bot">In the workspace bot @kycportal_bot<a class="headerlink" href="#in-the-workspace-bot-kycportal_bot" title="Permanent link">&para;</a></h3>
+<p>Up to 120 accounts at a time, each with fresh cookies and a proxy.</p>
+<p>Workspace bot:</p>
 <ol>
-<li>Open "🔄 Re-verification" and choose an exchange.</li>
-<li>Choose a type — it applies to every account in the batch.</li>
-<li>Send a list of proxies — one per account. Wait for them to be checked and tap "▶️ Continue".</li>
-<li>Send the cookie files (<code>.json</code>) in the same order as the proxies and tap "✅ I've sent all files".</li>
-<li>Wait for the sessions to be checked and review the plan: the accounts, the price of each one and the total.</li>
-<li>Tap "✅ Confirm &amp; pay".</li>
+<li>"🔄 Re-verification" → exchange → type.</li>
+<li>Send the proxies, one per account, and tap "▶️ Continue".</li>
+<li>Send the cookie files (<code>.json</code>) in the same order and tap "✅ I've sent all files".</li>
+<li>Review the plan with prices and tap "✅ Confirm &amp; pay".</li>
 </ol>
-<h3 id="in-the-web-app">In the web app<a class="headerlink" href="#in-the-web-app" title="Permanent link">&para;</a></h3>
-<p>"Create order" → "Reverification": choose the exchange and type → upload the accounts the same way as in a regular <a href="../upload/">upload</a> — an ADS Power file or manually → "Check accounts" → review the plan → "Create N · $…".</p>
-<p>If your balance didn't cover every account, the paid ones go into work straight away. For the rest, top up your balance and tap "🔄 Retry remaining" ("Retry remaining" in the web app) within 2 hours; after that you'll need to upload the accounts again.</p>
-<p>For Risk Removal, you'll also need to provide deposit screenshots before paying — see <a href="../risk-removal/">Risk Removal on MEXC</a>.</p>
+<p>Web app: "Create order" → "Reverification" → exchange and type → <a href="../upload/">accounts</a> → "Check accounts" → "Create N · $…".</p>
+<p>If your balance doesn't cover everything, work starts on the paid accounts, and you can pay for the rest with "🔄 Retry remaining" within 2 hours. Risk Removal also needs <a href="../risk-removal/#proofs">deposit screenshots</a>.</p>
 <h2 id="price">Price<a class="headerlink" href="#price" title="Permanent link">&para;</a></h2>
-<p>The price depends on the country and on how the <strong>original order</strong> for the account was bought, as well as on whether you have an active <a href="../subscription/">subscription</a>:</p>
-<table>
-<thead>
-<tr>
-<th>Original order</th>
-<th>Active subscription</th>
-<th>No subscription</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Standard</td>
-<td>Retail price</td>
-<td>Retail price</td>
-</tr>
-<tr>
-<td>Wholesale</td>
-<td>Wholesale price</td>
-<td>Retail price, with an offer to renew your subscription</td>
-</tr>
-<tr>
-<td>Team</td>
-<td>You set the price per slot</td>
-<td>Can't be ordered until you renew your subscription</td>
-</tr>
-</tbody>
-</table>
-<p>For accounts from team orders, you enter one price per slot for all such accounts in the batch — it goes to the executor in full.</p>
-<p><strong>Risk Removal</strong> costs the same for everyone — the retail price, however the original order was bought. For accounts from team orders, an active subscription is still required.</p>
-<p>The exact amount is always shown in the plan before you pay.</p>
-<h2 id="who-fulfills-it">Who fulfills it<a class="headerlink" href="#who-fulfills-it" title="Permanent link">&para;</a></h2>
-<p>The slot is assigned straight to the executor who did the account's first verification and isn't shown to any other executor. If the executor is slow to start, the platform sends them a reminder. A re-verification never goes back to the shared pool under any circumstances — the slot stays with that executor until it's completed or cancelled.</p>
-<p>If that executor isn't available, the slot isn't handed to anyone else. In a team order, if the executor is no longer on your team, you can cancel the slot right away or add the executor back to your team — the slot then goes back to them (see <a href="../cancel-refunds/#reverify">Cancelling a re-verification</a>). In other cases, support handles such a slot.</p>
-<h2 id="statuses-and-timing">Statuses and timing<a class="headerlink" href="#statuses-and-timing" title="Permanent link">&para;</a></h2>
-<p>A re-verification has the same statuses as a regular slot (see <a href="../lifecycle/#statuses">Slot statuses</a>); Risk Removal has its own. In the workspace bot, re-verifications are grouped under "📋 My orders" → "Re-KYC".</p>
-<p>Unlike an initial verification, a re-verification has no fulfillment deadline. Instead, you can request a cancellation after 24 hours — the rules are described in <a href="../cancel-refunds/#reverify">Cancelling a re-verification</a>.</p>
-<p>Re-verifications are never frozen when a subscription ends: each one is a separate, paid order that is fulfilled regardless of your subscription status.</p>
+<p>It depends on how the original order was bought:</p>
+<ul>
+<li>standard — the retail price;</li>
+<li>wholesale — the wholesale price with an active <a href="../subscription/">subscription</a>, otherwise retail;</li>
+<li>team — your price per slot, the same for the whole batch, which goes to the executor in full; an active subscription is required.</li>
+</ul>
+<p>Risk Removal costs the retail price for everyone; accounts from team orders still need a subscription. The exact amount is in the plan before payment.</p>
+<h2 id="executor-and-timing">Executor and timing<a class="headerlink" href="#executor-and-timing" title="Permanent link">&para;</a></h2>
+<p>The slot is assigned to the executor of the initial verification and isn't passed to anyone else. If the executor has left your team, <a href="../cancel-refunds/#reverify">cancel the slot</a> or add the executor back to the team.</p>
+<p>There's no fulfillment deadline: after 24 hours, you can request a <a href="../cancel-refunds/#reverify">cancellation</a>. Re-verifications aren't frozen when a subscription ends.</p>
 <h2 id="outcomes">How a re-verification ends<a class="headerlink" href="#outcomes" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>The check passes</strong> — the slot is completed and you get a notification. For Risk Removal, the slot is completed once MEXC approves the appeal; for Face API Key, create the key yourself after that.</li>
-<li><strong>ℹ️ No check was needed — refunded</strong> — by the time the executor took up the slot, the exchange no longer required this check, and no link had been issued for the slot yet. If a link had already been issued, the slot counts as completed.</li>
-<li><strong>🚫 Wrong country verified</strong> — the exchange confirmed the check with a different country; the slot is cancelled with a full refund.</li>
-<li><strong>The exchange refuses the check</strong> (for example, it blocks the account) — the re-verification isn't closed and isn't refunded automatically: the slot stays with the executor, and support decides what happens to it.</li>
-<li><strong>Cancellation</strong> — by you (see <a href="../cancel-refunds/#reverify">Cancelling a re-verification</a>) or by support.</li>
+<li><strong>Passed</strong> — the slot is completed.</li>
+<li><strong>"ℹ️ No check was needed — refunded"</strong> — the exchange no longer requires the check, and no link was issued. If one was, the slot is completed.</li>
+<li><strong>"🚫 Wrong country verified"</strong> — a full refund.</li>
+<li><strong>The exchange refused</strong>, for example, it blocked the account — the slot isn't closed, there's no automatic refund, and support decides.</li>
 </ul>
-<p>When a re-verification is cancelled, you get a "❌ Re-verification cancelled" notification with the reason and, if there was a refund, the amount. If you cancelled the slot and it closed right away, the result is shown on screen.</p>
 
 
 
@@ -1303,10 +1494,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../../assets/api.js"></script>
       
     
   </body>

@@ -1,0 +1,2192 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation and Terms of Use">
+      
+      
+      
+        <link rel="canonical" href="https://portal-ss.github.io/docs/en/api/orders/">
+      
+      
+        <link rel="prev" href="../account/">
+      
+      
+        <link rel="next" href="../upload/">
+      
+      
+        
+          <link rel="alternate" href="../../../api/orders/" hreflang="ru">
+        
+          <link rel="alternate" href="../../../uk/api/orders/" hreflang="uk">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Orders and slots - KYC Portal</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/api.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#orders-and-slots" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="KYC Portal" class="md-header__button md-logo" aria-label="KYC Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KYC Portal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Orders and slots
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../api/orders/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../uk/api/orders/" hreflang="uk" class="md-select__link">
+              Українська
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="KYC Portal" class="md-nav__button md-logo" aria-label="KYC Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    KYC Portal
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../guide/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/balance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balance and top-ups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading accounts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Order execution and deadlines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/cancel-refunds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cancellations and refunds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Re-verifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/risk-removal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Removal on MEXC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/sellers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Executors and order distribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/team/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your own team
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/subscription/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Subscription
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web app
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/referral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referral program
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Account and balance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orders and slots
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orders and slots
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get the catalog
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buy an order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List orders
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get an order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get a slot
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading and publishing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slot-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slot actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Re-verification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cancel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cancellations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event feed
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statuses and codes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Errors and limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terms of Use
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get the catalog
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buy an order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List orders
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get an order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get a slot
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="orders-and-slots">Orders and slots<a class="headerlink" href="#orders-and-slots" title="Permanent link">&para;</a></h1>
+<h3 id="get-catalog">Get the catalog<a class="headerlink" href="#get-catalog" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--get">GET</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/catalog</code></div>
+
+<p>Prices, availability and what you can buy. Prices change — read the catalog right before buying.</p>
+<p>Right: <code>read</code></p>
+<p>Response <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"max_quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"has_active_subscription"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"subscription_ends_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-11-18T10:00:00Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"has_active_team"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"exchanges"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mexc"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MEXC"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"services"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"service_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UA"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"price_standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12.50"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"price_wholesale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.00"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"out_of_stock_standard"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"out_of_stock_wholesale"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"reverify"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span><span class="nt">"verification_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MEXC_FACE_SECURITY"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price_standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5.00"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price_wholesale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4.00"</span><span class="p">,</span><span class="w"> </span><span class="nt">"needs_proofs"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">}</span>
+<span class="w">          </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"team_regions"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UA"</span><span class="p">,</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ukraine"</span><span class="p">}],</span>
+<span class="w">  </span><span class="nt">"deadline"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"min_hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="nt">"max_hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w"> </span><span class="nt">"choices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">72</span><span class="p">]}</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_quantity</code></td>
+<td>The maximum number of slots in one order</td>
+</tr>
+<tr>
+<td><code>has_active_subscription</code></td>
+<td>Whether you have an active subscription — required for wholesale and team orders</td>
+</tr>
+<tr>
+<td><code>has_active_team</code></td>
+<td>Whether your team has an active member — required for a team order</td>
+</tr>
+<tr>
+<td><code>exchanges[].exchange</code></td>
+<td>Exchange code: <code>bybit</code>, <code>mexc</code>, <code>kucoin</code> or <code>bingx</code></td>
+</tr>
+<tr>
+<td><code>services[].service_id</code></td>
+<td>The product (exchange and country) for standard and wholesale orders</td>
+</tr>
+<tr>
+<td><code>services[].price_standard</code>, <code>price_wholesale</code></td>
+<td>Price per slot in a standard and a wholesale order</td>
+</tr>
+<tr>
+<td><code>services[].out_of_stock_standard</code>, <code>out_of_stock_wholesale</code></td>
+<td><code>true</code> — can't be bought at this price right now</td>
+</tr>
+<tr>
+<td><code>services[].reverify[]</code></td>
+<td>Re-verifications for this country; <code>needs_proofs</code> — screenshots are needed</td>
+</tr>
+<tr>
+<td><code>team_regions[].code</code></td>
+<td>A region for a team order</td>
+</tr>
+<tr>
+<td><code>deadline</code></td>
+<td>The allowed slot fulfillment deadline, in hours; <code>choices</code> — the options the bots offer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="post-orders">Buy an order<a class="headerlink" href="#post-orders" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--post">POST</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders</code></div>
+
+<p>Buys an order and charges the full amount right away: first from the referral balance, then from the main one. The order's slots start out empty — next, <a href="../upload/#post-upload">upload accounts</a>.</p>
+<p>Right: <code>money</code> · <a href="../errors/#idempotency"><code>Idempotency-Key</code></a> required</p>
+<table>
+<thead>
+<tr>
+<th>Body field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td>string</td>
+<td>yes</td>
+<td><code>standard</code>, <code>wholesale</code> or <code>team</code></td>
+</tr>
+<tr>
+<td><code>quantity</code></td>
+<td>integer</td>
+<td>yes</td>
+<td>From 1 to 100</td>
+</tr>
+<tr>
+<td><code>service_id</code></td>
+<td>integer</td>
+<td>for <code>standard</code>, <code>wholesale</code></td>
+<td>A product from <a href="#get-catalog"><code>GET /catalog</code></a></td>
+</tr>
+<tr>
+<td><code>expected_price_per_slot</code></td>
+<td>amount</td>
+<td>for <code>standard</code>, <code>wholesale</code></td>
+<td>Up to 2 decimal places. If it's below the current price, the request is refused; otherwise the current price is charged</td>
+</tr>
+<tr>
+<td><code>exchange</code></td>
+<td>string</td>
+<td>for <code>team</code></td>
+<td><code>bybit</code>, <code>mexc</code>, <code>kucoin</code> or <code>bingx</code></td>
+</tr>
+<tr>
+<td><code>region</code></td>
+<td>string</td>
+<td>for <code>team</code></td>
+<td>A code from the catalog's <code>team_regions</code></td>
+</tr>
+<tr>
+<td><code>team_price</code></td>
+<td>amount</td>
+<td>for <code>team</code></td>
+<td>Your price per slot: greater than zero, up to 2 decimal places</td>
+</tr>
+<tr>
+<td><code>deadline_hours</code></td>
+<td>integer</td>
+<td>no</td>
+<td>The slot's <a href="../../guide/lifecycle/#deadline">fulfillment deadline</a> from publishing, 4–72 hours; omit it for no deadline</td>
+</tr>
+</tbody>
+</table>
+<p>A team order costs <code>team_price × quantity</code>.</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://app.kycportal.org/api/v1/orders<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$KP_API_KEY</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Idempotency-Key: </span><span class="k">$(</span>uuidgen<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{"type": "standard", "service_id": 42, "quantity": 5, "expected_price_per_slot": "12.50", "deadline_hours": 24}'</span>
+</code></pre></div>
+<p>Response <code>201</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8402-9173"</span><span class="p">,</span><span class="w"> </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="s2">"62.50"</span><span class="p">}</span>
+</code></pre></div>
+<p><code>total</code> is how much was charged.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>409</td>
+<td><code>price_changed</code></td>
+<td>The price went up, nothing was charged; <code>price</code> and <code>total</code> are the current values</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>insufficient_balance</code></td>
+<td>Not enough balance</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>purchase_in_progress</code></td>
+<td>Another purchase of yours is in progress; retry in a few seconds</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>service_unavailable</code></td>
+<td>The product isn't on sale or is out of stock</td>
+</tr>
+<tr>
+<td>403</td>
+<td><code>subscription_required</code></td>
+<td>A wholesale or team order without an active subscription</td>
+</tr>
+<tr>
+<td>403</td>
+<td><code>team_membership_required</code></td>
+<td>A team order, but your team has no active members</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-orders">List orders<a class="headerlink" href="#get-orders" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--get">GET</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders</code></div>
+
+<p>Your orders, newest first. Re-verification orders aren't listed here — their slots are in <a href="../reverify/#get-reverify"><code>GET /reverify</code></a>.</p>
+<p>Right: <code>read</code></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tab</code></td>
+<td>string</td>
+<td>no</td>
+<td><code>active</code> (default): <code>PAID</code>, <code>SESSION_UPLOADED</code>, <code>IN_PROGRESS</code>; <code>completed</code> — the rest</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>string</td>
+<td>no</td>
+<td>An <a href="../codes/#order-statuses">order status</a> within the tab; a status from the other tab is ignored</td>
+</tr>
+<tr>
+<td><code>q</code></td>
+<td>string</td>
+<td>no</td>
+<td>An order number or the number of one of its slots, up to 128 characters</td>
+</tr>
+<tr>
+<td><code>attention</code></td>
+<td>yes/no</td>
+<td>no</td>
+<td><code>true</code> — orders with a frozen slot or a slot waiting for you; only with <code>active</code></td>
+</tr>
+<tr>
+<td><code>limit</code>, <code>offset</code></td>
+<td>integer</td>
+<td>no</td>
+<td><a href="../#pagination">Page</a></td>
+</tr>
+</tbody>
+</table>
+<p>Response <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8402-9173"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mexc"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"verification_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INITIAL_KYC"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UA"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN_PROGRESS"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"price_per_slot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12.50"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T09:00:00Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"total_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"completed_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"in_progress_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"failed_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"reupload_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"free_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"cancelled_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"is_reverify"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"is_frozen"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"frozen_total_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"frozen_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"refunded"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"slot_counts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"in_work"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"waiting"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"frozen"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"done"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span>
+<span class="p">}],</span><span class="w"> </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>verification_type</code></td>
+<td><code>INITIAL_KYC</code> — initial verification; otherwise a re-verification type, for example <code>MEXC_FACE_SECURITY</code></td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td><a href="../codes/#order-statuses">Order status</a></td>
+</tr>
+<tr>
+<td><code>in_progress_slots</code></td>
+<td>In progress, including exchange review, attempt retries and the post-KYC steps</td>
+</tr>
+<tr>
+<td><code>failed_slots</code></td>
+<td>Risk Removal slots with a rejected appeal</td>
+</tr>
+<tr>
+<td><code>reupload_slots</code></td>
+<td>Waiting for your re-upload</td>
+</tr>
+<tr>
+<td><code>free_slots</code></td>
+<td>Not taken by anyone</td>
+</tr>
+<tr>
+<td><code>is_frozen</code></td>
+<td>The subscription isn't active, and the order has a frozen slot</td>
+</tr>
+<tr>
+<td><code>frozen_total_slots</code></td>
+<td>Frozen slots in total</td>
+</tr>
+<tr>
+<td><code>frozen_slots</code></td>
+<td>Of these, the ones without a close request from anyone else: <a href="../cancel/#post-cancel-frozen">cancelling frozen slots</a> will affect them</td>
+</tr>
+<tr>
+<td><code>refunded</code></td>
+<td>How much has been refunded to your balance for the order in total; <code>null</code> — nothing</td>
+</tr>
+<tr>
+<td><code>slot_counts</code></td>
+<td><code>in_work</code> — in progress, <code>waiting</code> — nobody has taken them, <code>frozen</code>, <code>done</code>; cancelled slots aren't counted</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-order">Get an order<a class="headerlink" href="#get-order" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--get">GET</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders/{order_id}</code></div>
+
+<p>The order card. Also works for a re-verification order.</p>
+<p>Right: <code>read</code></p>
+<p>Response <code>200</code> — all the order fields from <a href="#get-orders"><code>GET /orders</code></a>, plus:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"is_wholesale"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"is_team_order"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"published_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T09:30:00Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"source_order_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"free_empty_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"free_loaded_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"missing_proxy_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"missing_proxy_slot_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="nt">"frozen_checking_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"frozen_cancel_pending_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"frozen_checking_reupload_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"frozen_needs_check"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"frozen_refund"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"frozen_refund_now"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"freezes_on_publish"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"history"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"status_from"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">"status_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PAID"</span><span class="p">,</span><span class="w"> </span><span class="nt">"actor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client"</span><span class="p">,</span><span class="w"> </span><span class="nt">"at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T09:00:00Z"</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"status_from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PAID"</span><span class="p">,</span><span class="w"> </span><span class="nt">"status_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SESSION_UPLOADED"</span><span class="p">,</span><span class="w"> </span><span class="nt">"actor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client"</span><span class="p">,</span><span class="w"> </span><span class="nt">"at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T09:20:11Z"</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"status_from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SESSION_UPLOADED"</span><span class="p">,</span><span class="w"> </span><span class="nt">"status_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN_PROGRESS"</span><span class="p">,</span><span class="w"> </span><span class="nt">"actor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client"</span><span class="p">,</span><span class="w"> </span><span class="nt">"at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T09:30:00Z"</span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source_order_id</code></td>
+<td>For a re-verification — the order it repeats</td>
+</tr>
+<tr>
+<td><code>free_empty_slots</code></td>
+<td>Free slots without an account</td>
+</tr>
+<tr>
+<td><code>free_loaded_slots</code></td>
+<td>Free slots with an uploaded account</td>
+</tr>
+<tr>
+<td><code>missing_proxy_slots</code>, <code>missing_proxy_slot_ids</code></td>
+<td>Slots with an account but no proxy (numbers of the first few); publishing will be refused</td>
+</tr>
+<tr>
+<td><code>frozen_checking_slots</code></td>
+<td>Of <code>frozen_slots</code>: your frozen-slot cancellations waiting for an exchange check</td>
+</tr>
+<tr>
+<td><code>frozen_cancel_pending_slots</code></td>
+<td>Your unfinished frozen-slot cancellations, including after a subscription renewal</td>
+</tr>
+<tr>
+<td><code>frozen_checking_reupload_slots</code></td>
+<td>Of these, the ones waiting for your re-upload</td>
+</tr>
+<tr>
+<td><code>frozen_needs_check</code></td>
+<td>How many slots a frozen-slot cancellation will check on the exchange first</td>
+</tr>
+<tr>
+<td><code>frozen_refund</code></td>
+<td>How much a frozen-slot cancellation will refund if none of the slots turns out to be completed</td>
+</tr>
+<tr>
+<td><code>frozen_refund_now</code></td>
+<td>Of that, how much is refunded right away</td>
+</tr>
+<tr>
+<td><code>freezes_on_publish</code></td>
+<td>The subscription isn't active: after publishing, the slots will freeze right away</td>
+</tr>
+<tr>
+<td><code>history[]</code></td>
+<td>Status history; <code>actor</code> — <code>client</code>, <code>worker</code>, <code>system</code> or <code>admin</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-slots">List slots<a class="headerlink" href="#get-slots" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--get">GET</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/slots</code></div>
+
+<p>Slots of all your orders, including re-verifications, newest first.</p>
+<p>Right: <code>read</code></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tab</code></td>
+<td>string</td>
+<td>no</td>
+<td><code>all</code> (default), <code>active</code> or <code>completed</code> (<code>COMPLETED</code>, <code>CANCELLED</code>)</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>string</td>
+<td>no</td>
+<td>A <a href="../codes/#slot-statuses">slot status</a> within the tab; a status from the other tab is ignored</td>
+</tr>
+<tr>
+<td><code>q</code></td>
+<td>string</td>
+<td>no</td>
+<td>A slot number, an order number (all its slots) or a full account login</td>
+</tr>
+<tr>
+<td><code>attention</code></td>
+<td>yes/no</td>
+<td>no</td>
+<td><code>true</code> — only slots waiting for you (a non-empty <code>waiting_for_client</code>)</td>
+</tr>
+<tr>
+<td><code>limit</code>, <code>offset</code></td>
+<td>integer</td>
+<td>no</td>
+<td><a href="../#pagination">Page</a></td>
+</tr>
+</tbody>
+</table>
+<p>Response <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5120-3562"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8402-9173"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"account_identity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mexc"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UA"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"verification_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INITIAL_KYC"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"is_reverify"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REUPLOAD_REQUIRED"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"order_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN_PROGRESS"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"has_session"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"verification_result"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T09:00:00Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"is_frozen"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"risk_proofs_requested_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"waiting_for_client"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"reupload"</span><span class="p">]</span>
+<span class="p">}],</span><span class="w"> </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">}</span>
+</code></pre></div>
+<p>The fields are the same as in the <a href="#get-slot">slot card</a>.</p>
+<h3 id="get-slot">Get a slot<a class="headerlink" href="#get-slot" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--get">GET</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders/{order_id}/slots/{slot_id}</code></div>
+
+<p>The slot card: status, deadlines and what the slot needs from you.</p>
+<p>Right: <code>read</code></p>
+<p>Response <code>200</code> (a BingX slot at the second stage):</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5120-3562"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8402-9173"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"order_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN_PROGRESS"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bingx"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UA"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"verification_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INITIAL_KYC"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"price_per_slot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12.50"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"is_reverify"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"slot_number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"total_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BINGX_FACE_OFF"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"verification_result"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"account_identity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"account_uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1384920577"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"session_format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"manual"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"adspower_profile_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"has_session"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"has_proxy"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"reupload_scope"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"retry_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"worker_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7731-0045"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T09:00:00Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"claimed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T10:12:40Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"first_claimed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T10:12:40Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"verified_first_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"verified_last_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"verified_country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"mexc_hold_started_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"mexc_face_deadline_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"clocks_paused"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"check_kyc_available"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"is_frozen"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"order_is_frozen"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"close_request_open"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"risk_proofs_requested_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"waiting_for_client"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"bingx_code"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"close_reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"bingx"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"step"</span><span class="p">:</span><span class="w"> </span><span class="s2">"awaiting_code"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"code_ask_reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"first"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"code_sent_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T11:02:15Z"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"client_time_left_seconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">3240</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"client_clock_running"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"client_deadline_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T12:02:15Z"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"fresh_code_available"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"face_login"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"cancel"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"available"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nt">"unavailable_reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">"open_reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">"min_hours"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"opens_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">"paused_left_seconds"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">"pending"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nt">"checking"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nt">"operator_hold"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"source_slot_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"source_order_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"deadlines"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"slot_deadline"</span><span class="p">,</span><span class="w"> </span><span class="nt">"at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-31T09:30:00Z"</span><span class="p">,</span><span class="w"> </span><span class="nt">"reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">}],</span>
+<span class="w">  </span><span class="nt">"history"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"status_from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FREE"</span><span class="p">,</span><span class="w"> </span><span class="nt">"status_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN_PROGRESS"</span><span class="p">,</span><span class="w"> </span><span class="nt">"actor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"worker"</span><span class="p">,</span><span class="w"> </span><span class="nt">"at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T10:12:40Z"</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"status_from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN_PROGRESS"</span><span class="p">,</span><span class="w"> </span><span class="nt">"status_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BINGX_FACE_OFF"</span><span class="p">,</span><span class="w"> </span><span class="nt">"actor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"system"</span><span class="p">,</span><span class="w"> </span><span class="nt">"at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T11:01:58Z"</span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>slot_number</code>, <code>total_slots</code></td>
+<td>Slot N of M in the order</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td><a href="../codes/#slot-statuses">Slot status</a></td>
+</tr>
+<tr>
+<td><code>verification_result</code></td>
+<td><a href="../codes/#verification-results">Verification outcome</a> or <code>null</code></td>
+</tr>
+<tr>
+<td><code>account_identity</code>, <code>account_uid</code></td>
+<td>The account login and its UID on the exchange</td>
+</tr>
+<tr>
+<td><code>session_format</code></td>
+<td>How the account was uploaded: <code>manual</code> or <code>adspower</code></td>
+</tr>
+<tr>
+<td><code>reupload_scope</code></td>
+<td>What to send on a <a href="../slot-actions/#post-reupload">re-upload</a>: <code>proxy</code>, <code>session</code> (cookies) or <code>full</code></td>
+</tr>
+<tr>
+<td><code>retry_count</code></td>
+<td>How many attempts have already been rejected</td>
+</tr>
+<tr>
+<td><code>worker_id</code></td>
+<td>The current executor, or <code>null</code></td>
+</tr>
+<tr>
+<td><code>claimed_at</code>, <code>first_claimed_at</code></td>
+<td>When the current executor took the slot / when it was first taken</td>
+</tr>
+<tr>
+<td><code>verified_first_name</code>, <code>verified_last_name</code>, <code>verified_country</code></td>
+<td>Who was verified; only on a completed slot</td>
+</tr>
+<tr>
+<td><code>mexc_hold_started_at</code>, <code>mexc_face_deadline_at</code></td>
+<td>MEXC: the start of the post-KYC observation period and the face check deadline</td>
+</tr>
+<tr>
+<td><code>clocks_paused</code></td>
+<td>All the slot's deadlines are paused: it's waiting for your re-upload or for the exchange's answer</td>
+</tr>
+<tr>
+<td><code>check_kyc_available</code></td>
+<td>Whether you can <a href="../slot-actions/#post-check-kyc">check the status</a> right now</td>
+</tr>
+<tr>
+<td><code>is_frozen</code>, <code>order_is_frozen</code></td>
+<td>The slot / its order is frozen</td>
+</tr>
+<tr>
+<td><code>close_request_open</code></td>
+<td>The slot is scheduled to close; the time is in <code>deadlines</code></td>
+</tr>
+<tr>
+<td><code>risk_proofs_requested_at</code></td>
+<td>When new Risk Removal screenshots were requested</td>
+</tr>
+<tr>
+<td><code>waiting_for_client</code></td>
+<td><a href="../codes/#waiting">What the slot needs from you</a>; an empty list means nothing</td>
+</tr>
+<tr>
+<td><code>close_reason</code></td>
+<td><a href="../codes/#close-reasons">Why the slot was cancelled</a></td>
+</tr>
+<tr>
+<td><code>source_slot_id</code>, <code>source_order_id</code></td>
+<td>For a re-verification — the slot and order it repeats</td>
+</tr>
+<tr>
+<td><code>deadlines[]</code></td>
+<td>Deadlines sorted by <code>at</code>: <code>kind</code> — the <a href="../codes/#deadline-kinds">kind</a>, <code>reason</code> — the <a href="../codes/#deadline-reasons">reason</a> for <code>close_request</code></td>
+</tr>
+<tr>
+<td><code>history[]</code></td>
+<td>Status history; <code>actor</code> — <code>client</code>, <code>worker</code>, <code>system</code> or <code>admin</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>bingx</code> — on a BingX slot from the second stage on; <code>null</code> on others:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>step</code></td>
+<td><a href="../codes/#bingx-steps">Second-stage step</a></td>
+</tr>
+<tr>
+<td><code>code_ask_reason</code></td>
+<td>With <code>awaiting_code</code>: <a href="../codes/#ask-reasons">why the code is requested</a></td>
+</tr>
+<tr>
+<td><code>code_sent_at</code></td>
+<td>With <code>awaiting_code</code>: when BingX sent the relevant email</td>
+</tr>
+<tr>
+<td><code>client_time_left_seconds</code></td>
+<td>What's left of your 60 minutes for codes; once it runs out, the slot completes with face login left on</td>
+</tr>
+<tr>
+<td><code>client_clock_running</code></td>
+<td>Whether your time is running right now</td>
+</tr>
+<tr>
+<td><code>client_deadline_at</code></td>
+<td>When your time runs out</td>
+</tr>
+<tr>
+<td><code>fresh_code_available</code></td>
+<td>The code is older than 10 minutes: you can <a href="../slot-actions/#post-bingx-refresh">request a new email</a></td>
+</tr>
+<tr>
+<td><code>face_login</code></td>
+<td>The outcome on a completed slot: <a href="../codes/#bingx-endings"><code>off</code>, <code>left_on</code> or <code>unknown</code></a></td>
+</tr>
+</tbody>
+</table>
+<p><code>cancel</code> — whether you can <a href="../cancel/#post-cancel-reverify">cancel the re-verification</a>; on other slots, all fields are <code>false</code> or <code>null</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>available</code></td>
+<td>Cancellation is available right now</td>
+</tr>
+<tr>
+<td><code>unavailable_reason</code></td>
+<td>Why it isn't available: <code>too_early</code>, <code>pending</code>, <code>needs_reupload</code>, <code>face_passed</code> or <code>forbidden_status</code></td>
+</tr>
+<tr>
+<td><code>open_reason</code></td>
+<td><code>worker_left_team</code> — cancellation opened earlier than usual</td>
+</tr>
+<tr>
+<td><code>min_hours</code></td>
+<td>With <code>too_early</code>: how many hours after the attempt starts cancellation opens</td>
+</tr>
+<tr>
+<td><code>opens_at</code></td>
+<td>When it opens; <code>null</code> while the timer is paused</td>
+</tr>
+<tr>
+<td><code>paused_left_seconds</code></td>
+<td>What's left on the timer while it's paused</td>
+</tr>
+<tr>
+<td><code>pending</code>, <code>checking</code>, <code>operator_hold</code></td>
+<td>Your cancellation has been accepted / is waiting for the exchange's answer / is waiting for a manual review</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../../assets/api.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2362 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation and Terms of Use">
+      
+      
+      
+        <link rel="canonical" href="https://portal-ss.github.io/docs/api/slot-actions/">
+      
+      
+        <link rel="prev" href="../upload/">
+      
+      
+        <link rel="next" href="../reverify/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="ru">
+        
+          <link rel="alternate" href="../../uk/api/slot-actions/" hreflang="uk">
+        
+          <link rel="alternate" href="../../en/api/slot-actions/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Действия со слотом - KYC Portal</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/api.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="KYC Portal" class="md-header__button md-logo" aria-label="KYC Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KYC Portal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Действия со слотом
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Выберите язык">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../uk/api/slot-actions/" hreflang="uk" class="md-select__link">
+              Українська
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/api/slot-actions/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="KYC Portal" class="md-nav__button md-logo" aria-label="KYC Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    KYC Portal
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../guide/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Документация
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Документация
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обзор платформы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Начало работы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/balance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Баланс и пополнение
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Заказы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Загрузка аккаунтов
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Выполнение заказа и сроки
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/cancel-refunds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отмена и возвраты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реверификации
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/risk-removal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Removal на MEXC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/sellers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Исполнители и распределение
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/team/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Своя команда
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/subscription/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Подписка
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Веб-версия
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/referral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реферальная программа
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Аккаунт и баланс
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Заказы и слоты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Загрузка и публикация
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Действия со слотом
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Действия со слотом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Повторная загрузка и прокси
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Повторная загрузка и прокси">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-reupload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Загрузить аккаунт повторно
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-replace-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Заменить прокси
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-start-proxy-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Поставить слот на паузу для замены прокси
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проверка статуса
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Проверка статуса">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-check-kyc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проверить статус верификации
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bingx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Код BingX
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Код BingX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-bingx-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отправить код BingX
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-bingx-refresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Запросить новый код BingX
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risk-removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Скриншоты для Risk Removal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Скриншоты для Risk Removal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-risk-proofs-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Загрузить скриншот депозита
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-risk-proofs-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Удалить скриншот
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-slot-risk-proofs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отправить скриншоты для Risk Removal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реверификация
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cancel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отмены
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лента событий
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Статусы и коды
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ошибки и лимиты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Условия использования
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Повторная загрузка и прокси
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Повторная загрузка и прокси">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-reupload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Загрузить аккаунт повторно
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-replace-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Заменить прокси
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-start-proxy-replace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Поставить слот на паузу для замены прокси
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проверка статуса
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Проверка статуса">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-check-kyc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Проверить статус верификации
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bingx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Код BingX
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Код BingX">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-bingx-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отправить код BingX
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-bingx-refresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Запросить новый код BingX
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risk-removal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Скриншоты для Risk Removal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Скриншоты для Risk Removal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-risk-proofs-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Загрузить скриншот депозита
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-risk-proofs-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Удалить скриншот
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-slot-risk-proofs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отправить скриншоты для Risk Removal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">Действия со слотом<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>Что слот ждёт от вас — поле <code>waiting_for_client</code> <a href="../orders/#get-slot">карточки слота</a> (<a href="../codes/#waiting">значения</a>).</p>
+<h2 id="_2">Повторная загрузка и прокси<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Слот <code>REUPLOAD_REQUIRED</code> стоит на паузе: сроки не идут, слот не отменяется и не уходит к другому исполнителю. Что прислать — поле <code>reupload_scope</code> карточки слота. <code>reupload</code> и <code>replace-proxy</code> проверяют аккаунт на бирже через прокси слота — ответ может занять до полутора минут.</p>
+<p>Ошибки проверки, общие для <code>reupload</code> и <code>replace-proxy</code>:</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>Когда</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>409</td>
+<td><a href="../codes/#upload-codes">коды проверки</a></td>
+<td>Биржа отклонила аккаунт или прокси, например <code>session_invalid</code>, <code>proxy_broken</code>, <code>exchange_unreachable</code></td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>exchange_transient</code></td>
+<td>Биржа не ответила, прокси работает; ничего не изменилось — повторите</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>reupload_scope_changed</code></td>
+<td>Слоту теперь нужно больше — прочитайте слот и пришлите, что он просит</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>check_in_flight</code></td>
+<td>По слоту идёт другая проверка — повторите через несколько секунд</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>upload_in_progress</code></td>
+<td>По заказу идёт проверка загрузки</td>
+</tr>
+<tr>
+<td>429</td>
+<td><code>client_exchange_busy</code></td>
+<td>Уже идут 3 обращения к бирже по вашим слотам (<code>limit</code>); без <code>Retry-After</code></td>
+</tr>
+<tr>
+<td>504</td>
+<td><code>proxy_probe_timeout</code></td>
+<td>Биржа не ответила через этот прокси вовремя</td>
+</tr>
+<tr>
+<td>502</td>
+<td><code>upload_check_failed</code></td>
+<td>Сбой платформы — повторите позже</td>
+</tr>
+</tbody>
+</table>
+<h3 id="post-reupload">Загрузить аккаунт повторно<a class="headerlink" href="#post-reupload" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--post">POST</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders/{order_id}/slots/{slot_id}/reupload</code></div>
+
+<p>Присылает свежие cookies (и, если нужно, новый прокси) слоту с <code>reupload_scope</code> <code>session</code> или <code>full</code>. Один аккаунт — тот, что был в слоте; весь запрос — до 22 МБ.</p>
+<p>Право <code>upload</code></p>
+<table>
+<thead>
+<tr>
+<th>Поле формы</th>
+<th>Тип</th>
+<th>Обязательно</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>method</code></td>
+<td>строка</td>
+<td>да</td>
+<td><code>adspower</code> или <code>manual</code></td>
+</tr>
+<tr>
+<td><code>ads_file</code></td>
+<td>файл</td>
+<td>при <code>adspower</code></td>
+<td>Экспорт ADS Power с одним профилем, до 20 МБ; при <code>full</code> — с прокси</td>
+</tr>
+<tr>
+<td><code>cookie_files</code></td>
+<td>файл</td>
+<td>при <code>manual</code></td>
+<td>Файл cookies, до 8 МБ; читается первый</td>
+</tr>
+<tr>
+<td><code>proxies</code></td>
+<td>строка</td>
+<td>при <code>full</code> и <code>manual</code></td>
+<td>Одна строка прокси</td>
+</tr>
+<tr>
+<td><code>replace_proxy</code></td>
+<td>да/нет</td>
+<td>нет</td>
+<td><code>true</code> при <code>session</code> — заменить и прокси (загрузка пройдёт как <code>full</code>)</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://app.kycportal.org/api/v1/orders/8402-9173/slots/5120-3564/reupload<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$KP_API_KEY</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="nv">method</span><span class="o">=</span>manual<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="s2">"proxies=203.0.113.21:8000:login5:pass5"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="nv">cookie_files</span><span class="o">=</span>@fresh.json
+</code></pre></div>
+<p>Ответ <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">}</span>
+</code></pre></div>
+<p><code>ok</code> — слот продолжает работу с того же места. <code>proxy_broken</code> или <code>proxy_missing</code> — cookies приняты, но сохранённый прокси тоже не работает: слот теперь просит <code>full</code>.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>Когда</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>409</td>
+<td><code>reupload_not_allowed</code></td>
+<td>Слот не ждёт повторной загрузки</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>use_replace_proxy</code></td>
+<td>Слот ждёт только прокси — отправьте его в <a href="#post-replace-proxy"><code>replace-proxy</code></a></td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>reupload_identity_mismatch</code></td>
+<td>Cookies другого аккаунта</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>reupload_identity_unavailable</code></td>
+<td>Этот слот обновить нельзя — напишите в поддержку</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>reupload_single_account</code></td>
+<td>В экспорте ADS Power больше одного профиля</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>proxy_missing</code></td>
+<td>Для <code>full</code> не передан прокси</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>export_proxy_missing</code></td>
+<td>Для <code>full</code>: в профиле ADS Power нет прокси</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>parse_error</code></td>
+<td>В экспорте ADS Power нет аккаунта</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>missing_file</code>, <code>invalid_method</code></td>
+<td>Нет файла для выбранного <code>method</code> или неверный <code>method</code></td>
+</tr>
+<tr>
+<td>422</td>
+<td><a href="../codes/#upload-codes">коды разбора</a></td>
+<td>Cookies или прокси не читаются</td>
+</tr>
+<tr>
+<td>413</td>
+<td><code>file_too_large</code></td>
+<td>Запрос больше 22 МБ или файл больше своего лимита</td>
+</tr>
+</tbody>
+</table>
+<h3 id="post-replace-proxy">Заменить прокси<a class="headerlink" href="#post-replace-proxy" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--post">POST</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders/{order_id}/slots/{slot_id}/replace-proxy</code></div>
+
+<p>Присылает новый прокси слоту с <code>reupload_scope: "proxy"</code>. Сохранённые cookies перепроверяются через новый прокси.</p>
+<p>Право <code>upload</code></p>
+<table>
+<thead>
+<tr>
+<th>Поле тела</th>
+<th>Тип</th>
+<th>Обязательно</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>proxy</code></td>
+<td>строка</td>
+<td>да</td>
+<td>Строка прокси, до 512 символов</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://app.kycportal.org/api/v1/orders/8402-9173/slots/5120-3564/replace-proxy<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$KP_API_KEY</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{"proxy": "203.0.113.20:8000:login4:pass4"}'</span>
+</code></pre></div>
+<p>Ответ <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">}</span>
+</code></pre></div>
+<p><code>ok</code> — слот продолжает работу с того же места. <code>session_invalid</code> или <code>cookie_jar_too_large</code> — прокси сохранён, но cookies тоже не работают: слот теперь просит <code>full</code>, пришлите <a href="#post-reupload"><code>reupload</code></a>.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>Когда</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>409</td>
+<td><code>proxy_replace_not_allowed</code></td>
+<td>Слот не ждёт нового прокси</td>
+</tr>
+<tr>
+<td>422</td>
+<td><a href="../codes/#upload-codes">коды разбора</a></td>
+<td>Строка прокси не читается: <code>invalid_proxy</code>, <code>private_proxy</code>, <code>parse_proxy_*</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="post-start-proxy-replace">Поставить слот на паузу для замены прокси<a class="headerlink" href="#post-start-proxy-replace" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--post">POST</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders/{order_id}/slots/{slot_id}/start-proxy-replace</code></div>
+
+<p>Ставит слот на паузу до нового прокси, когда прокси работает, а биржа через него не открывается (<code>check-kyc</code> ответил <code>409 exchange_unreachable</code>). Слот станет <code>REUPLOAD_REQUIRED</code> с <code>reupload_scope: "proxy"</code> — пришлите прокси в <a href="#post-replace-proxy"><code>replace-proxy</code></a>. Доступно для слота <code>FREE</code> в опубликованном заказе, <code>IN_PROGRESS</code> и <code>VERIFICATION_FAILED</code>.</p>
+<p>Право <code>upload</code></p>
+<p>Ответ <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>Когда</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>409</td>
+<td><code>reupload_required</code></td>
+<td>Слот уже ждёт повторной загрузки</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>slot_no_session</code></td>
+<td>В слоте нет аккаунта</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>edit_not_allowed</code></td>
+<td>Слот в другом статусе или заказ не опубликован — до публикации используйте <a href="../upload/#post-proxy"><code>POST …/proxy</code></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">Проверка статуса<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="post-check-kyc">Проверить статус верификации<a class="headerlink" href="#post-check-kyc" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--post">POST</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders/{order_id}/slots/{slot_id}/check-kyc</code></div>
+
+<p>Запрашивает у биржи статус верификации слота; если биржа подтверждает успех, слот засчитывается. Доступна ли проверка сейчас — поле <code>check_kyc_available</code> <a href="../orders/#get-slot">карточки слота</a>. Ответ может занять до полутора минут.</p>
+<p>Право <code>upload</code></p>
+<p>Ответ <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w"> </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pending"</span><span class="p">,</span><span class="w"> </span><span class="nt">"order_done"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nt">"verification_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INITIAL_KYC"</span><span class="p">}</span>
+</code></pre></div>
+<p><code>action</code> — что проверка сделала со слотом:</p>
+<ul>
+<li><code>result_only</code> — слот ещё не у исполнителя: результат только сообщается, слот не меняется;</li>
+<li><code>stale</code> — слот изменился во время проверки: прочитайте его заново;</li>
+<li><code>reupload_required</code> — прокси или вход не работают: слот встал на паузу и ждёт <a href="#post-reupload">повторной загрузки</a>; в <code>status</code> — <code>proxy_broken</code>, <code>proxy_missing</code>, <code>session_invalid</code> или <code>cookie_jar_too_large</code>;</li>
+<li>остальные значения (<code>passed_completed</code>, <code>mexc_hold_started</code>, <code>wrong_country_cancelled</code>, <code>blocked_cancelled</code> и другие) — решение по слоту у исполнителя; что оно значит, говорит <code>status</code>.</li>
+</ul>
+<p><code>order_done: true</code> — этой проверкой закончился весь заказ. <code>verification_type</code> — что проверялось, например <code>MEXC_FACE_SECURITY</code>.</p>
+<table>
+<thead>
+<tr>
+<th><code>status</code></th>
+<th>Что значит</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>passed</code></td>
+<td>Верификация пройдена</td>
+</tr>
+<tr>
+<td><code>mexc_hold</code></td>
+<td>MEXC: верификация пройдена, начался период наблюдения</td>
+</tr>
+<tr>
+<td><code>bingx_face_off_started</code></td>
+<td>BingX: KYC пройден, начался второй этап — ждите <a href="#bingx">запроса кода</a></td>
+</tr>
+<tr>
+<td><code>bingx_review_held</code></td>
+<td>BingX: KYC пройден, слот проверит поддержка; от вас ничего не нужно</td>
+</tr>
+<tr>
+<td><code>risk_face_passed</code></td>
+<td>Risk Removal: проверка лица пройдена, дальше апелляция</td>
+</tr>
+<tr>
+<td><code>wrong_country</code></td>
+<td>Пройдена с другой страной, чем в заказе. При <code>action: "wrong_country_cancelled"</code> слот отменён, деньги возвращены</td>
+</tr>
+<tr>
+<td><code>pending</code></td>
+<td>Биржа рассматривает верификацию</td>
+</tr>
+<tr>
+<td><code>available</code></td>
+<td>Заявки ещё нет; у реверификации — проверка сейчас не требуется</td>
+</tr>
+<tr>
+<td><code>failed</code></td>
+<td>Попытка отклонена, возможна следующая</td>
+</tr>
+<tr>
+<td><code>face_not_submitted</code></td>
+<td>Проверка лица открыта, но ещё не пройдена</td>
+</tr>
+<tr>
+<td><code>blocked</code></td>
+<td>Биржа не допускает верификацию на аккаунте. При <code>action: "blocked_cancelled"</code> слот отменён, деньги возвращены; у реверификации решает поддержка</td>
+</tr>
+<tr>
+<td><code>already_verified</code></td>
+<td>При <code>result_only</code>: аккаунт был верифицирован ещё до загрузки</td>
+</tr>
+<tr>
+<td><code>stale</code></td>
+<td>Слот изменился во время проверки</td>
+</tr>
+<tr>
+<td><code>unknown</code></td>
+<td>Ответ биржи не распознан</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>Когда</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>409</td>
+<td><code>slot_no_session</code></td>
+<td>В слоте нет аккаунта</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>proxy_missing</code></td>
+<td>В слоте нет прокси</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>reupload_required</code></td>
+<td>Слот ждёт <a href="#post-reupload">повторной загрузки</a></td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>no_link_yet</code></td>
+<td>Исполнитель взял слот, но ещё не начал верификацию</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>check_not_available</code></td>
+<td>В этом статусе проверка недоступна; <code>status</code> — статус слота</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>check_in_flight</code></td>
+<td>По слоту идёт другая проверка — повторите через несколько секунд</td>
+</tr>
+<tr>
+<td>429</td>
+<td><code>cooldown</code></td>
+<td>Слот проверяли меньше 30 секунд назад (после неудачной проверки — 15); <code>seconds</code> и <code>Retry-After</code> — сколько ждать</td>
+</tr>
+<tr>
+<td>429</td>
+<td><code>client_exchange_busy</code></td>
+<td>Уже идут 3 обращения к бирже по вашим слотам (<code>limit</code>); без <code>Retry-After</code></td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>exchange_transient</code></td>
+<td>Биржа не ответила, прокси работает; ничего не изменилось — повторите</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>exchange_unreachable</code></td>
+<td>Прокси работает, но биржа через него не открывается — <a href="#post-start-proxy-replace">замените прокси</a></td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>proxy_broken</code>, <code>session_invalid</code>, <code>cookie_jar_too_large</code></td>
+<td>Данные не работают, но слот нельзя поставить на паузу — например, он не опубликован или закрыт</td>
+</tr>
+<tr>
+<td>409, 502</td>
+<td><code>status_check_failed</code></td>
+<td>Статус прочитать не удалось — повторите позже</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bingx">Код BingX<a class="headerlink" href="#bingx" title="Permanent link">&para;</a></h2>
+<p>На втором этапе BingX (слот <code>BINGX_FACE_OFF</code>) нужен код из письма, которое BingX присылает на почту аккаунта. На коды у вас 60 минут на весь слот; время идёт, только пока <code>bingx.client_clock_running: true</code>. Время вышло — слот завершается с включённым входом по лицу, деньги не возвращаются (<a href="../codes/#bingx-endings">итоги</a>).</p>
+<ol>
+<li>Дождитесь события <code>slot_action_required</code> с <code>action: "bingx_code"</code>; <code>reason</code> — почему просят (<a href="../codes/#ask-reasons">значения</a>).</li>
+<li>Прочитайте <a href="../orders/#get-slot">слот</a>: при <code>bingx.step: "awaiting_code"</code> возьмите код из самого свежего письма, пришедшего не раньше <code>bingx.code_sent_at</code>.</li>
+<li>При <code>bingx.fresh_code_available: true</code> (письму больше 10 минут) вызовите <a href="#post-bingx-refresh"><code>refresh</code></a>. Шаг можно пропустить: на просроченный код платформа сама попросит новое письмо.</li>
+<li>Отправьте код в <a href="#post-bingx-code"><code>bingx-code</code></a>.</li>
+<li>Дождитесь ответа в ленте: <code>slot_notice</code> с <code>notice: "bingx_code_accepted"</code> — код принят; новый запрос с <code>reason: "wrong_code"</code> — отправьте код из самого свежего письма ещё раз.</li>
+</ol>
+<h3 id="post-bingx-code">Отправить код BingX<a class="headerlink" href="#post-bingx-code" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--post">POST</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders/{order_id}/slots/{slot_id}/bingx-code</code></div>
+
+<p>Передаёт код из письма BingX. На каждый запрос кода принимается один код — первый, откуда бы его ни прислали: бот, веб-версия или API.</p>
+<p>Право <code>upload</code></p>
+<table>
+<thead>
+<tr>
+<th>Поле тела</th>
+<th>Тип</th>
+<th>Обязательно</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>code</code></td>
+<td>строка</td>
+<td>да</td>
+<td>До 32 символов; без пробелов — от 4 до 8 цифр</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://app.kycportal.org/api/v1/orders/8402-9173/slots/5120-3562/bingx-code<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$KP_API_KEY</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{"code": "123 456"}'</span>
+</code></pre></div>
+<p>Ответ <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"accepted"</span><span class="p">}</span>
+</code></pre></div>
+<p><code>accepted</code> — код взят и отправлен в BingX, а не «код подошёл». Итог придёт в ленту. Код нигде не возвращается.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>Когда</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>409</td>
+<td><code>not_open</code></td>
+<td>Слот сейчас не ждёт код: ещё не запросили, код уже взят, слот ждёт повторной загрузки, закрыт или это не второй этап BingX</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>bad_format</code></td>
+<td>Без пробелов — не 4–8 цифр; ничего не изменилось</td>
+</tr>
+</tbody>
+</table>
+<h3 id="post-bingx-refresh">Запросить новый код BingX<a class="headerlink" href="#post-bingx-refresh" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--post">POST</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders/{order_id}/slots/{slot_id}/bingx-code/refresh</code></div>
+
+<p>Проверяет, действует ли код в последнем письме, и при необходимости просит BingX прислать новое.</p>
+<p>Право <code>upload</code></p>
+<p>Ответ <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"resent"</span><span class="p">}</span>
+</code></pre></div>
+<p><code>still_fresh</code> — коду меньше 10 минут, отправляйте его. <code>resent</code> — BingX пришлёт новое письмо; в ленту придёт запрос с <code>reason: "stale_resent"</code>.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>Когда</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>409</td>
+<td><code>not_open</code></td>
+<td>Код сейчас не ждут или ваши 60 минут закончились</td>
+</tr>
+</tbody>
+</table>
+<h2 id="risk-removal">Скриншоты для Risk Removal<a class="headerlink" href="#risk-removal" title="Permanent link">&para;</a></h2>
+<p>Когда по слоту Risk Removal запросят новые скриншоты депозита, придёт событие <code>slot_action_required</code> с <code>action: "risk_proofs"</code>. Загрузите каждый скриншот в <a href="#post-risk-proofs-files"><code>POST /risk-proofs/files</code></a>, затем отправьте набор в <a href="#post-slot-risk-proofs"><code>POST …/risk-proofs</code></a>. Что должно быть на скриншоте — <a href="../../guide/risk-removal/">Risk Removal</a>.</p>
+<h3 id="post-risk-proofs-files">Загрузить скриншот депозита<a class="headerlink" href="#post-risk-proofs-files" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--post">POST</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/risk-proofs/files</code></div>
+
+<p>Загружает один скриншот депозита. Неотправленный скриншот можно использовать 23 часа. Необязательный заголовок <code>X-Upload-Key</code> (UUID): повтор с тем же ключом в течение 24 часов вернёт тот же <code>id</code>.</p>
+<p>Право <code>upload</code></p>
+<table>
+<thead>
+<tr>
+<th>Поле формы</th>
+<th>Тип</th>
+<th>Обязательно</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>file</code></td>
+<td>файл</td>
+<td>да</td>
+<td>JPEG, PNG, WebP или HEIC (по содержимому); 10 КБ – 18 МБ; каждая сторона 300–12 000 пикселей</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://app.kycportal.org/api/v1/risk-proofs/files<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$KP_API_KEY</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"X-Upload-Key: 6f1d3c1e-0000-4000-8000-000000000001"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="nv">file</span><span class="o">=</span>@deposit-1.png
+</code></pre></div>
+<p>Ответ <code>201</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0b6c2a7e-1111-4222-8333-444455556666"</span><span class="p">,</span><span class="w"> </span><span class="nt">"size_bytes"</span><span class="p">:</span><span class="w"> </span><span class="mi">184321</span><span class="p">,</span><span class="w"> </span><span class="nt">"mime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"image/png"</span><span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>Когда</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>422</td>
+<td><code>proof_not_an_image</code></td>
+<td>Не JPEG, PNG, WebP или HEIC, или нет части <code>file</code></td>
+</tr>
+<tr>
+<td>413</td>
+<td><code>proof_too_large</code></td>
+<td>Больше 18 МБ</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>proof_too_small</code></td>
+<td>Меньше 10 КБ или короткая сторона меньше 300 пикселей</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>proof_dimensions_absurd</code></td>
+<td>Сторона больше 12 000 пикселей</td>
+</tr>
+<tr>
+<td>429</td>
+<td><code>proof_quota_exceeded</code></td>
+<td>За 24 часа с первой загрузки — 250 скриншотов или 500 МБ (удалённые тоже считаются), либо уже 120 неотправленных; <code>retry_after_seconds</code></td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>proofs_upload_in_progress</code></td>
+<td>Первая попытка с этим <code>X-Upload-Key</code> ещё сохраняется; <code>retry_after_seconds: 3</code></td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>proofs_storage_busy</code></td>
+<td>Хранилище занято; <code>retry_after_seconds: 5</code></td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>proofs_storage_unavailable</code></td>
+<td>Хранилище недоступно — повторите позже</td>
+</tr>
+</tbody>
+</table>
+<h3 id="delete-risk-proofs-file">Удалить скриншот<a class="headerlink" href="#delete-risk-proofs-file" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--delete">DELETE</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/risk-proofs/files/{file_id}</code></div>
+
+<p>Удаляет свой неотправленный скриншот.</p>
+<p>Право <code>upload</code></p>
+<p>Ответ <code>204</code> без тела.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>Когда</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>404</td>
+<td><code>proof_file_not_found</code></td>
+<td>Скриншот не найден, чужой или уже отправлен</td>
+</tr>
+</tbody>
+</table>
+<h3 id="post-slot-risk-proofs">Отправить скриншоты для Risk Removal<a class="headerlink" href="#post-slot-risk-proofs" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--post">POST</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders/{order_id}/slots/{slot_id}/risk-proofs</code></div>
+
+<p>Отправляет новые скриншоты по слоту Risk Removal, когда их запросили. Набор полностью заменяет прежние скриншоты слота; платить ничего не нужно.</p>
+<p>Право <code>upload</code></p>
+<table>
+<thead>
+<tr>
+<th>Поле тела</th>
+<th>Тип</th>
+<th>Обязательно</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>deposits</code></td>
+<td>список</td>
+<td>да</td>
+<td>От 1 до 4 скриншотов</td>
+</tr>
+<tr>
+<td><code>deposits[].file_id</code></td>
+<td>строка</td>
+<td>да</td>
+<td><code>id</code> из <a href="#post-risk-proofs-files"><code>POST /risk-proofs/files</code></a></td>
+</tr>
+<tr>
+<td><code>deposits[].source</code></td>
+<td>строка</td>
+<td>да</td>
+<td>Откуда пришёл депозит, до 64 символов; попадёт в апелляцию как есть</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://app.kycportal.org/api/v1/orders/2210-4471/slots/3307-1186/risk-proofs<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$KP_API_KEY</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{"deposits": [{"file_id": "0b6c2a7e-1111-4222-8333-444455556666", "source": "Bybit"},</span>
+<span class="s1">                   {"file_id": "9d4e1f20-2222-4333-8444-555566667777", "source": "Trust Wallet"}]}'</span>
+</code></pre></div>
+<p>Ответ <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"slot_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3307-1186"</span><span class="p">,</span><span class="w"> </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RISK_REJECTED"</span><span class="p">,</span><span class="w"> </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span>
+</code></pre></div>
+<p><code>status</code> — статус слота, <code>count</code> — сколько скриншотов теперь у слота. После отправки <code>risk_proofs</code> пропадает из <code>waiting_for_client</code>.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>Когда</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>404</td>
+<td><code>proof_file_not_found</code></td>
+<td>Скриншот не найден, чужой, уже отправлен или старше 23 часов</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>proof_source_invalid</code></td>
+<td>Пустой <code>source</code></td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>risk_proofs_not_requested</code></td>
+<td>Новые скриншоты по слоту не запрашивали или слот закрыт</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>risk_proofs_invalid</code></td>
+<td>Набор отклонён</td>
+</tr>
+<tr>
+<td>404</td>
+<td><code>slot_not_found</code></td>
+<td>В том числе слот не Risk Removal</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../assets/api.js"></script>
+      
+    
+  </body>
+</html>

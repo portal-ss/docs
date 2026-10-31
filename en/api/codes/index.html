@@ -1,0 +1,2504 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation and Terms of Use">
+      
+      
+      
+        <link rel="canonical" href="https://portal-ss.github.io/docs/en/api/codes/">
+      
+      
+        <link rel="prev" href="../events/">
+      
+      
+        <link rel="next" href="../errors/">
+      
+      
+        
+          <link rel="alternate" href="../../../api/codes/" hreflang="ru">
+        
+          <link rel="alternate" href="../../../uk/api/codes/" hreflang="uk">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Statuses and codes - KYC Portal</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/api.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#statuses-and-codes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="KYC Portal" class="md-header__button md-logo" aria-label="KYC Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KYC Portal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Statuses and codes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../api/codes/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../uk/api/codes/" hreflang="uk" class="md-select__link">
+              Українська
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="KYC Portal" class="md-nav__button md-logo" aria-label="KYC Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    KYC Portal
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../guide/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/balance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balance and top-ups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading accounts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Order execution and deadlines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/cancel-refunds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cancellations and refunds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Re-verifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/risk-removal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Removal on MEXC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/sellers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Executors and order distribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/team/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your own team
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/subscription/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Subscription
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web app
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/referral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referral program
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Account and balance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orders and slots
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading and publishing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slot-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slot actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Re-verification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cancel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cancellations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event feed
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statuses and codes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statuses and codes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#slot-statuses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slot statuses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-statuses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Order statuses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification outcome
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the slot needs from you
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What needs to be done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ask-reasons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request reasons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#close-reasons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the slot was cancelled
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deadline-kinds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deadline kinds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deadline-reasons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why a cancellation is scheduled
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bingx-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BingX second-stage steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bingx-endings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BingX second-stage outcome
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balance-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Balance changes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upload codes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Upload codes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-file-cant-be-read" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The file can't be read
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-account-failed-the-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The account failed the check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Errors and limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terms of Use
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#slot-statuses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slot statuses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-statuses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Order statuses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verification outcome
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the slot needs from you
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What needs to be done
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ask-reasons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request reasons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#close-reasons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the slot was cancelled
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deadline-kinds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deadline kinds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deadline-reasons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why a cancellation is scheduled
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bingx-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BingX second-stage steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bingx-endings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BingX second-stage outcome
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balance-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Balance changes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upload codes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Upload codes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-file-cant-be-read" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The file can't be read
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-account-failed-the-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The account failed the check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="statuses-and-codes">Statuses and codes<a class="headerlink" href="#statuses-and-codes" title="Permanent link">&para;</a></h1>
+<h2 id="slot-statuses">Slot statuses<a class="headerlink" href="#slot-statuses" title="Permanent link">&para;</a></h2>
+<p>The slot's <code>status</code> field and the <code>slot_status</code> event.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FREE</code></td>
+<td>Nobody has taken the slot: it's empty, has an account uploaded or is waiting for an executor after publishing</td>
+</tr>
+<tr>
+<td><code>IN_PROGRESS</code></td>
+<td>An executor has taken the slot and is completing the verification</td>
+</tr>
+<tr>
+<td><code>PENDING</code></td>
+<td>The exchange is reviewing the verification; deadlines are paused</td>
+</tr>
+<tr>
+<td><code>VERIFICATION_FAILED</code></td>
+<td>The exchange rejected the attempt, and the executor is retrying</td>
+</tr>
+<tr>
+<td><code>REUPLOAD_REQUIRED</code></td>
+<td>A fresh proxy, fresh cookies or both are needed; the slot is paused — <a href="../slot-actions/#post-reupload">re-upload</a></td>
+</tr>
+<tr>
+<td><code>MEXC_HOLD</code></td>
+<td>MEXC: the verification has passed, and the platform is waiting to see whether the exchange asks for a face check</td>
+</tr>
+<tr>
+<td><code>MEXC_FACE_REQUIRED</code></td>
+<td>MEXC has asked for a face check, and the executor is passing it at no extra charge</td>
+</tr>
+<tr>
+<td><code>BINGX_FACE_OFF</code></td>
+<td>BingX: KYC has passed, and the second stage is under way — turning off face login</td>
+</tr>
+<tr>
+<td><code>BINGX_REVIEW</code></td>
+<td>BingX: KYC has passed, but the slot couldn't be completed automatically; support is reviewing it</td>
+</tr>
+<tr>
+<td><code>RISK_AWAITING_DOCUMENT</code></td>
+<td>Risk Removal: the appeal is being prepared</td>
+</tr>
+<tr>
+<td><code>RISK_SUBMITTED</code></td>
+<td>Risk Removal: the appeal has been filed with MEXC</td>
+</tr>
+<tr>
+<td><code>RISK_FACE_EXPIRED</code></td>
+<td>Risk Removal: the face check has to be passed again; the same executor does it</td>
+</tr>
+<tr>
+<td><code>RISK_REJECTED</code></td>
+<td>Risk Removal: MEXC closed the appeal without lifting the restriction; support decides on the next steps</td>
+</tr>
+<tr>
+<td><code>RISK_ERROR</code></td>
+<td>Risk Removal: there's a problem with the appeal, and support is handling it</td>
+</tr>
+<tr>
+<td><code>COMPLETED</code></td>
+<td>The slot is completed</td>
+</tr>
+<tr>
+<td><code>CANCELLED</code></td>
+<td>The slot is closed; the reason is in <a href="#close-reasons"><code>close_reason</code></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="order-statuses">Order statuses<a class="headerlink" href="#order-statuses" title="Permanent link">&para;</a></h2>
+<p>The order's <code>status</code> field, the slot's <code>order_status</code> and the <code>order_status</code> event.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PAID</code></td>
+<td>Paid, waiting for accounts to be uploaded</td>
+</tr>
+<tr>
+<td><code>SESSION_UPLOADED</code></td>
+<td>Every slot has an account, and the order is waiting to be published</td>
+</tr>
+<tr>
+<td><code>IN_PROGRESS</code></td>
+<td>Published; not all slots are closed yet</td>
+</tr>
+<tr>
+<td><code>COMPLETED</code></td>
+<td>All slots are completed</td>
+</tr>
+<tr>
+<td><code>PARTIAL_COMPLETED</code></td>
+<td>All slots are closed: some completed, some cancelled</td>
+</tr>
+<tr>
+<td><code>CANCELLED</code></td>
+<td>All slots are closed, none completed</td>
+</tr>
+</tbody>
+</table>
+<p>Very old orders may have the obsolete values <code>ACCESS_GRANTED</code>, <code>IN_POOL</code>, <code>PARTIAL</code>, <code>REFUNDED</code>, <code>MANUAL</code>.</p>
+<h2 id="verification-results">Verification outcome<a class="headerlink" href="#verification-results" title="Permanent link">&para;</a></h2>
+<p>The slot's <code>verification_result</code> field. Values differ in letter case — compare the strings exactly as they are.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>passed</code></td>
+<td>Passed</td>
+</tr>
+<tr>
+<td><code>pending</code></td>
+<td>The exchange is still reviewing</td>
+</tr>
+<tr>
+<td><code>wrong_country</code></td>
+<td>Wrong country</td>
+</tr>
+<tr>
+<td><code>blocked</code></td>
+<td>The exchange doesn't allow verification on the account</td>
+</tr>
+<tr>
+<td><code>kyc_already_done</code></td>
+<td>The account had already been verified</td>
+</tr>
+<tr>
+<td><code>no_challenge_required</code></td>
+<td>No check was required</td>
+</tr>
+<tr>
+<td><code>admin_cancelled</code></td>
+<td>Cancelled by support</td>
+</tr>
+<tr>
+<td><code>DEADLINE_EXPIRED</code></td>
+<td>The deadline expired</td>
+</tr>
+<tr>
+<td><code>ACCOUNT_UNSERVABLE</code></td>
+<td>The exchange doesn't accept this account</td>
+</tr>
+<tr>
+<td><code>CLIENT_CANCELLED</code></td>
+<td>Cancelled by you</td>
+</tr>
+<tr>
+<td><code>failed</code>, <code>SUBSCRIPTION_LAPSED</code></td>
+<td>Obsolete, found only on old slots</td>
+</tr>
+</tbody>
+</table>
+<h2 id="waiting">What the slot needs from you<a class="headerlink" href="#waiting" title="Permanent link">&para;</a></h2>
+<p>The slot's <code>waiting_for_client</code> field is a list. It's non-empty for exactly the slots that <code>GET /slots?attention=true</code> returns.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>When</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reupload</code></td>
+<td>The slot is in <code>REUPLOAD_REQUIRED</code> status</td>
+<td>Send what <code>reupload_scope</code> says (below)</td>
+</tr>
+<tr>
+<td><code>risk_proofs</code></td>
+<td>New deposit screenshots are needed for Risk Removal</td>
+<td><a href="../slot-actions/#post-slot-risk-proofs">Send the screenshots</a></td>
+</tr>
+<tr>
+<td><code>bingx_code</code></td>
+<td>A <code>BINGX_FACE_OFF</code> slot is waiting for the code from the BingX email</td>
+<td><a href="../slot-actions/#post-bingx-code">Send the code</a></td>
+</tr>
+</tbody>
+</table>
+<p><code>reupload</code> and <code>risk_proofs</code> can be present at the same time. A slot waiting for a re-upload waits only for that — even if it was asking for a BingX code before.</p>
+<p>The <code>reupload_scope</code> field — what to send on a re-upload:</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>What to send</th>
+<th>Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>proxy</code></td>
+<td>A new proxy</td>
+<td><a href="../slot-actions/#post-replace-proxy"><code>replace-proxy</code></a></td>
+</tr>
+<tr>
+<td><code>session</code></td>
+<td>Fresh cookies from the same account</td>
+<td><a href="../slot-actions/#post-reupload"><code>reupload</code></a></td>
+</tr>
+<tr>
+<td><code>full</code></td>
+<td>Both cookies and a proxy</td>
+<td><a href="../slot-actions/#post-reupload"><code>reupload</code></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="actions">What needs to be done<a class="headerlink" href="#actions" title="Permanent link">&para;</a></h2>
+<p>The <code>action</code> field of the <code>slot_action_required</code> event.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>What it means</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bingx_code</code></td>
+<td>BingX has emailed the account a code for the second stage</td>
+<td><a href="../slot-actions/#post-bingx-code">Send the code</a></td>
+</tr>
+<tr>
+<td><code>risk_proofs</code></td>
+<td>New deposit screenshots are needed for Risk Removal</td>
+<td><a href="../slot-actions/#post-slot-risk-proofs">Send the screenshots</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ask-reasons">Request reasons<a class="headerlink" href="#ask-reasons" title="Permanent link">&para;</a></h2>
+<p>The <code>reason</code> field of the <code>slot_action_required</code> event and the slot's <code>bingx.code_ask_reason</code>. For any code request, send the code from the latest BingX email.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>first</code></td>
+<td>The first request: KYC has passed, and BingX has just sent the code</td>
+</tr>
+<tr>
+<td><code>new_code_sent</code></td>
+<td>BingX sent the code again</td>
+</tr>
+<tr>
+<td><code>wrong_code</code></td>
+<td>The code you sent didn't work — check it and send it again</td>
+</tr>
+<tr>
+<td><code>wrong_code_resent</code></td>
+<td>The code didn't work again, and BingX sent a new email — check every digit</td>
+</tr>
+<tr>
+<td><code>worker_ready</code></td>
+<td>The executor is ready to pass the face check again, and BingX sent a new code</td>
+</tr>
+<tr>
+<td><code>stale_resent</code></td>
+<td>The previous code expired (it works for about 10 minutes), and BingX sent a new one</td>
+</tr>
+<tr>
+<td><code>requested</code></td>
+<td>Only with <code>action: "risk_proofs"</code>: new screenshots have been requested</td>
+</tr>
+</tbody>
+</table>
+<p><code>bingx.code_ask_reason</code> is filled in only when <code>bingx.step</code> = <code>awaiting_code</code>, and it's never <code>requested</code>. If the request opened after your time for the codes had already run out, it's <code>null</code>.</p>
+<h2 id="close-reasons">Why the slot was cancelled<a class="headerlink" href="#close-reasons" title="Permanent link">&para;</a></h2>
+<p>The slot's <code>close_reason</code> field and the <code>reason</code> of a <code>slot_status</code> event with status <code>CANCELLED</code>. On open and completed slots, and on slots closed before reasons were introduced, it's <code>null</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>wrong_country</code></td>
+<td>The document's country didn't match the order's country, or the account had already been verified in another country before work started</td>
+</tr>
+<tr>
+<td><code>blocked</code></td>
+<td>The exchange no longer allows verification on this account</td>
+</tr>
+<tr>
+<td><code>already_verified</code></td>
+<td>The account had already been verified</td>
+</tr>
+<tr>
+<td><code>no_check_required</code></td>
+<td>Re-verification: the exchange didn't request the check it was ordered for</td>
+</tr>
+<tr>
+<td><code>slot_deadline</code></td>
+<td>The fulfillment deadline chosen at purchase has passed</td>
+</tr>
+<tr>
+<td><code>face_deadline</code></td>
+<td>MEXC: the additional face check wasn't passed in time</td>
+</tr>
+<tr>
+<td><code>bingx_face_off_failed</code></td>
+<td>BingX, second stage: the executor didn't pass the repeat face check in time</td>
+</tr>
+<tr>
+<td><code>client_cancel</code></td>
+<td>You cancelled it yourself</td>
+</tr>
+<tr>
+<td><code>admin_cancel</code></td>
+<td>Support cancelled the slot</td>
+</tr>
+<tr>
+<td><code>exchange_review_in_flight</code></td>
+<td>The exchange is already reviewing another application for this account. If it doesn't pass, the account can be uploaded to a new order</td>
+</tr>
+<tr>
+<td><code>exchange_attempts_spent</code></td>
+<td>The account has used up today's verification attempts on the exchange. The account can be uploaded to a new order in about a day</td>
+</tr>
+</tbody>
+</table>
+<h2 id="deadline-kinds">Deadline kinds<a class="headerlink" href="#deadline-kinds" title="Permanent link">&para;</a></h2>
+<p>The <code>kind</code> field in the slot's <code>deadlines</code>. Deadlines are sorted by <code>at</code>, earliest first.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>slot_deadline</code></td>
+<td>The fulfillment deadline chosen at purchase</td>
+</tr>
+<tr>
+<td><code>budget</code></td>
+<td>If the executor doesn't finish, the slot goes back to the pool no later than this moment (<a href="../../guide/sellers/#worker-time">executor's time</a>)</td>
+</tr>
+<tr>
+<td><code>mexc_hold</code></td>
+<td>MEXC: the end of the observation window after KYC</td>
+</tr>
+<tr>
+<td><code>mexc_face</code></td>
+<td>MEXC: the deadline for the additional face check</td>
+</tr>
+<tr>
+<td><code>close_request</code></td>
+<td>The slot will be closed at <code>at</code>; the reason is in <code>reason</code> (below)</td>
+</tr>
+<tr>
+<td><code>client_cancel</code></td>
+<td>When your re-verification cancellation will be checked</td>
+</tr>
+</tbody>
+</table>
+<p><code>close_request</code> and <code>client_cancel</code> disappear from the list once their time has passed. Other deadlines may stay briefly after their <code>at</code>.</p>
+<h2 id="deadline-reasons">Why a cancellation is scheduled<a class="headerlink" href="#deadline-reasons" title="Permanent link">&para;</a></h2>
+<p>The <code>reason</code> field in the slot's <code>deadlines</code>; only for <code>kind: "close_request"</code>, <code>null</code> for the others.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>admin_cancel</code></td>
+<td>Support scheduled the cancellation</td>
+</tr>
+<tr>
+<td><code>slot_deadline</code></td>
+<td>The slot's fulfillment deadline has passed</td>
+</tr>
+<tr>
+<td><code>face_deadline</code></td>
+<td>The MEXC face check deadline has passed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bingx-steps">BingX second-stage steps<a class="headerlink" href="#bingx-steps" title="Permanent link">&para;</a></h2>
+<p>The <code>bingx.step</code> field. The <code>bingx</code> object is present on a BingX slot from the second stage on; on other slots it's <code>null</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>requesting_code</code></td>
+<td>The platform is asking BingX to email the code</td>
+</tr>
+<tr>
+<td><code>awaiting_code</code></td>
+<td>Waiting for your code — <a href="../slot-actions/#post-bingx-code">send it</a>; your time is running</td>
+</tr>
+<tr>
+<td><code>checking_code</code></td>
+<td>The code is being checked, usually within a minute</td>
+</tr>
+<tr>
+<td><code>face_in_progress</code></td>
+<td>The code was accepted, and the executor is passing the face check</td>
+</tr>
+<tr>
+<td><code>switching_off</code></td>
+<td>The face check has passed, and the platform is turning off face login</td>
+</tr>
+<tr>
+<td><code>waiting_for_worker</code></td>
+<td>The executor's attempt failed; when they're ready, BingX will send a new code</td>
+</tr>
+<tr>
+<td><code>under_review</code></td>
+<td>The slot is with support (status <code>BINGX_REVIEW</code>)</td>
+</tr>
+<tr>
+<td><code>done</code></td>
+<td>The second stage is over; the outcome is in <code>face_login</code> or <code>close_reason</code></td>
+</tr>
+</tbody>
+</table>
+<p>While the slot is waiting for a re-upload, <code>step</code> doesn't change, your time is paused, and no code is accepted.</p>
+<h2 id="bingx-endings">BingX second-stage outcome<a class="headerlink" href="#bingx-endings" title="Permanent link">&para;</a></h2>
+<p>The <code>reason</code> field of a <code>slot_status</code> event with status <code>COMPLETED</code> on a BingX slot, and the <code>bingx.face_login</code> field.</p>
+<table>
+<thead>
+<tr>
+<th><code>reason</code></th>
+<th><code>bingx.face_login</code></th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bingx_face_login_off</code></td>
+<td><code>off</code></td>
+<td>KYC has passed, and face login is turned off</td>
+</tr>
+<tr>
+<td><code>bingx_face_login_left_on</code></td>
+<td><code>left_on</code></td>
+<td>KYC has passed, but face login stayed on — for example, your time for the codes ran out</td>
+</tr>
+<tr>
+<td><code>bingx_face_login_unknown</code></td>
+<td><code>unknown</code></td>
+<td>Support completed the slot; the platform didn't check whether face login is off</td>
+</tr>
+</tbody>
+</table>
+<p><code>face_login</code> is <code>null</code> while the second stage is under way, and on a cancelled slot. A slot completed before the second stage has neither a <code>bingx</code> object nor a <code>reason</code> in the event.</p>
+<h2 id="notices">Notices<a class="headerlink" href="#notices" title="Permanent link">&para;</a></h2>
+<p>The <code>notice</code> field of <code>slot_notice</code> and <code>order_notice</code> events.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Event</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bingx_code_accepted</code></td>
+<td><code>slot_notice</code></td>
+<td>BingX accepted your code. The code may be needed again later</td>
+</tr>
+<tr>
+<td><code>slot_frozen</code></td>
+<td><code>slot_notice</code></td>
+<td>The slot came back from the executor into a frozen order: it isn't offered to executors until you renew your subscription or cancel the slot</td>
+</tr>
+<tr>
+<td><code>order_frozen</code></td>
+<td><code>order_notice</code></td>
+<td>The subscription has ended: the order's untaken slots are frozen; slots in progress will be finished</td>
+</tr>
+<tr>
+<td><code>order_unfrozen</code></td>
+<td><code>order_notice</code></td>
+<td>The subscription has been renewed: the frozen slots are offered to executors again</td>
+</tr>
+</tbody>
+</table>
+<h2 id="balance-events">Balance changes<a class="headerlink" href="#balance-events" title="Permanent link">&para;</a></h2>
+<p>The <code>balance_event</code> field of the <code>balance</code> event.</p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>deposit</code></td>
+<td>A top-up has been credited</td>
+</tr>
+<tr>
+<td><code>spend</code></td>
+<td>A charge: an order, a subscription or a re-verification</td>
+</tr>
+<tr>
+<td><code>refund</code></td>
+<td>A refund to your balance</td>
+</tr>
+<tr>
+<td><code>referral_accrual</code></td>
+<td>A referral bonus</td>
+</tr>
+<tr>
+<td><code>manual_adjustment</code></td>
+<td>A balance adjustment by support</td>
+</tr>
+<tr>
+<td><code>legacy_opening</code></td>
+<td>An opening balance from the move to the current accounting system; only on long-standing accounts</td>
+</tr>
+</tbody>
+</table>
+<h2 id="upload-codes">Upload codes<a class="headerlink" href="#upload-codes" title="Permanent link">&para;</a></h2>
+<h3 id="the-file-cant-be-read">The file can't be read<a class="headerlink" href="#the-file-cant-be-read" title="Permanent link">&para;</a></h3>
+<p>A <code>422</code> response (<code>413</code> for <code>too_many_items</code>) to an account upload, a re-upload or a bulk re-verification account upload. <code>at</code> is the account number (yours from <code>positions</code>, or the profile's number in the ADS Power file), <code>profile</code> is the profile name, and <code>detail</code> gives details. If there are several problems, <code>issues</code> lists them all, and the response itself repeats the first one.</p>
+<table>
+<thead>
+<tr>
+<th><code>code</code></th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>parse_too_large</code></td>
+<td>The file is too large for one account's cookies (an ADS Power file — over 20 MB)</td>
+</tr>
+<tr>
+<td><code>parse_too_many_cookies</code></td>
+<td>Cookies from many sites, while only the exchange's cookies are needed</td>
+</tr>
+<tr>
+<td><code>parse_cookie_value_too_long</code></td>
+<td>Doesn't look like a regular cookies export</td>
+</tr>
+<tr>
+<td><code>cookie_jar_too_large</code></td>
+<td>Cookies from many sites — the exchange will reject such a request</td>
+</tr>
+<tr>
+<td><code>no_platform_cookies</code></td>
+<td>The file has no cookies for the exchange you need</td>
+</tr>
+<tr>
+<td><code>parse_unrecognized_format</code></td>
+<td>Not cookies: a screenshot or text from a page</td>
+</tr>
+<tr>
+<td><code>parse_empty_adspower</code></td>
+<td>The ADS Power file has no profiles at all</td>
+</tr>
+<tr>
+<td><code>too_many_items</code></td>
+<td>More than 200 profiles or proxy lines (<code>limit</code>)</td>
+</tr>
+<tr>
+<td><code>parse_block_missing_cookie</code></td>
+<td>An ADS Power profile has no cookies — it isn't logged in</td>
+</tr>
+<tr>
+<td><code>parse_no_proxies</code></td>
+<td>No proxy lines at all</td>
+</tr>
+<tr>
+<td><code>invalid_proxy</code></td>
+<td>The proxy can't be read, or its scheme isn't supported</td>
+</tr>
+<tr>
+<td><code>private_proxy</code></td>
+<td>A local or internal address, not a proxy</td>
+</tr>
+<tr>
+<td><code>parse_not_a_text_file</code></td>
+<td>Not a text file</td>
+</tr>
+<tr>
+<td><code>parse_encrypted_export</code></td>
+<td>A password-protected Cookie-Editor export</td>
+</tr>
+<tr>
+<td><code>parse_har_file</code></td>
+<td>A recording of network requests (HAR), not cookies</td>
+</tr>
+<tr>
+<td><code>parse_broken_json</code></td>
+<td>The cookies are damaged: the text is cut off or has extra characters</td>
+</tr>
+<tr>
+<td><code>parse_unsupported_cookie_export</code></td>
+<td>This cookies format can't be read (for example, a cURL command)</td>
+</tr>
+<tr>
+<td><code>parse_multiple_accounts_in_one_file</code></td>
+<td>Cookies from several accounts in one file</td>
+</tr>
+<tr>
+<td><code>parse_adspower_file</code></td>
+<td>An ADS Power export where one account's cookies file is expected — use <code>method=adspower</code></td>
+</tr>
+<tr>
+<td><code>parse_empty_cookies</code></td>
+<td>The export is empty</td>
+</tr>
+<tr>
+<td><code>parse_wrong_exchange</code></td>
+<td>Cookies from a different exchange; <code>detail</code> says which</td>
+</tr>
+<tr>
+<td><code>parse_wrong_site</code></td>
+<td>Cookies from a different site; <code>detail</code> is the domain</td>
+</tr>
+<tr>
+<td><code>parse_not_logged_in</code></td>
+<td>The cookies aren't logged in to the account (MEXC, Bybit); <code>detail</code> may name the domain where you are logged in</td>
+</tr>
+<tr>
+<td><code>parse_not_an_adspower_file</code></td>
+<td>This isn't an ADS Power export; <code>detail</code>: <code>cookies</code> — it's a cookies file, <code>proxies</code> — it's a proxy list</td>
+</tr>
+<tr>
+<td><code>parse_export_without_cookies</code></td>
+<td>No profile has cookies</td>
+</tr>
+<tr>
+<td><code>parse_block_has_two_profiles</code></td>
+<td>Two profiles merged into one — the separator line is missing. Export again and don't edit the file</td>
+</tr>
+<tr>
+<td><code>parse_unsupported_proxy_type</code></td>
+<td>The proxy type in the profile isn't supported: HTTP, HTTPS or SOCKS is required</td>
+</tr>
+<tr>
+<td><code>parse_proxy_has_spaces</code></td>
+<td>The proxy line has extra text or two proxies</td>
+</tr>
+<tr>
+<td><code>parse_proxy_no_port</code></td>
+<td>The proxy port is missing</td>
+</tr>
+<tr>
+<td><code>parse_proxy_non_latin</code></td>
+<td>The proxy has non-Latin letters</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-account-failed-the-check">The account failed the check<a class="headerlink" href="#the-account-failed-the-check" title="Permanent link">&para;</a></h3>
+<p>The <code>error_code</code> field of accounts in <a href="../upload/#get-upload"><code>GET /orders/{order_id}/upload</code></a>. The same codes are returned in a <code>409</code> response to a proxy change or a re-upload, except that "no proxy" is <code>proxy_missing</code> there, not <code>missing_proxy</code>. A rejected account doesn't go into the slot.</p>
+<table>
+<thead>
+<tr>
+<th><code>code</code></th>
+<th>What it means</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>proxy_auth_rejected</code></td>
+<td>The proxy rejected the login or password</td>
+<td>Check them with your proxy provider</td>
+</tr>
+<tr>
+<td><code>proxy_timeout</code></td>
+<td>The proxy isn't responding — for example, it isn't paid for or is turned off</td>
+<td>Check the proxy or send another one</td>
+</tr>
+<tr>
+<td><code>proxy_bad_host</code></td>
+<td>The proxy address wasn't found</td>
+<td>Check the address</td>
+</tr>
+<tr>
+<td><code>proxy_unreachable</code></td>
+<td>Couldn't connect to the proxy</td>
+<td>Check the port and the type (HTTP or SOCKS5)</td>
+</tr>
+<tr>
+<td><code>proxy_broken</code></td>
+<td>The proxy doesn't work</td>
+<td>Send another proxy</td>
+</tr>
+<tr>
+<td><code>missing_proxy</code></td>
+<td>The account has no proxy (for example, an ADS Power profile without a proxy)</td>
+<td>Provide a proxy; in ADS Power, add it to the profile and export again</td>
+</tr>
+<tr>
+<td><code>exchange_unreachable</code></td>
+<td>The proxy works, but the exchange doesn't open through it</td>
+<td>Use a proxy from a different provider or city</td>
+</tr>
+<tr>
+<td><code>session_invalid</code></td>
+<td>The exchange doesn't accept these cookies for the account — the login has expired</td>
+<td>Log in again, export the cookies right away and don't log out</td>
+</tr>
+<tr>
+<td><code>session_not_logged_in</code></td>
+<td>The cookies aren't logged in to the account (happens on KuCoin)</td>
+<td>Log in, export the cookies and don't log out</td>
+</tr>
+<tr>
+<td><code>cookie_jar_too_large</code></td>
+<td>The export has cookies from many sites</td>
+<td>Export the cookies on the exchange's tab only</td>
+</tr>
+<tr>
+<td><code>identity_mismatch</code></td>
+<td>This isn't the same account as the one already in the slot</td>
+<td>Upload the same account</td>
+</tr>
+<tr>
+<td><code>duplicate_account_other_slot</code></td>
+<td>The account is already in another slot of this order; <code>conflict_slot_id</code> names the slot</td>
+<td>Use a different account</td>
+</tr>
+<tr>
+<td><code>duplicate_account_other_order</code>, <code>duplicate_account</code></td>
+<td>The account is already uploaded to another order</td>
+<td>Use a different account</td>
+</tr>
+<tr>
+<td><code>already_verified</code></td>
+<td>The account has already passed verification on the exchange</td>
+<td>Use a different account</td>
+</tr>
+<tr>
+<td><code>verification_blocked</code></td>
+<td>The exchange no longer allows verification on this account</td>
+<td>Use a different account</td>
+</tr>
+<tr>
+<td><code>verification_attempts_spent</code></td>
+<td>The account has run out of verification attempts for today</td>
+<td>Upload it again in about a day, or use a different one</td>
+</tr>
+<tr>
+<td><code>verification_in_review</code></td>
+<td>The exchange is already reviewing an application for this account</td>
+<td>Wait for the outcome, or use a different account</td>
+</tr>
+<tr>
+<td><code>exchange_refused_unclear</code></td>
+<td>The exchange won't let the verification start, and the reason is unknown</td>
+<td>Use a different account; if you need this one in particular, contact support</td>
+</tr>
+<tr>
+<td><code>exchange_unreadable</code></td>
+<td>The exchange didn't respond</td>
+<td>Upload the account again in a few minutes</td>
+</tr>
+<tr>
+<td><code>slot_unavailable</code></td>
+<td>While the check was running, the slot was taken by an executor or closed; nothing has changed</td>
+<td>Retry if needed</td>
+</tr>
+<tr>
+<td><code>slot_busy</code></td>
+<td>The slot is being checked right now</td>
+<td>Retry in a minute</td>
+</tr>
+<tr>
+<td><code>unknown_error</code></td>
+<td>The check didn't complete</td>
+<td>Retry in a few minutes; if it happens again, contact support</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../../assets/api.js"></script>
+      
+    
+  </body>
+</html>

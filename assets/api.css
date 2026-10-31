@@ -1,0 +1,57 @@
+/* API method pages: the endpoint line under each method heading and the
+   method badges, also copied into the page's table of contents by api.js. */
+
+.md-typeset .api-endpoint {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  margin: 0 0 1.2em;
+  padding: 0.45em 0.7em;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.3rem;
+  background: var(--md-code-bg-color);
+  overflow-x: auto;
+}
+
+.md-typeset .api-endpoint code {
+  padding: 0;
+  background: none;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
+.md-typeset .api-endpoint .api-base {
+  color: var(--md-default-fg-color--light);
+}
+
+.api-method {
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 0.1em 0.45em;
+  border-radius: 0.2rem;
+  font-family: var(--md-code-font-family);
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+}
+
+.api-method--get { color: #1a7f37; background: rgba(46, 160, 67, 0.14); }
+.api-method--post { color: #b35900; background: rgba(251, 133, 0, 0.16); }
+.api-method--put { color: #0550ae; background: rgba(56, 139, 253, 0.15); }
+.api-method--delete { color: #cf222e; background: rgba(248, 81, 73, 0.15); }
+
+[data-md-color-scheme="slate"] .api-method--get { color: #3fb950; }
+[data-md-color-scheme="slate"] .api-method--post { color: #f0883e; }
+[data-md-color-scheme="slate"] .api-method--put { color: #58a6ff; }
+[data-md-color-scheme="slate"] .api-method--delete { color: #f85149; }
+
+.md-nav__link.api-toc-link {
+  justify-content: flex-start;
+  gap: 0.5em;
+}
+
+.md-nav__link.api-toc-link .api-method {
+  margin-top: 0.1em;
+  font-size: 0.55rem;
+}

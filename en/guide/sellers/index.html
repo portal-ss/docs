@@ -29,7 +29,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -37,10 +37,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -58,6 +58,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../assets/api.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -707,21 +709,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#confirmed-country" class="md-nav__link">
+  <a href="#who-gets-an-order" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Confirmed country
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-an-order-finds-an-executor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How an order finds an executor
+        Who gets an order
       
     </span>
   </a>
@@ -733,28 +724,6 @@
     <span class="md-ellipsis">
       
         Executor's time and returning a slot to the pool
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-an-executor-doesnt-succeed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        If an executor doesn't succeed
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quality-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quality control
       
     </span>
   </a>
@@ -917,6 +886,345 @@
   
   
   
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../api/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Account and balance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orders and slots
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading and publishing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/slot-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slot actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Re-verification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/cancel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cancellations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event feed
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statuses and codes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api/errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Errors and limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../terms/" class="md-nav__link">
         
@@ -992,21 +1300,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#confirmed-country" class="md-nav__link">
+  <a href="#who-gets-an-order" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Confirmed country
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-an-order-finds-an-executor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        How an order finds an executor
+        Who gets an order
       
     </span>
   </a>
@@ -1018,28 +1315,6 @@
     <span class="md-ellipsis">
       
         Executor's time and returning a slot to the pool
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#if-an-executor-doesnt-succeed" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        If an executor doesn't succeed
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quality-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quality control
       
     </span>
   </a>
@@ -1086,72 +1361,49 @@
 
 
 <h1 id="executors-and-order-distribution">Executors and order distribution<a class="headerlink" href="#executors-and-order-distribution" title="Permanent link">&para;</a></h1>
-<p>The verifications on the exchange are carried out by real people: executors (called "Sellers" in the interface). An executor passes the identity check through a link that the platform generates inside your session. Executors don't have your account's login details.</p>
-<p>You can see who is working on a slot in its card: "👨‍💻 Executor: #…" in the workspace bot and "Worker" in the web app. The executor appears under the same number in the <a href="#priority-block">"Marketplace"</a> section.</p>
-<h2 id="confirmed-country">Confirmed country<a class="headerlink" href="#confirmed-country" title="Permanent link">&para;</a></h2>
-<p>When an executor registers, the platform compares the country of their phone number with their actual location. If the two match, the executor gets a confirmed country. As a result, your orders go first to people who are actually in the order's country, which improves the account's chances of passing future re-verifications.</p>
-<h2 id="how-an-order-finds-an-executor">How an order finds an executor<a class="headerlink" href="#how-an-order-finds-an-executor" title="Permanent link">&para;</a></h2>
-<p>Standard and wholesale orders go first to local executors whose confirmed country matches the order:</p>
+<h2 id="who-gets-an-order">Who gets an order<a class="headerlink" href="#who-gets-an-order" title="Permanent link">&para;</a></h2>
+<p>Standard and wholesale orders go to executors whose confirmed country is the order's country — their phone number's country matched their actual location. In order of priority:</p>
 <ol>
-<li>First, the order is shown to your <strong>priority</strong> executors from that country.</li>
-<li>Then it's shown to all executors whose confirmed country matches the order.</li>
+<li>your <a href="#priority-block">priority</a> executors from that country;</li>
+<li>all executors with the order's country confirmed.</li>
 </ol>
-<p>A slot that <a href="#worker-time">returns to the pool</a> goes through the same order again.</p>
-<p>Executors you've blocked don't see your standard and wholesale orders.</p>
-<p>Team orders are visible only to members of <a href="../team/">your team</a>. A re-verification goes only to the executor who did the account's first verification (see <a href="../reverify/">Re-verifications</a>).</p>
+<p>Executors you've blocked don't see these orders. Team orders are visible only to <a href="../team/">your team</a>, and a re-verification only to the executor of the account's first verification.</p>
 <h2 id="worker-time">Executor's time and returning a slot to the pool<a class="headerlink" href="#worker-time" title="Permanent link">&para;</a></h2>
-<p>When an executor takes an initial verification slot, they have <strong>4 hours</strong> of their own time to pass it. The time doesn't run while the slot is waiting for you to update its data or while the exchange is reviewing the verification. For team orders, you set this time yourself — see <a href="../team/#idle-return">Worker's time per slot</a>.</p>
-<p>The slot card shows the time by which the executor has to finish: "⏳ The worker has until …" in the workspace bot, "Back to the pool by … at the latest" in the web app. If the <a href="../lifecycle/#deadline">slot deadline</a> comes first, the card shows that instead.</p>
-<p>A slot goes back to the pool if the executor runs out of time or gives the slot up themselves:</p>
+<p>An executor has <strong>4 hours</strong> of their own time for an initial verification slot; in team orders, <a href="../team/#idle-return">as much as you set</a>. The time doesn't run while the slot is waiting for you or the exchange. The cut-off is on the slot card ("⏳ The worker has until …").</p>
+<p>If the executor runs out of time or gives the slot up, it goes back to the pool:</p>
 <ul>
-<li>if they've already issued a verification link, the slot doesn't leave right away: the platform waits 10 minutes and checks the exchange — a passed verification counts;</li>
-<li>after it's returned, the slot waits for an executor again; the previous executor can't take this particular slot again, but can take the order's other slots;</li>
-<li>you don't pay anything extra, and the slot deadline, if you set one, doesn't start over;</li>
-<li>if the account still passes through the link the previous executor issued, the slot goes back to them and counts as completed.</li>
+<li>if a verification link has already been issued, the platform waits 10 minutes and checks the exchange; a passed verification counts;</li>
+<li>the previous executor can't take this slot again;</li>
+<li>you don't pay extra, and the <a href="../lifecycle/#deadline">fulfillment deadline</a> doesn't restart;</li>
+<li>if the account later passes through the previous executor's link, the slot counts for them.</li>
 </ul>
-<p>You can't swap the executor on a taken slot yourself: if they don't make it in time, the slot goes back to the pool on its own.</p>
-<p>Re-verifications don't go back to the pool: they have no such time limit, and only the executor assigned to the account can do them.</p>
-<h2 id="if-an-executor-doesnt-succeed">If an executor doesn't succeed<a class="headerlink" href="#if-an-executor-doesnt-succeed" title="Permanent link">&para;</a></h2>
-<p>If the exchange rejects an attempt, the executor retries on the same slot — nothing is needed from you. If the exchange gives a final refusal on the executor's attempt (for example, the document's country doesn't match the order's country), the slot is closed with a full refund — see <a href="../cancel-refunds/#auto-refunds">Automatic refunds</a>. Such a case counts as a failure for the executor.</p>
-<h2 id="quality-control">Quality control<a class="headerlink" href="#quality-control" title="Permanent link">&para;</a></h2>
-<p>The platform monitors how well executors handle re-verifications. If an executor's re-verification success rate drops below the acceptable level, they automatically stop receiving new orders from the shared pool. This doesn't affect slots they've already taken, re-verifications assigned to them or team orders — you manage your own team yourself.</p>
+<p>You can't change the executor manually. Re-verifications don't go back to the pool. On MEXC after KYC and at the BingX second stage, the slot stays with the same executor — <a href="../lifecycle/#mexc-hold">MEXC</a>, <a href="../lifecycle/#bingx">BingX</a>.</p>
 <h2 id="priority-block">Priority and blocking<a class="headerlink" href="#priority-block" title="Permanent link">&para;</a></h2>
-<p>In the web app, the "Sellers" screen has a "Marketplace" section. It lists executors who have taken slots of your standard and wholesale orders in the last 90 days, plus everyone you've already prioritized or blocked — even if they haven't worked for you in a long time. Members of your team aren't shown here. You can filter the list: "All", "Priority", "Blocked".</p>
+<p>Web app only: "Sellers" → "Marketplace". It lists executors who took your standard and wholesale orders in the last 90 days, plus everyone you've already prioritized or blocked.</p>
 <table>
 <thead>
 <tr>
-<th>Action</th>
+<th>Button</th>
 <th>What it does</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>"Prioritize"</td>
-<td>The executor sees your future orders in their confirmed country first. Available only for executors with a confirmed country</td>
-</tr>
-<tr>
-<td>"Remove"</td>
-<td>Removes the priority</td>
+<td>The executor sees your orders in their confirmed country first</td>
 </tr>
 <tr>
 <td>"Block"</td>
-<td>The executor no longer sees your standard and wholesale orders. Slots they've already taken, team orders and re-verifications of accounts they verified aren't affected</td>
+<td>The executor doesn't see your standard and wholesale orders. Slots they've already taken, team orders and re-verifications of their accounts aren't affected</td>
 </tr>
 <tr>
-<td>"Unblock"</td>
-<td>Removes the block</td>
+<td>"Remove" / "Unblock"</td>
+<td>Removes the priority / the block</td>
 </tr>
 </tbody>
 </table>
-<p>An executor can be either prioritized or blocked, not both.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Priority and blocking are available only in the <a href="../web/">web app</a>.</p>
-</div>
 <h2 id="record">Executor's record<a class="headerlink" href="#record" title="Permanent link">&para;</a></h2>
-<p>For each executor, you see only your own history with them, for all time: how many of your graded slots they passed and what share that is — for example, "12/13" and "92%". The platform doesn't show an overall executor rating.</p>
-<p>Only finished slots are graded: those that passed and those closed through the executor's fault. Slots still in progress, slots returned to the pool, slots the executor gave up and closures that weren't their fault — for example, a slot deadline that ran out shortly after they took the slot — don't count. Until there are graded slots, the record shows "no slots yet".</p>
-<p>The "Marketplace" counts all your orders except team orders; the "My team" section counts only team orders (see <a href="../team/#stats">Team statistics</a>).</p>
+<p>For each executor, you see only your own history with them: how many graded slots they passed, for example "12/13" and "92%". Graded slots are those passed and those closed through the executor's fault; slots in progress, returns to the pool, slots given up and closures that weren't their fault don't count. "Marketplace" counts all orders except team orders; "My team" counts only team orders.</p>
 
 
 
@@ -1202,10 +1454,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../../assets/api.js"></script>
       
     
   </body>

@@ -1,0 +1,2504 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation and Terms of Use">
+      
+      
+      
+        <link rel="canonical" href="https://portal-ss.github.io/docs/api/codes/">
+      
+      
+        <link rel="prev" href="../events/">
+      
+      
+        <link rel="next" href="../errors/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="ru">
+        
+          <link rel="alternate" href="../../uk/api/codes/" hreflang="uk">
+        
+          <link rel="alternate" href="../../en/api/codes/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Статусы и коды - KYC Portal</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/api.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="KYC Portal" class="md-header__button md-logo" aria-label="KYC Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KYC Portal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Статусы и коды
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Выберите язык">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../uk/api/codes/" hreflang="uk" class="md-select__link">
+              Українська
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/api/codes/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="KYC Portal" class="md-nav__button md-logo" aria-label="KYC Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    KYC Portal
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../guide/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Документация
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Документация
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обзор платформы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Начало работы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/balance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Баланс и пополнение
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Заказы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Загрузка аккаунтов
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Выполнение заказа и сроки
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/cancel-refunds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отмена и возвраты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реверификации
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/risk-removal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Removal на MEXC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/sellers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Исполнители и распределение
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/team/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Своя команда
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/subscription/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Подписка
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Веб-версия
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/referral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реферальная программа
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Аккаунт и баланс
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Заказы и слоты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Загрузка и публикация
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slot-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Действия со слотом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реверификация
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cancel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отмены
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лента событий
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Статусы и коды
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Статусы и коды
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#slot-statuses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Статусы слота
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-statuses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Статусы заказа
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Итог верификации
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что ждёт от вас слот
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что нужно сделать
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ask-reasons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Почему просят
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#close-reasons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Почему слот отменён
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deadline-kinds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Виды сроков
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deadline-reasons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Почему запланирована отмена
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bingx-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг второго этапа BingX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bingx-endings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Итог второго этапа BingX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Новости
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balance-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Движение баланса
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Коды загрузки
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Коды загрузки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Файл не читается
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Аккаунт не прошёл проверку
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ошибки и лимиты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Условия использования
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#slot-statuses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Статусы слота
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-statuses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Статусы заказа
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verification-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Итог верификации
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waiting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что ждёт от вас слот
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что нужно сделать
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ask-reasons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Почему просят
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#close-reasons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Почему слот отменён
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deadline-kinds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Виды сроков
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deadline-reasons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Почему запланирована отмена
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bingx-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг второго этапа BingX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bingx-endings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Итог второго этапа BingX
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Новости
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#balance-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Движение баланса
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upload-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Коды загрузки
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Коды загрузки">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Файл не читается
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Аккаунт не прошёл проверку
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">Статусы и коды<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="slot-statuses">Статусы слота<a class="headerlink" href="#slot-statuses" title="Permanent link">&para;</a></h2>
+<p>Поле <code>status</code> слота и события <code>slot_status</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Что значит</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FREE</code></td>
+<td>Слот никто не взял: пустой, загружен или ждёт исполнителя после публикации</td>
+</tr>
+<tr>
+<td><code>IN_PROGRESS</code></td>
+<td>Исполнитель взял слот и проходит верификацию</td>
+</tr>
+<tr>
+<td><code>PENDING</code></td>
+<td>Биржа рассматривает верификацию; сроки на паузе</td>
+</tr>
+<tr>
+<td><code>VERIFICATION_FAILED</code></td>
+<td>Биржа отклонила попытку, исполнитель повторяет</td>
+</tr>
+<tr>
+<td><code>REUPLOAD_REQUIRED</code></td>
+<td>Нужны свежие прокси, cookies или и то и другое; слот на паузе — <a href="../slot-actions/#post-reupload">повторная загрузка</a></td>
+</tr>
+<tr>
+<td><code>MEXC_HOLD</code></td>
+<td>MEXC: верификация пройдена, платформа ждёт, не запросит ли биржа проверку лица</td>
+</tr>
+<tr>
+<td><code>MEXC_FACE_REQUIRED</code></td>
+<td>MEXC запросила проверку лица, исполнитель проходит её без доплаты</td>
+</tr>
+<tr>
+<td><code>BINGX_FACE_OFF</code></td>
+<td>BingX: KYC пройден, идёт второй этап — отключение входа по лицу</td>
+</tr>
+<tr>
+<td><code>BINGX_REVIEW</code></td>
+<td>BingX: KYC пройден, но завершить автоматически не получилось; слот проверяет поддержка</td>
+</tr>
+<tr>
+<td><code>RISK_AWAITING_DOCUMENT</code></td>
+<td>Risk Removal: готовится апелляция</td>
+</tr>
+<tr>
+<td><code>RISK_SUBMITTED</code></td>
+<td>Risk Removal: апелляция подана в MEXC</td>
+</tr>
+<tr>
+<td><code>RISK_FACE_EXPIRED</code></td>
+<td>Risk Removal: проверку лица нужно пройти ещё раз, это делает тот же исполнитель</td>
+</tr>
+<tr>
+<td><code>RISK_REJECTED</code></td>
+<td>Risk Removal: MEXC закрыла заявку, не сняв ограничение; дальнейшие шаги решает поддержка</td>
+</tr>
+<tr>
+<td><code>RISK_ERROR</code></td>
+<td>Risk Removal: с заявкой возникла проблема, ею занимается поддержка</td>
+</tr>
+<tr>
+<td><code>COMPLETED</code></td>
+<td>Слот выполнен</td>
+</tr>
+<tr>
+<td><code>CANCELLED</code></td>
+<td>Слот закрыт; почему — в <a href="#close-reasons"><code>close_reason</code></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="order-statuses">Статусы заказа<a class="headerlink" href="#order-statuses" title="Permanent link">&para;</a></h2>
+<p>Поле <code>status</code> заказа, <code>order_status</code> слота и события <code>order_status</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Что значит</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>PAID</code></td>
+<td>Оплачен, ждёт загрузки аккаунтов</td>
+</tr>
+<tr>
+<td><code>SESSION_UPLOADED</code></td>
+<td>Аккаунты во всех слотах, заказ ждёт публикации</td>
+</tr>
+<tr>
+<td><code>IN_PROGRESS</code></td>
+<td>Опубликован, не все слоты закрыты</td>
+</tr>
+<tr>
+<td><code>COMPLETED</code></td>
+<td>Все слоты выполнены</td>
+</tr>
+<tr>
+<td><code>PARTIAL_COMPLETED</code></td>
+<td>Все слоты закрыты: часть выполнена, часть отменена</td>
+</tr>
+<tr>
+<td><code>CANCELLED</code></td>
+<td>Все слоты закрыты, ни один не выполнен</td>
+</tr>
+</tbody>
+</table>
+<p>У очень старых заказов встречаются устаревшие <code>ACCESS_GRANTED</code>, <code>IN_POOL</code>, <code>PARTIAL</code>, <code>REFUNDED</code>, <code>MANUAL</code>.</p>
+<h2 id="verification-results">Итог верификации<a class="headerlink" href="#verification-results" title="Permanent link">&para;</a></h2>
+<p>Поле <code>verification_result</code> слота. Регистр у значений разный — сравнивайте строки как есть.</p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Что значит</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>passed</code></td>
+<td>Пройдена</td>
+</tr>
+<tr>
+<td><code>pending</code></td>
+<td>Биржа ещё рассматривает</td>
+</tr>
+<tr>
+<td><code>wrong_country</code></td>
+<td>Неверная страна</td>
+</tr>
+<tr>
+<td><code>blocked</code></td>
+<td>Биржа не допускает верификацию на аккаунте</td>
+</tr>
+<tr>
+<td><code>kyc_already_done</code></td>
+<td>Аккаунт уже был верифицирован</td>
+</tr>
+<tr>
+<td><code>no_challenge_required</code></td>
+<td>Проверка не потребовалась</td>
+</tr>
+<tr>
+<td><code>admin_cancelled</code></td>
+<td>Отменён поддержкой</td>
+</tr>
+<tr>
+<td><code>DEADLINE_EXPIRED</code></td>
+<td>Истёк срок</td>
+</tr>
+<tr>
+<td><code>ACCOUNT_UNSERVABLE</code></td>
+<td>Биржа не принимает этот аккаунт</td>
+</tr>
+<tr>
+<td><code>CLIENT_CANCELLED</code></td>
+<td>Отменён вами</td>
+</tr>
+<tr>
+<td><code>failed</code>, <code>SUBSCRIPTION_LAPSED</code></td>
+<td>Устаревшие, только у старых слотов</td>
+</tr>
+</tbody>
+</table>
+<h2 id="waiting">Что ждёт от вас слот<a class="headerlink" href="#waiting" title="Permanent link">&para;</a></h2>
+<p>Поле <code>waiting_for_client</code> слота — список. Непустой ровно у тех слотов, что возвращает <code>GET /slots?attention=true</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Когда</th>
+<th>Что делать</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>reupload</code></td>
+<td>Слот в статусе <code>REUPLOAD_REQUIRED</code></td>
+<td>Пришлите то, что указано в <code>reupload_scope</code> (ниже)</td>
+</tr>
+<tr>
+<td><code>risk_proofs</code></td>
+<td>Нужны новые скриншоты депозитов для Risk Removal</td>
+<td><a href="../slot-actions/#post-slot-risk-proofs">Пришлите скриншоты</a></td>
+</tr>
+<tr>
+<td><code>bingx_code</code></td>
+<td>Слот <code>BINGX_FACE_OFF</code> ждёт код из письма BingX</td>
+<td><a href="../slot-actions/#post-bingx-code">Отправьте код</a></td>
+</tr>
+</tbody>
+</table>
+<p><code>reupload</code> и <code>risk_proofs</code> бывают одновременно. Слот, который ждёт повторной загрузки, ждёт только её — даже если до этого просил код BingX.</p>
+<p>Поле <code>reupload_scope</code> — что прислать при повторной загрузке:</p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Что прислать</th>
+<th>Метод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>proxy</code></td>
+<td>Новый прокси</td>
+<td><a href="../slot-actions/#post-replace-proxy"><code>replace-proxy</code></a></td>
+</tr>
+<tr>
+<td><code>session</code></td>
+<td>Свежие cookies того же аккаунта</td>
+<td><a href="../slot-actions/#post-reupload"><code>reupload</code></a></td>
+</tr>
+<tr>
+<td><code>full</code></td>
+<td>И cookies, и прокси</td>
+<td><a href="../slot-actions/#post-reupload"><code>reupload</code></a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="actions">Что нужно сделать<a class="headerlink" href="#actions" title="Permanent link">&para;</a></h2>
+<p>Поле <code>action</code> события <code>slot_action_required</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Что значит</th>
+<th>Что делать</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bingx_code</code></td>
+<td>BingX прислал на почту аккаунта код для второго этапа</td>
+<td><a href="../slot-actions/#post-bingx-code">Отправьте код</a></td>
+</tr>
+<tr>
+<td><code>risk_proofs</code></td>
+<td>Нужны новые скриншоты депозитов для Risk Removal</td>
+<td><a href="../slot-actions/#post-slot-risk-proofs">Пришлите скриншоты</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ask-reasons">Почему просят<a class="headerlink" href="#ask-reasons" title="Permanent link">&para;</a></h2>
+<p>Поле <code>reason</code> события <code>slot_action_required</code> и <code>bingx.code_ask_reason</code> слота. На любой запрос кода отправляйте код из самого свежего письма BingX.</p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Что значит</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>first</code></td>
+<td>Первый запрос: KYC пройден, BingX только что отправил код</td>
+</tr>
+<tr>
+<td><code>new_code_sent</code></td>
+<td>BingX отправил код ещё раз</td>
+</tr>
+<tr>
+<td><code>wrong_code</code></td>
+<td>Отправленный код не подошёл — проверьте его и отправьте снова</td>
+</tr>
+<tr>
+<td><code>wrong_code_resent</code></td>
+<td>Код снова не подошёл, BingX прислал новое письмо — проверьте каждую цифру</td>
+</tr>
+<tr>
+<td><code>worker_ready</code></td>
+<td>Исполнитель готов снова пройти проверку лица, BingX прислал новый код</td>
+</tr>
+<tr>
+<td><code>stale_resent</code></td>
+<td>Прошлый код истёк (он действует около 10 минут), BingX прислал новый</td>
+</tr>
+<tr>
+<td><code>requested</code></td>
+<td>Только у <code>action: "risk_proofs"</code>: запрошены новые скриншоты</td>
+</tr>
+</tbody>
+</table>
+<p><code>bingx.code_ask_reason</code> заполнено только при <code>bingx.step</code> = <code>awaiting_code</code> и не бывает <code>requested</code>. Если запрос открылся, когда ваше время на коды уже вышло, там <code>null</code>.</p>
+<h2 id="close-reasons">Почему слот отменён<a class="headerlink" href="#close-reasons" title="Permanent link">&para;</a></h2>
+<p>Поле <code>close_reason</code> слота и <code>reason</code> события <code>slot_status</code> со статусом <code>CANCELLED</code>. У открытых и выполненных слотов, а также у слотов, закрытых до появления причин, — <code>null</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Что значит</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>wrong_country</code></td>
+<td>Страна документа не совпала со страной заказа, или аккаунт ещё до начала работы был верифицирован в другой стране</td>
+</tr>
+<tr>
+<td><code>blocked</code></td>
+<td>Биржа больше не допускает верификацию на этом аккаунте</td>
+</tr>
+<tr>
+<td><code>already_verified</code></td>
+<td>Аккаунт уже был верифицирован</td>
+</tr>
+<tr>
+<td><code>no_check_required</code></td>
+<td>Реверификация: биржа не запросила проверку, ради которой она заказана</td>
+</tr>
+<tr>
+<td><code>slot_deadline</code></td>
+<td>Истёк срок выполнения, выбранный при покупке</td>
+</tr>
+<tr>
+<td><code>face_deadline</code></td>
+<td>MEXC: дополнительную проверку лица не прошли вовремя</td>
+</tr>
+<tr>
+<td><code>bingx_face_off_failed</code></td>
+<td>BingX, второй этап: исполнитель не успел пройти повторную проверку лица</td>
+</tr>
+<tr>
+<td><code>client_cancel</code></td>
+<td>Вы отменили сами</td>
+</tr>
+<tr>
+<td><code>admin_cancel</code></td>
+<td>Слот отменила поддержка</td>
+</tr>
+<tr>
+<td><code>exchange_review_in_flight</code></td>
+<td>На бирже уже рассматривается другая заявка по этому аккаунту. Если она не пройдёт, аккаунт можно загрузить в новый заказ</td>
+</tr>
+<tr>
+<td><code>exchange_attempts_spent</code></td>
+<td>На бирже исчерпаны попытки верификации на сегодня. Загрузить аккаунт в новый заказ можно примерно через сутки</td>
+</tr>
+</tbody>
+</table>
+<h2 id="deadline-kinds">Виды сроков<a class="headerlink" href="#deadline-kinds" title="Permanent link">&para;</a></h2>
+<p>Поле <code>kind</code> в <code>deadlines</code> слота. Сроки идут по возрастанию <code>at</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Что значит</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>slot_deadline</code></td>
+<td>Срок выполнения, выбранный при покупке</td>
+</tr>
+<tr>
+<td><code>budget</code></td>
+<td>Не позже этого момента слот вернётся в пул, если исполнитель не успеет (<a href="../../guide/sellers/#worker-time">время исполнителя</a>)</td>
+</tr>
+<tr>
+<td><code>mexc_hold</code></td>
+<td>MEXC: конец окна наблюдения после KYC</td>
+</tr>
+<tr>
+<td><code>mexc_face</code></td>
+<td>MEXC: срок дополнительной проверки лица</td>
+</tr>
+<tr>
+<td><code>close_request</code></td>
+<td>Слот будет закрыт в момент <code>at</code>; почему — в <code>reason</code> (ниже)</td>
+</tr>
+<tr>
+<td><code>client_cancel</code></td>
+<td>Когда будет проверена ваша отмена реверификации</td>
+</tr>
+</tbody>
+</table>
+<p><code>close_request</code> и <code>client_cancel</code> пропадают из списка, когда их время прошло. Остальные сроки могут ненадолго остаться после своего <code>at</code>.</p>
+<h2 id="deadline-reasons">Почему запланирована отмена<a class="headerlink" href="#deadline-reasons" title="Permanent link">&para;</a></h2>
+<p>Поле <code>reason</code> в <code>deadlines</code> слота; только у <code>kind: "close_request"</code>, у остальных — <code>null</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Что значит</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>admin_cancel</code></td>
+<td>Отмену назначила поддержка</td>
+</tr>
+<tr>
+<td><code>slot_deadline</code></td>
+<td>Истёк срок выполнения слота</td>
+</tr>
+<tr>
+<td><code>face_deadline</code></td>
+<td>Истёк срок проверки лица на MEXC</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bingx-steps">Шаг второго этапа BingX<a class="headerlink" href="#bingx-steps" title="Permanent link">&para;</a></h2>
+<p>Поле <code>bingx.step</code>. Объект <code>bingx</code> есть у слота BingX со второго этапа, у остальных слотов — <code>null</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Что значит</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>requesting_code</code></td>
+<td>Платформа просит BingX отправить код на почту</td>
+</tr>
+<tr>
+<td><code>awaiting_code</code></td>
+<td>Ждём ваш код — <a href="../slot-actions/#post-bingx-code">отправьте его</a>; ваше время идёт</td>
+</tr>
+<tr>
+<td><code>checking_code</code></td>
+<td>Код проверяется, обычно до минуты</td>
+</tr>
+<tr>
+<td><code>face_in_progress</code></td>
+<td>Код принят, исполнитель проходит проверку лица</td>
+</tr>
+<tr>
+<td><code>switching_off</code></td>
+<td>Проверка лица пройдена, платформа отключает вход по лицу</td>
+</tr>
+<tr>
+<td><code>waiting_for_worker</code></td>
+<td>Попытка исполнителя не удалась; когда он будет готов, BingX пришлёт новый код</td>
+</tr>
+<tr>
+<td><code>under_review</code></td>
+<td>Слот у поддержки (статус <code>BINGX_REVIEW</code>)</td>
+</tr>
+<tr>
+<td><code>done</code></td>
+<td>Второй этап окончен; итог — в <code>face_login</code> или <code>close_reason</code></td>
+</tr>
+</tbody>
+</table>
+<p>Пока слот ждёт повторной загрузки, <code>step</code> не меняется, ваше время стоит и код не принимается.</p>
+<h2 id="bingx-endings">Итог второго этапа BingX<a class="headerlink" href="#bingx-endings" title="Permanent link">&para;</a></h2>
+<p>Поле <code>reason</code> события <code>slot_status</code> со статусом <code>COMPLETED</code> у слота BingX и поле <code>bingx.face_login</code>.</p>
+<table>
+<thead>
+<tr>
+<th><code>reason</code></th>
+<th><code>bingx.face_login</code></th>
+<th>Что значит</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bingx_face_login_off</code></td>
+<td><code>off</code></td>
+<td>KYC пройден, вход по лицу отключён</td>
+</tr>
+<tr>
+<td><code>bingx_face_login_left_on</code></td>
+<td><code>left_on</code></td>
+<td>KYC пройден, но вход по лицу остался включённым — например, ваше время на коды вышло</td>
+</tr>
+<tr>
+<td><code>bingx_face_login_unknown</code></td>
+<td><code>unknown</code></td>
+<td>Слот завершила поддержка; отключён ли вход по лицу, платформа не проверяла</td>
+</tr>
+</tbody>
+</table>
+<p><code>face_login</code> — <code>null</code>, пока второй этап идёт, и у отменённого слота. У слота, завершённого до второго этапа, нет ни объекта <code>bingx</code>, ни <code>reason</code> в событии.</p>
+<h2 id="notices">Новости<a class="headerlink" href="#notices" title="Permanent link">&para;</a></h2>
+<p>Поле <code>notice</code> событий <code>slot_notice</code> и <code>order_notice</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Событие</th>
+<th>Что значит</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bingx_code_accepted</code></td>
+<td><code>slot_notice</code></td>
+<td>BingX принял ваш код. Позже код может понадобиться ещё раз</td>
+</tr>
+<tr>
+<td><code>slot_frozen</code></td>
+<td><code>slot_notice</code></td>
+<td>Слот вернулся от исполнителя в замороженный заказ: исполнителям его не предлагают, пока вы не продлите подписку или не отмените слот</td>
+</tr>
+<tr>
+<td><code>order_frozen</code></td>
+<td><code>order_notice</code></td>
+<td>Подписка закончилась: невзятые слоты заказа заморожены; слоты в работе доработаются</td>
+</tr>
+<tr>
+<td><code>order_unfrozen</code></td>
+<td><code>order_notice</code></td>
+<td>Подписка продлена: замороженные слоты снова предлагаются исполнителям</td>
+</tr>
+</tbody>
+</table>
+<h2 id="balance-events">Движение баланса<a class="headerlink" href="#balance-events" title="Permanent link">&para;</a></h2>
+<p>Поле <code>balance_event</code> события <code>balance</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Значение</th>
+<th>Что значит</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>deposit</code></td>
+<td>Пополнение зачислено</td>
+</tr>
+<tr>
+<td><code>spend</code></td>
+<td>Списание: заказ, подписка или реверификация</td>
+</tr>
+<tr>
+<td><code>refund</code></td>
+<td>Возврат на баланс</td>
+</tr>
+<tr>
+<td><code>referral_accrual</code></td>
+<td>Реферальный бонус</td>
+</tr>
+<tr>
+<td><code>manual_adjustment</code></td>
+<td>Корректировка баланса поддержкой</td>
+</tr>
+<tr>
+<td><code>legacy_opening</code></td>
+<td>Начальный остаток при переходе на нынешний учёт; только у давних аккаунтов</td>
+</tr>
+</tbody>
+</table>
+<h2 id="upload-codes">Коды загрузки<a class="headerlink" href="#upload-codes" title="Permanent link">&para;</a></h2>
+<h3 id="_2">Файл не читается<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>Ответ <code>422</code> (у <code>too_many_items</code> — <code>413</code>) на загрузку аккаунтов, повторную загрузку и загрузку аккаунтов массовой реверификации. <code>at</code> — номер аккаунта (ваш из <code>positions</code> или номер профиля в файле ADS Power), <code>profile</code> — имя профиля, <code>detail</code> — уточнение. Если проблем несколько, <code>issues</code> перечисляет все, а сам ответ повторяет первую.</p>
+<table>
+<thead>
+<tr>
+<th><code>code</code></th>
+<th>Что значит</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>parse_too_large</code></td>
+<td>Файл слишком большой для cookies одного аккаунта (файл ADS Power — больше 20 МБ)</td>
+</tr>
+<tr>
+<td><code>parse_too_many_cookies</code></td>
+<td>Cookies многих сайтов, а нужны только cookies биржи</td>
+</tr>
+<tr>
+<td><code>parse_cookie_value_too_long</code></td>
+<td>Не похоже на обычный экспорт cookies</td>
+</tr>
+<tr>
+<td><code>cookie_jar_too_large</code></td>
+<td>Cookies многих сайтов — биржа отклонит такой запрос</td>
+</tr>
+<tr>
+<td><code>no_platform_cookies</code></td>
+<td>В файле нет cookies нужной биржи</td>
+</tr>
+<tr>
+<td><code>parse_unrecognized_format</code></td>
+<td>Это не cookies: скриншот, текст со страницы</td>
+</tr>
+<tr>
+<td><code>parse_empty_adspower</code></td>
+<td>В файле ADS Power нет ни одного профиля</td>
+</tr>
+<tr>
+<td><code>too_many_items</code></td>
+<td>Больше 200 профилей или строк прокси (<code>limit</code>)</td>
+</tr>
+<tr>
+<td><code>parse_block_missing_cookie</code></td>
+<td>В профиле ADS Power нет cookies — в нём не выполнен вход</td>
+</tr>
+<tr>
+<td><code>parse_no_proxies</code></td>
+<td>Нет ни одной строки прокси</td>
+</tr>
+<tr>
+<td><code>invalid_proxy</code></td>
+<td>Прокси не читается или схема не поддерживается</td>
+</tr>
+<tr>
+<td><code>private_proxy</code></td>
+<td>Локальный или внутренний адрес, а не прокси</td>
+</tr>
+<tr>
+<td><code>parse_not_a_text_file</code></td>
+<td>Не текстовый файл</td>
+</tr>
+<tr>
+<td><code>parse_encrypted_export</code></td>
+<td>Экспорт Cookie-Editor с паролем</td>
+</tr>
+<tr>
+<td><code>parse_har_file</code></td>
+<td>Запись сетевых запросов (HAR), а не cookies</td>
+</tr>
+<tr>
+<td><code>parse_broken_json</code></td>
+<td>Cookies повреждены: текст обрывается или в нём лишние символы</td>
+</tr>
+<tr>
+<td><code>parse_unsupported_cookie_export</code></td>
+<td>Этот формат cookies не читается (например, команда cURL)</td>
+</tr>
+<tr>
+<td><code>parse_multiple_accounts_in_one_file</code></td>
+<td>Cookies нескольких аккаунтов в одном файле</td>
+</tr>
+<tr>
+<td><code>parse_adspower_file</code></td>
+<td>Экспорт ADS Power там, где нужен файл cookies одного аккаунта — используйте <code>method=adspower</code></td>
+</tr>
+<tr>
+<td><code>parse_empty_cookies</code></td>
+<td>Экспорт пустой</td>
+</tr>
+<tr>
+<td><code>parse_wrong_exchange</code></td>
+<td>Cookies другой биржи; <code>detail</code> — какой</td>
+</tr>
+<tr>
+<td><code>parse_wrong_site</code></td>
+<td>Cookies другого сайта; <code>detail</code> — домен</td>
+</tr>
+<tr>
+<td><code>parse_not_logged_in</code></td>
+<td>В cookies нет входа в аккаунт (MEXC, Bybit); <code>detail</code> может назвать домен, где вход выполнен</td>
+</tr>
+<tr>
+<td><code>parse_not_an_adspower_file</code></td>
+<td>Это не экспорт ADS Power; <code>detail</code>: <code>cookies</code> — файл cookies, <code>proxies</code> — список прокси</td>
+</tr>
+<tr>
+<td><code>parse_export_without_cookies</code></td>
+<td>Ни в одном профиле нет cookies</td>
+</tr>
+<tr>
+<td><code>parse_block_has_two_profiles</code></td>
+<td>Два профиля слились в один — пропала строка-разделитель. Экспортируйте заново и не редактируйте</td>
+</tr>
+<tr>
+<td><code>parse_unsupported_proxy_type</code></td>
+<td>Тип прокси в профиле не поддерживается: нужен HTTP, HTTPS или SOCKS</td>
+</tr>
+<tr>
+<td><code>parse_proxy_has_spaces</code></td>
+<td>В строке прокси лишний текст или два прокси</td>
+</tr>
+<tr>
+<td><code>parse_proxy_no_port</code></td>
+<td>Не указан порт прокси</td>
+</tr>
+<tr>
+<td><code>parse_proxy_non_latin</code></td>
+<td>В прокси не латинские буквы</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_3">Аккаунт не прошёл проверку<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>Поле <code>error_code</code> у аккаунтов в <a href="../upload/#get-upload"><code>GET /orders/{order_id}/upload</code></a>. Те же коды приходят в ответе <code>409</code> на смену прокси и повторную загрузку; только «нет прокси» там — <code>proxy_missing</code>, а не <code>missing_proxy</code>. Отклонённый аккаунт в слот не попадает.</p>
+<table>
+<thead>
+<tr>
+<th><code>code</code></th>
+<th>Что значит</th>
+<th>Что делать</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>proxy_auth_rejected</code></td>
+<td>Прокси не принял логин или пароль</td>
+<td>Проверьте их у провайдера прокси</td>
+</tr>
+<tr>
+<td><code>proxy_timeout</code></td>
+<td>Прокси не отвечает — например, не оплачен или выключен</td>
+<td>Проверьте прокси или пришлите другой</td>
+</tr>
+<tr>
+<td><code>proxy_bad_host</code></td>
+<td>Адрес прокси не найден</td>
+<td>Проверьте адрес</td>
+</tr>
+<tr>
+<td><code>proxy_unreachable</code></td>
+<td>Не удалось подключиться к прокси</td>
+<td>Проверьте порт и тип (HTTP или SOCKS5)</td>
+</tr>
+<tr>
+<td><code>proxy_broken</code></td>
+<td>Прокси не работает</td>
+<td>Пришлите другой прокси</td>
+</tr>
+<tr>
+<td><code>missing_proxy</code></td>
+<td>У аккаунта нет прокси (например, профиль ADS Power без прокси)</td>
+<td>Укажите прокси; в ADS Power — добавьте в профиль и экспортируйте заново</td>
+</tr>
+<tr>
+<td><code>exchange_unreachable</code></td>
+<td>Прокси работает, но биржа через него не открывается</td>
+<td>Возьмите прокси другого провайдера или города</td>
+</tr>
+<tr>
+<td><code>session_invalid</code></td>
+<td>Биржа не пускает в аккаунт по этим cookies — вход устарел</td>
+<td>Войдите заново, сразу экспортируйте cookies и не выходите из аккаунта</td>
+</tr>
+<tr>
+<td><code>session_not_logged_in</code></td>
+<td>В cookies нет входа в аккаунт (бывает на KuCoin)</td>
+<td>Войдите, экспортируйте cookies и не выходите из аккаунта</td>
+</tr>
+<tr>
+<td><code>cookie_jar_too_large</code></td>
+<td>В экспорте cookies многих сайтов</td>
+<td>Экспортируйте cookies только на вкладке биржи</td>
+</tr>
+<tr>
+<td><code>identity_mismatch</code></td>
+<td>Это не тот аккаунт, что уже в слоте</td>
+<td>Загрузите тот же аккаунт</td>
+</tr>
+<tr>
+<td><code>duplicate_account_other_slot</code></td>
+<td>Аккаунт уже в другом слоте этого заказа; <code>conflict_slot_id</code> — в каком</td>
+<td>Используйте другой аккаунт</td>
+</tr>
+<tr>
+<td><code>duplicate_account_other_order</code>, <code>duplicate_account</code></td>
+<td>Аккаунт уже загружен в другой заказ</td>
+<td>Используйте другой аккаунт</td>
+</tr>
+<tr>
+<td><code>already_verified</code></td>
+<td>Аккаунт уже прошёл верификацию на бирже</td>
+<td>Используйте другой аккаунт</td>
+</tr>
+<tr>
+<td><code>verification_blocked</code></td>
+<td>Биржа больше не допускает верификацию на этом аккаунте</td>
+<td>Используйте другой аккаунт</td>
+</tr>
+<tr>
+<td><code>verification_attempts_spent</code></td>
+<td>На аккаунте закончились попытки верификации на сегодня</td>
+<td>Загрузите его снова примерно через сутки или используйте другой</td>
+</tr>
+<tr>
+<td><code>verification_in_review</code></td>
+<td>Биржа уже рассматривает заявку по этому аккаунту</td>
+<td>Дождитесь итога или используйте другой аккаунт</td>
+</tr>
+<tr>
+<td><code>exchange_refused_unclear</code></td>
+<td>Биржа не даёт начать верификацию, причина неизвестна</td>
+<td>Используйте другой аккаунт; нужен именно этот — напишите в поддержку</td>
+</tr>
+<tr>
+<td><code>exchange_unreadable</code></td>
+<td>Биржа не ответила</td>
+<td>Загрузите аккаунт снова через несколько минут</td>
+</tr>
+<tr>
+<td><code>slot_unavailable</code></td>
+<td>Пока шла проверка, слот взяли в работу или закрыли; ничего не изменилось</td>
+<td>Повторите при необходимости</td>
+</tr>
+<tr>
+<td><code>slot_busy</code></td>
+<td>Слот сейчас проверяется</td>
+<td>Повторите через минуту</td>
+</tr>
+<tr>
+<td><code>unknown_error</code></td>
+<td>Проверка не завершилась</td>
+<td>Повторите через несколько минут; повторяется — напишите в поддержку</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../assets/api.js"></script>
+      
+    
+  </body>
+</html>

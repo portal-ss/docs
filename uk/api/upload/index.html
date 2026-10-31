@@ -1,0 +1,1865 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation and Terms of Use">
+      
+      
+      
+        <link rel="canonical" href="https://portal-ss.github.io/docs/uk/api/upload/">
+      
+      
+        <link rel="prev" href="../orders/">
+      
+      
+        <link rel="next" href="../slot-actions/">
+      
+      
+        
+          <link rel="alternate" href="../../../api/upload/" hreflang="ru">
+        
+          <link rel="alternate" href="./" hreflang="uk">
+        
+          <link rel="alternate" href="../../../en/api/upload/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Завантаження й публікація - KYC Portal</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/api.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../../" title="KYC Portal" class="md-header__button md-logo" aria-label="KYC Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KYC Portal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Завантаження й публікація
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Обрати мову">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../api/upload/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="uk" class="md-select__link">
+              Українська
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../en/api/upload/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="KYC Portal" class="md-nav__button md-logo" aria-label="KYC Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    KYC Portal
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Головна
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../guide/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Документація
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Документація
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Огляд платформи
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Початок роботи
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/balance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Баланс і поповнення
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Замовлення
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Завантаження акаунтів
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Виконання замовлення й строки
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/cancel-refunds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Скасування та повернення
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реверифікації
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/risk-removal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Removal на MEXC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/sellers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Виконавці та розподіл
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/team/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Своя команда
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/subscription/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Підписка
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Вебверсія
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/referral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реферальна програма
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Акаунт і баланс
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Замовлення й слоти
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Завантаження й публікація
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Завантаження й публікація
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#post-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завантажити акаунти
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отримати статус завантаження
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Змінити проксі до публікації
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-publish" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Опублікувати замовлення
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Формат завантаження
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slot-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Дії зі слотом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реверифікація
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cancel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Скасування
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Стрічка подій
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Статуси й коди
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Помилки й ліміти
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Умови використання
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#post-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завантажити акаунти
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-upload" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отримати статус завантаження
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Змінити проксі до публікації
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-publish" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Опублікувати замовлення
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Формат завантаження
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">Завантаження й публікація<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h3 id="post-upload">Завантажити акаунти<a class="headerlink" href="#post-upload" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--post">POST</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders/{order_id}/upload</code></div>
+
+<p>Завантажує акаунти в порожні слоти замовлення й ставить їх на перевірку у фоні. Доступно, поки замовлення не опубліковано (<code>PAID</code>, <code>SESSION_UPLOADED</code>).</p>
+<p>Право <code>upload</code> · потрібен <a href="../errors/#idempotency"><code>Idempotency-Key</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Поле форми</th>
+<th>Тип</th>
+<th>Обов'язково</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>method</code></td>
+<td>рядок</td>
+<td>так</td>
+<td><code>adspower</code> або <code>manual</code></td>
+</tr>
+<tr>
+<td><code>ads_file</code></td>
+<td>файл</td>
+<td>для <code>adspower</code></td>
+<td>Експорт ADS Power <code>.txt</code>: до 20 МБ, до 200 профілів</td>
+</tr>
+<tr>
+<td><code>proxies</code></td>
+<td>рядок</td>
+<td>для <code>manual</code></td>
+<td>Проксі по одному в рядку, у порядку файлів; до 1 МБ</td>
+</tr>
+<tr>
+<td><code>cookie_files</code></td>
+<td>файл, повторюється</td>
+<td>для <code>manual</code></td>
+<td>Файл cookies на кожен акаунт: до 8 МБ, разом до 32 МБ</td>
+</tr>
+<tr>
+<td><code>positions</code></td>
+<td>рядок</td>
+<td>ні</td>
+<td>Для <code>manual</code>: ваші номери акаунтів через кому (<code>1,3</code>) для <code>at</code> і <code>upload_position</code></td>
+</tr>
+<tr>
+<td><code>replace_all</code></td>
+<td>так/ні</td>
+<td>ні</td>
+<td><code>true</code> — очистити всі невзяті слоти й заповнити з файлу</td>
+</tr>
+<tr>
+<td><code>replace_slot_id</code></td>
+<td>номер</td>
+<td>ні</td>
+<td>Замінити акаунт одного невзятого слота; у разі відмови залишиться попередній</td>
+</tr>
+</tbody>
+</table>
+<p>Тіло — <code>multipart/form-data</code> із заголовком <code>Content-Length</code>: загалом до 34 МБ і не більше ніж 200 акаунтів. Формат — <a href="#format">нижче</a>.</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://app.kycportal.org/api/v1/orders/8402-9173/upload<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$KP_API_KEY</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Idempotency-Key: </span><span class="k">$(</span>uuidgen<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="nv">method</span><span class="o">=</span>manual<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="s2">"proxies=&lt;proxies.txt"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="nv">cookie_files</span><span class="o">=</span>@acc1.json<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="nv">cookie_files</span><span class="o">=</span>@acc2.json
+</code></pre></div>
+<p>Для ADS Power: <code>-F method=adspower -F ads_file=@export.txt</code>.</p>
+<p>Відповідь <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"queued"</span><span class="p">,</span><span class="w"> </span><span class="nt">"staged_slot_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"5120-3562"</span><span class="p">,</span><span class="w"> </span><span class="s2">"5120-3563"</span><span class="p">]}</span>
+</code></pre></div>
+<p><code>staged_slot_ids</code> — слоти, у які потрапили акаунти, у порядку файлу. Підсумок перевірки — у <a href="#get-upload"><code>GET /orders/{order_id}/upload</code></a>.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>Коли</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>409</td>
+<td><code>upload_not_allowed</code></td>
+<td>Замовлення вже опубліковано</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>upload_in_progress</code></td>
+<td>Ще перевіряється попереднє завантаження цього замовлення</td>
+</tr>
+<tr>
+<td>429</td>
+<td><code>upload_concurrency_limit</code></td>
+<td>У вас уже 2 завантаження на перевірці, включно з ботом і вебверсією; <code>limit</code>, без <code>Retry-After</code></td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>too_many_uploads</code></td>
+<td>Те саме обмеження за одночасних запитів</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>nothing_to_upload</code></td>
+<td>У замовленні немає порожнього слота</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>nothing_to_upload</code></td>
+<td>У файлі немає жодного акаунта</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>nothing_to_replace</code></td>
+<td>Слот із <code>replace_slot_id</code> уже взято або замовлення опубліковано</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>edit_not_allowed</code></td>
+<td>Слот із <code>replace_slot_id</code> не можна змінити</td>
+</tr>
+<tr>
+<td>404</td>
+<td><code>order_not_found</code></td>
+<td>Слота з <code>replace_slot_id</code> немає в замовленні</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>replace_all_reverify</code></td>
+<td><code>replace_all</code> у замовленні реверифікації</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>replace_account_reverify</code></td>
+<td><code>replace_slot_id</code> у замовленні реверифікації</td>
+</tr>
+<tr>
+<td>422</td>
+<td><a href="../codes/#upload-codes">коди розбору</a></td>
+<td>Файл, cookies або проксі не читаються; <code>at</code> — номер акаунта, <code>issues</code> — усі проблеми</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>missing_file</code></td>
+<td>Немає файлу або проксі для обраного <code>method</code></td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>invalid_method</code></td>
+<td><code>method</code> — не <code>adspower</code> і не <code>manual</code></td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>proxy_count_mismatch</code></td>
+<td>Рядків проксі не стільки, скільки файлів cookies</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>empty_file</code></td>
+<td>Порожній файл; <code>kind</code> — який</td>
+</tr>
+<tr>
+<td>413</td>
+<td><code>upload_too_large</code></td>
+<td>Запит більший за 34 МБ або cookies разом більші за 32 МБ; <code>limit</code></td>
+</tr>
+<tr>
+<td>413</td>
+<td><code>file_too_large</code></td>
+<td>Файл більший за свій ліміт; <code>kind</code> — який</td>
+</tr>
+<tr>
+<td>413</td>
+<td><code>too_many_items</code></td>
+<td>Понад 200 акаунтів; <code>limit</code></td>
+</tr>
+<tr>
+<td>411</td>
+<td><code>length_required</code></td>
+<td>Немає <code>Content-Length</code> (тіло частинами)</td>
+</tr>
+<tr>
+<td>415</td>
+<td><code>unsupported_media_type</code></td>
+<td>Тіло більше за 64 КБ, але не <code>multipart/form-data</code></td>
+</tr>
+<tr>
+<td>400</td>
+<td>—</td>
+<td>Пошкоджена форма (поле більше за 1 МБ, забагато полів); текст у <code>detail</code> замість коду</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>queue_unavailable</code></td>
+<td>Платформа зайнята, нічого не зроблено; повторіть через <code>retry_after_seconds</code> або через кілька секунд</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-upload">Отримати статус завантаження<a class="headerlink" href="#get-upload" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--get">GET</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders/{order_id}/upload</code></div>
+
+<p>Перебіг і підсумок перевірки останнього завантаження. Опитуйте раз на 3–5 секунд, поки <code>state</code> не стане <code>done</code> або <code>failed</code>.</p>
+<p>Право <code>read</code></p>
+<p>Відповідь <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"done"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"done"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"ok"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"all_filled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"slots"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"slot_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5120-3562"</span><span class="p">,</span><span class="w"> </span><span class="nt">"ok"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nt">"account_identity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span><span class="w"> </span><span class="nt">"error_code"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">"conflict_slot_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UA"</span><span class="p">,</span><span class="w"> </span><span class="nt">"ip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"203.0.113.10"</span><span class="p">,</span><span class="w"> </span><span class="nt">"upload_position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"adspower_profile_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"slot_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5120-3563"</span><span class="p">,</span><span class="w"> </span><span class="nt">"ok"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nt">"account_identity"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">"error_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"proxy_timeout"</span><span class="p">,</span>
+<span class="w">     </span><span class="nt">"conflict_slot_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">"country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">"ip"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">"upload_position"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"adspower_profile_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"deadline_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"ignored"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"cleared"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>state</code></td>
+<td><code>idle</code> — перевірок немає або підсумку понад годину; <code>queued</code>, <code>running</code>, <code>done</code>, <code>failed</code></td>
+</tr>
+<tr>
+<td><code>done</code>, <code>total</code>, <code>ok</code></td>
+<td>Перевірено / усього / прийнято</td>
+</tr>
+<tr>
+<td><code>all_filled</code></td>
+<td><code>true</code> — в усіх слотах замовлення є акаунт, можна <a href="#post-publish">публікувати</a></td>
+</tr>
+<tr>
+<td><code>slots[].account_identity</code></td>
+<td>Акаунт, який знайшла біржа</td>
+</tr>
+<tr>
+<td><code>slots[].error_code</code></td>
+<td><a href="../codes/#upload-codes">Чому акаунт відхилено</a>; <code>null</code> — прийнято</td>
+</tr>
+<tr>
+<td><code>slots[].conflict_slot_id</code></td>
+<td>У разі <code>duplicate_account_other_slot</code> — слот цього замовлення з тим самим акаунтом</td>
+</tr>
+<tr>
+<td><code>slots[].country</code>, <code>slots[].ip</code></td>
+<td>Країна (ISO-2) та IP виходу проксі</td>
+</tr>
+<tr>
+<td><code>slots[].upload_position</code></td>
+<td>Номер акаунта: з <code>positions</code> або місце в запиті, з 1</td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td>Чому перевірка зупинилася зі станом <code>failed</code>: <code>timeout</code>, <code>cancelled</code>, <code>probe</code>, <code>payload</code> або <code>requeue</code></td>
+</tr>
+<tr>
+<td><code>deadline_at</code></td>
+<td>Поки перевірка триває: пізніше за цей момент вона не триватиме</td>
+</tr>
+<tr>
+<td><code>ignored</code></td>
+<td>Акаунти понад кількість вільних слотів — не збережено</td>
+</tr>
+<tr>
+<td><code>cleared</code></td>
+<td>Завантаження з <code>replace_all</code> уже очистило слоти</td>
+</tr>
+</tbody>
+</table>
+<p>У разі <code>failed</code> прийняті акаунти збережено — надішліть решту знову.</p>
+<h3 id="post-proxy">Змінити проксі до публікації<a class="headerlink" href="#post-proxy" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--post">POST</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders/{order_id}/slots/{slot_id}/proxy</code></div>
+
+<p>Змінює проксі завантаженого, ще не взятого слота до публікації; збережений акаунт перевіряється повторно через новий проксі. Відповідь — до 90 секунд.</p>
+<p>Право <code>upload</code></p>
+<table>
+<thead>
+<tr>
+<th>Поле тіла</th>
+<th>Тип</th>
+<th>Обов'язково</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>proxy</code></td>
+<td>рядок</td>
+<td>так</td>
+<td>Новий проксі, до 512 символів</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://app.kycportal.org/api/v1/orders/8402-9173/slots/5120-3563/proxy<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$KP_API_KEY</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{"proxy": "203.0.113.12:8000:login3:pass3"}'</span>
+</code></pre></div>
+<p>Відповідь <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>Коли</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>409</td>
+<td><code>edit_not_allowed</code></td>
+<td>Замовлення опубліковано, слот узято або в ньому немає акаунта</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>invalid_proxy</code>, <code>private_proxy</code>, <code>parse_proxy_has_spaces</code>, <code>parse_proxy_no_port</code>, <code>parse_proxy_non_latin</code></td>
+<td>Проксі не читається (<a href="../codes/#upload-codes">коди</a>)</td>
+</tr>
+<tr>
+<td>409</td>
+<td><a href="../codes/#upload-codes">коди перевірки</a></td>
+<td>Акаунт не пройшов перевірку через новий проксі, наприклад <code>proxy_broken</code>, <code>session_invalid</code></td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>reupload_identity_mismatch</code></td>
+<td>Біржа показала не той акаунт, що в слоті</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>reupload_identity_unavailable</code></td>
+<td>Акаунт слота невідомий; напишіть у підтримку</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>check_in_flight</code></td>
+<td>Слот зараз перевіряється; повторіть пізніше</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>upload_in_progress</code></td>
+<td>Триває завантаження в це замовлення</td>
+</tr>
+<tr>
+<td>429</td>
+<td><code>client_exchange_busy</code></td>
+<td>Уже тривають 3 одночасні перевірки ваших акаунтів; <code>limit</code></td>
+</tr>
+<tr>
+<td>504</td>
+<td><code>proxy_probe_timeout</code></td>
+<td>Біржа не відповіла через проксі вчасно</td>
+</tr>
+<tr>
+<td>502</td>
+<td><code>upload_check_failed</code></td>
+<td>Акаунт не вдалося перевірити; повторіть пізніше</td>
+</tr>
+</tbody>
+</table>
+<h3 id="post-publish">Опублікувати замовлення<a class="headerlink" href="#post-publish" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--post">POST</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders/{order_id}/publish</code></div>
+
+<p>Публікує замовлення: слоти передаються виконавцям, замовлення переходить у <code>IN_PROGRESS</code> і починається відлік строку виконання. У кожному слоті мають бути акаунт і проксі. Якщо в <a href="../orders/#get-order">замовлення</a> <code>freezes_on_publish: true</code>, слоти одразу буде заморожено до поновлення підписки.</p>
+<p>Право <code>upload</code></p>
+<p>Відповідь <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"published"</span><span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>Коли</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>409</td>
+<td><code>publish_not_ready</code></td>
+<td>Замовлення не в статусі <code>SESSION_UPLOADED</code>: є порожні слоти або його вже опубліковано, зокрема попереднім запитом</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>publish_proxy_required</code></td>
+<td>У слотів зі списку <code>slots</code> немає проксі</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>publish_session_required</code></td>
+<td>У слотах зі списку <code>slots</code> немає акаунта</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>publish_in_bot</code></td>
+<td>Замовлення реверифікації — воно публікується саме</td>
+</tr>
+</tbody>
+</table>
+<h2 id="format">Формат завантаження<a class="headerlink" href="#format" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>adspower</code> — один експорт ADS Power без змін: один профіль — один слот, проксі береться з профілю.</li>
+<li><code>manual</code> — у <code>proxies</code> по одному проксі в рядку, у <code>cookie_files</code> по одному файлу на акаунт: перший рядок — першому файлу. Cookies передаються лише файловими частинами форми, не текстовим полем.</li>
+<li>Формати cookies і проксі — як у <a href="../../guide/upload/">Завантаженні акаунтів</a>; також приймаються <code>{"cookies": [...]}</code> (Playwright) і об'єкт <code>{"ім'я": "значення"}</code>. З файлу беруться лише cookies біржі замовлення.</li>
+<li>Відхилений акаунт до слота не потрапляє. Надішліть лише відхилені — новим запитом із новим <code>Idempotency-Key</code>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../../assets/api.js"></script>
+      
+    
+  </body>
+</html>

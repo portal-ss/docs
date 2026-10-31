@@ -1,0 +1,2290 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation and Terms of Use">
+      
+      
+      
+        <link rel="canonical" href="https://portal-ss.github.io/docs/en/api/reverify/">
+      
+      
+        <link rel="prev" href="../slot-actions/">
+      
+      
+        <link rel="next" href="../cancel/">
+      
+      
+        
+          <link rel="alternate" href="../../../api/reverify/" hreflang="ru">
+        
+          <link rel="alternate" href="../../../uk/api/reverify/" hreflang="uk">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Re-verification - KYC Portal</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/api.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#re-verification" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../" title="KYC Portal" class="md-header__button md-logo" aria-label="KYC Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KYC Portal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Re-verification
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../api/reverify/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../uk/api/reverify/" hreflang="uk" class="md-select__link">
+              Українська
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="KYC Portal" class="md-nav__button md-logo" aria-label="KYC Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    KYC Portal
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../guide/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Documentation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Platform overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/balance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balance and top-ups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading accounts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Order execution and deadlines
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/cancel-refunds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cancellations and refunds
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Re-verifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/risk-removal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Removal on MEXC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/sellers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Executors and order distribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/team/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Your own team
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/subscription/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Subscription
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web app
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/referral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Referral program
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Account and balance
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Orders and slots
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Uploading and publishing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slot-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slot actions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Re-verification
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Re-verification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#re-verification-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Re-verification slots
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Re-verification slots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-reverify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List re-verification slots
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bulk-re-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bulk re-verification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bulk re-verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-reverify-meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get re-verification options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-reverify-batches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a re-verification batch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-reverify-batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get a batch and its plan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-reverify-proofs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get the screenshot draft
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-reverify-proofs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save the screenshot draft
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-reverify-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Launch the re-verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-reverify-retry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retry the remainder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-reverify-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get the launch result
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cancel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cancellations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Event feed
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statuses and codes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Errors and limits
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terms of Use
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#re-verification-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Re-verification slots
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Re-verification slots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-reverify" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List re-verification slots
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bulk-re-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bulk re-verification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bulk re-verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-reverify-meta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get re-verification options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-reverify-batches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a re-verification batch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-reverify-batch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get a batch and its plan
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-reverify-proofs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get the screenshot draft
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#put-reverify-proofs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save the screenshot draft
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-reverify-execute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Launch the re-verification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-reverify-retry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Retry the remainder
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-reverify-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get the launch result
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="re-verification">Re-verification<a class="headerlink" href="#re-verification" title="Permanent link">&para;</a></h1>
+<h2 id="re-verification-slots">Re-verification slots<a class="headerlink" href="#re-verification-slots" title="Permanent link">&para;</a></h2>
+<h3 id="get-reverify">List re-verification slots<a class="headerlink" href="#get-reverify" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--get">GET</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/reverify</code></div>
+
+<p>A list of re-verification slots.</p>
+<p>Right: <code>read</code></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tab</code></td>
+<td>string</td>
+<td>no</td>
+<td><code>active</code> (default) or <code>finished</code></td>
+</tr>
+<tr>
+<td><code>q</code></td>
+<td>string</td>
+<td>no</td>
+<td>A slot or order number, up to 128 characters</td>
+</tr>
+<tr>
+<td><code>limit</code>, <code>offset</code></td>
+<td>integer</td>
+<td>no</td>
+<td><a href="../#pagination">Pagination</a></td>
+</tr>
+</tbody>
+</table>
+<p>Response <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3307-1185"</span><span class="p">,</span><span class="w"> </span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2210-4471"</span><span class="p">,</span><span class="w"> </span><span class="nt">"account_identity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"trader@example.com"</span><span class="p">,</span><span class="w"> </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DE"</span><span class="p">,</span><span class="w"> </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN_PROGRESS"</span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>status</code> is the <a href="../codes/#slot-statuses">slot status</a>. For the full card, see <a href="../orders/#get-slot"><code>GET /orders/{order_id}/slots/{slot_id}</code></a>; to cancel, use <a href="../cancel/#post-cancel-reverify"><code>cancel-reverify</code></a>.</p>
+<h2 id="bulk-re-verification">Bulk re-verification<a class="headerlink" href="#bulk-re-verification" title="Permanent link">&para;</a></h2>
+<p>Re-verifications are ordered in batches: accounts of one exchange and one type. The account check and the plan are free; money is charged only at launch.</p>
+<ol>
+<li><a href="#get-reverify-meta"><code>GET /reverify/meta</code></a> — what can be ordered and at what price.</li>
+<li><a href="#post-reverify-batches"><code>POST /reverify/batches</code></a> — upload accounts with fresh cookies and proxies.</li>
+<li>Poll <a href="#get-reverify-batch"><code>GET /reverify/batches/{batch_id}</code></a> every few seconds until <code>state</code> becomes <code>done</code> and <code>plan</code> appears.</li>
+<li>Only if <code>plan.needs_proofs: true</code> (Risk Removal): upload screenshots to <a href="../slot-actions/#post-risk-proofs-files"><code>POST /risk-proofs/files</code></a> and attach them via <a href="#put-reverify-proofs"><code>PUT …/proofs</code></a>.</li>
+<li>Launch <a href="#post-reverify-execute"><code>POST …/execute</code></a> with <code>expected_total</code> = <code>plan.total</code>.</li>
+<li>Check the outcome in <a href="#get-reverify-execution"><code>GET …/execution</code></a>; if <code>retryable: true</code>, fix the cause and call <a href="#post-reverify-retry"><code>POST …/retry</code></a>.</li>
+</ol>
+<p>A batch lives for 1 hour after the upload; for Risk Removal, every read or write of the screenshots extends it, up to 12 hours after the upload. <code>batch_id</code> is 12 characters of <code>0-9a-f</code>. The created orders are published automatically and assigned to the executor who did the initial verification; follow them in the <a href="../events/#events">feed</a> and in <a href="#get-reverify"><code>GET /reverify</code></a>.</p>
+<h3 id="get-reverify-meta">Get re-verification options<a class="headerlink" href="#get-reverify-meta" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--get">GET</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/reverify/meta</code></div>
+
+<p>What can be ordered on each exchange, and at what price for your accounts.</p>
+<p>Right: <code>read</code></p>
+<p>Response <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"exchanges"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mexc"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"types"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="nt">"verification_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MEXC_FACE_SECURITY"</span><span class="p">,</span><span class="w"> </span><span class="nt">"needs_proofs"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nt">"price_from_standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4.00"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price_from_wholesale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.20"</span><span class="p">}</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nt">"eligible"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"regions"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DE"</span><span class="p">,</span><span class="w"> </span><span class="nt">"prices"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"verification_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MEXC_FACE_SECURITY"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price_standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4.00"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price_wholesale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3.20"</span><span class="p">}]}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"has_active_subscription"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>eligible</code></td>
+<td>Whether you have an account verified through the platform on this exchange; without one, a batch can't be created</td>
+</tr>
+<tr>
+<td><code>types[].needs_proofs</code></td>
+<td>Deposit screenshots are needed before launch</td>
+</tr>
+<tr>
+<td><code>types[].price_from_standard</code>, <code>price_from_wholesale</code></td>
+<td>The lowest catalog price for accounts from standard and from wholesale orders; an amount or <code>null</code></td>
+</tr>
+<tr>
+<td><code>regions[].prices[]</code></td>
+<td>Prices for your accounts by region: <code>price_standard</code> — from standard orders, <code>price_wholesale</code> — from wholesale orders with an active subscription; with <code>eligible: false</code>, the list is empty</td>
+</tr>
+</tbody>
+</table>
+<h3 id="post-reverify-batches">Create a re-verification batch<a class="headerlink" href="#post-reverify-batches" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--post">POST</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/reverify/batches</code></div>
+
+<p>Uploads accounts to a batch; the check runs in the background. Fresh cookies and proxies are needed — the original order's data isn't used. Up to 120 accounts, and no more than the number of verified accounts you have on the exchange: the extra ones are dropped.</p>
+<p>Right: <code>upload</code> · <a href="../errors/#idempotency"><code>Idempotency-Key</code></a> required</p>
+<table>
+<thead>
+<tr>
+<th>Form field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>exchange</code></td>
+<td>string</td>
+<td>yes</td>
+<td><code>exchange</code> from <code>GET /reverify/meta</code></td>
+</tr>
+<tr>
+<td><code>verification_type</code></td>
+<td>string</td>
+<td>yes</td>
+<td><code>verification_type</code> from <code>GET /reverify/meta</code></td>
+</tr>
+<tr>
+<td><code>method</code>, <code>ads_file</code>, <code>proxies</code>, <code>cookie_files</code>, <code>positions</code></td>
+<td>—</td>
+<td>—</td>
+<td>Same as for <a href="../upload/#post-upload">uploading to an order</a>; the whole request is up to 34 MB</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://app.kycportal.org/api/v1/reverify/batches<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$KP_API_KEY</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Idempotency-Key: </span><span class="k">$(</span>uuidgen<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="nv">method</span><span class="o">=</span>manual<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="nv">exchange</span><span class="o">=</span>mexc<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="nv">verification_type</span><span class="o">=</span>MEXC_FACE_SECURITY<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="s2">"proxies=&lt;proxies.txt"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="nv">cookie_files</span><span class="o">=</span>@acc1.json<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="nv">cookie_files</span><span class="o">=</span>@acc2.json<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-F<span class="w"> </span><span class="nv">cookie_files</span><span class="o">=</span>@acc3.json
+</code></pre></div>
+<p>Response <code>202</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"batch_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a1b2c3d4e5f6"</span><span class="p">,</span><span class="w"> </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"queued"</span><span class="p">,</span><span class="w"> </span><span class="nt">"staged"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"failures"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"upload_position"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"error_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"proxy_timeout"</span><span class="p">}]}</span>
+</code></pre></div>
+<p><code>state: "no_valid"</code> — there's nothing to check, and there will be no plan. <code>failures[]</code> — accounts that failed the proxy check; <code>error_code</code>: <code>missing_proxy</code>, <code>proxy_broken</code>, <code>proxy_auth_rejected</code>, <code>proxy_timeout</code>, <code>proxy_bad_host</code> or <code>proxy_unreachable</code>. For Risk Removal, no more than 50 accounts go into the plan.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>422</td>
+<td><code>reverify_invalid_type</code></td>
+<td>The exchange has no such type, or you have no verified account on it</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>reverify_type_unavailable</code></td>
+<td>The type can't be ordered right now</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>reverify_validate_in_progress</code></td>
+<td>Another batch of yours is still being checked — wait for it</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>nothing_to_upload</code></td>
+<td>The file has no accounts</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>queue_unavailable</code></td>
+<td>The queue is busy, nothing was done — retry in a minute</td>
+</tr>
+<tr>
+<td>4xx</td>
+<td>Upload and <a href="../codes/#upload-codes">file parsing</a> codes</td>
+<td>Same as for <a href="../upload/#post-upload"><code>POST …/upload</code></a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-reverify-batch">Get a batch and its plan<a class="headerlink" href="#get-reverify-batch" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--get">GET</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/reverify/batches/{batch_id}</code></div>
+
+<p>Progress of the account check, and the plan once it's ready.</p>
+<p>Right: <code>read</code></p>
+<p>Response <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"a1b2c3d4e5f6"</span><span class="p">,</span><span class="w"> </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"done"</span><span class="p">,</span><span class="w"> </span><span class="nt">"done"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"alive"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"plan"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mexc"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"verification_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MEXC_FACE_SECURITY"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"matched"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span><span class="nt">"index"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"upload_position"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"source_order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7731-0458"</span><span class="p">,</span><span class="w"> </span><span class="nt">"source_slot_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6620-1934"</span><span class="p">,</span>
+<span class="w">       </span><span class="nt">"source_class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"standard"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4.00"</span><span class="p">,</span><span class="w"> </span><span class="nt">"downgraded"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nt">"challenge"</span><span class="p">:</span><span class="w"> </span><span class="s2">"required"</span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">"skipped"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"index"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"upload_position"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"not_required"</span><span class="p">}],</span>
+<span class="w">    </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4.00"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"needs_team_price"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"needs_proofs"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"retry_available"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"retry_deadline"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>state</code></td>
+<td>The account check: <code>idle</code>, <code>queued</code>, <code>running</code>, <code>done</code> or <code>failed</code>; with <code>failed</code>, the reason is in <code>error</code></td>
+</tr>
+<tr>
+<td><code>alive</code></td>
+<td>How many accounts have working cookies</td>
+</tr>
+<tr>
+<td><code>plan.matched[]</code></td>
+<td>Accounts to order. <code>index</code> — the item number for screenshots, <code>upload_position</code> — the position in the upload (from 1), <code>source_order_id</code> and <code>source_slot_id</code> — where the account was verified</td>
+</tr>
+<tr>
+<td><code>plan.matched[].source_class</code></td>
+<td>How the original order was bought: <code>standard</code>, <code>wholesale</code> or <code>team</code></td>
+</tr>
+<tr>
+<td><code>plan.matched[].price</code></td>
+<td>The item's price; <code>null</code> for a team item whose price you set</td>
+</tr>
+<tr>
+<td><code>plan.matched[].downgraded</code></td>
+<td><code>true</code> — a wholesale source was priced at retail: there's no active subscription</td>
+</tr>
+<tr>
+<td><code>plan.matched[].challenge</code></td>
+<td>Whether the exchange requires this check right now: <code>required</code>, <code>not_required</code>, <code>unknown</code> or <code>null</code></td>
+</tr>
+<tr>
+<td><code>plan.skipped[]</code></td>
+<td>Skipped accounts (see <code>reason</code> below); nothing is charged for them</td>
+</tr>
+<tr>
+<td><code>plan.total</code></td>
+<td>The sum of the item prices, excluding team items without a price — pass it as <code>expected_total</code></td>
+</tr>
+<tr>
+<td><code>plan.needs_team_price</code></td>
+<td>There's a team item without a price: it needs a <code>team_price</code></td>
+</tr>
+<tr>
+<td><code>plan.needs_proofs</code></td>
+<td>Screenshots are needed before launch</td>
+</tr>
+<tr>
+<td><code>plan.retry_available</code>, <code>plan.retry_deadline</code></td>
+<td>Whether <a href="#post-reverify-retry">retrying the rest</a> is available, and until when</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>skipped[].reason</code></th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>no_match</code></td>
+<td>There's no completed initial-verification slot with this account</td>
+</tr>
+<tr>
+<td><code>session_dead</code></td>
+<td>The cookies or proxy don't work</td>
+</tr>
+<tr>
+<td><code>not_required</code></td>
+<td>The exchange doesn't require this check right now</td>
+</tr>
+<tr>
+<td><code>type_unavailable</code></td>
+<td>The type isn't available for this region</td>
+</tr>
+<tr>
+<td><code>subscription_required</code></td>
+<td>The source is a team order: a subscription is required</td>
+</tr>
+<tr>
+<td><code>team_membership_required</code></td>
+<td>The source is a team order: your team has no active member</td>
+</tr>
+<tr>
+<td><code>already_reverifying</code></td>
+<td>A re-verification is already under way on the account</td>
+</tr>
+<tr>
+<td><code>account_busy</code></td>
+<td>The account is busy with another active order</td>
+</tr>
+<tr>
+<td><code>duplicate_in_upload</code></td>
+<td>The account is repeated in this upload</td>
+</tr>
+<tr>
+<td><code>not_validated</code></td>
+<td>The account wasn't checked in time — upload it again</td>
+</tr>
+<tr>
+<td><code>advanced_kyc_missing</code></td>
+<td>Advanced KYC hasn't been passed on the account</td>
+</tr>
+<tr>
+<td><code>provider_unsupported</code></td>
+<td>MEXC uses a face check method on this account that the platform doesn't support</td>
+</tr>
+<tr>
+<td><code>form_unsupported</code></td>
+<td>MEXC asks for documents that the platform doesn't submit yet</td>
+</tr>
+<tr>
+<td><code>account_blocked</code></td>
+<td>The exchange no longer allows verification on this account</td>
+</tr>
+<tr>
+<td><code>review_in_progress</code></td>
+<td>A check is already under way on the account — wait for the result</td>
+</tr>
+<tr>
+<td><code>exchange_error</code></td>
+<td>An error on the exchange's side — contact support</td>
+</tr>
+<tr>
+<td><code>risk_gate_failed</code></td>
+<td>The account status couldn't be read — try again in a few minutes</td>
+</tr>
+<tr>
+<td><code>proofs_missing</code></td>
+<td>Risk Removal: deposit screenshots haven't been added</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>404</td>
+<td><code>reverify_expired</code></td>
+<td>The batch has expired, belongs to someone else or wasn't found — upload the accounts again</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-reverify-proofs">Get the screenshot draft<a class="headerlink" href="#get-reverify-proofs" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--get">GET</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/reverify/batches/{batch_id}/proofs</code></div>
+
+<p>The screenshot draft of a Risk Removal batch. Every call extends the batch's lifetime.</p>
+<p>Right: <code>upload</code></p>
+<p>Response <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"entries"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"index"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"deposits"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"file_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0b6c2a7e-1111-4222-8333-444455556666"</span><span class="p">,</span><span class="w"> </span><span class="nt">"source"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bybit"</span><span class="p">}]}],</span>
+<span class="w">  </span><span class="nt">"expires_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-31T12:40:00Z"</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><code>expires_at</code> is when the batch expires.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>404</td>
+<td><code>reverify_expired</code></td>
+<td>The batch has expired, belongs to someone else or wasn't found</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>reverify_type_unavailable</code></td>
+<td>This type has no screenshot step</td>
+</tr>
+</tbody>
+</table>
+<h3 id="put-reverify-proofs">Save the screenshot draft<a class="headerlink" href="#put-reverify-proofs" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--put">PUT</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/reverify/batches/{batch_id}/proofs</code></div>
+
+<p>Replaces the screenshot draft as a whole: an item not in the request is left without screenshots. If even one item fails validation, nothing is saved.</p>
+<p>Right: <code>upload</code></p>
+<table>
+<thead>
+<tr>
+<th>Body field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>entries</code></td>
+<td>list</td>
+<td>yes</td>
+<td>Up to 120 items; the body is up to 1 000 000 bytes</td>
+</tr>
+<tr>
+<td><code>entries[].index</code></td>
+<td>integer</td>
+<td>yes</td>
+<td><code>index</code> from <code>plan.matched</code>, each only once</td>
+</tr>
+<tr>
+<td><code>entries[].deposits</code></td>
+<td>list</td>
+<td>yes</td>
+<td>Up to 4 screenshots</td>
+</tr>
+<tr>
+<td><code>entries[].deposits[].file_id</code></td>
+<td>string</td>
+<td>yes</td>
+<td>The screenshot's <code>id</code>; a screenshot can be used for one account only</td>
+</tr>
+<tr>
+<td><code>entries[].deposits[].source</code></td>
+<td>string</td>
+<td>no</td>
+<td>Where the deposit came from, up to 64 characters; may be empty while the draft is being filled in</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>PUT<span class="w"> </span>https://app.kycportal.org/api/v1/reverify/batches/a1b2c3d4e5f6/proofs<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$KP_API_KEY</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{"entries": [{"index": 0, "deposits": [{"file_id": "0b6c2a7e-1111-4222-8333-444455556666", "source": "Bybit"}]}]}'</span>
+</code></pre></div>
+<p>Response <code>200</code> — same as for <a href="#get-reverify-proofs"><code>GET …/proofs</code></a>.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>422</td>
+<td><code>reverify_invalid_entry</code></td>
+<td>The <code>index</code> isn't from the plan or is repeated</td>
+</tr>
+<tr>
+<td>404</td>
+<td><code>proof_file_not_found</code></td>
+<td>The screenshot wasn't found, belongs to someone else, has already been sent or is listed twice</td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>proof_source_invalid</code></td>
+<td>An invalid <code>source</code></td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>reverify_type_unavailable</code></td>
+<td>This type has no screenshot step</td>
+</tr>
+<tr>
+<td>404</td>
+<td><code>reverify_expired</code></td>
+<td>The batch has expired, belongs to someone else or wasn't found</td>
+</tr>
+</tbody>
+</table>
+<h3 id="post-reverify-execute">Launch the re-verification<a class="headerlink" href="#post-reverify-execute" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--post">POST</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/reverify/batches/{batch_id}/execute</code></div>
+
+<p>Orders and pays for the plan items — at the plan prices, even if the catalog has changed in the meantime. An insufficient balance doesn't block the launch: items the balance can't cover stop as <code>unpaid</code>.</p>
+<p>Right: <code>money</code> · <a href="../errors/#idempotency"><code>Idempotency-Key</code></a> required</p>
+<table>
+<thead>
+<tr>
+<th>Body field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>expected_total</code></td>
+<td>amount</td>
+<td>yes</td>
+<td>Exactly <code>plan.total</code></td>
+</tr>
+<tr>
+<td><code>include_team</code></td>
+<td>yes/no</td>
+<td>no</td>
+<td>Order the team items too; default <code>false</code></td>
+</tr>
+<tr>
+<td><code>team_price</code></td>
+<td>amount or <code>null</code></td>
+<td>with <code>plan.needs_team_price</code> and <code>include_team</code></td>
+<td>The price for each unpriced team item, on top of <code>plan.total</code></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://app.kycportal.org/api/v1/reverify/batches/a1b2c3d4e5f6/execute<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$KP_API_KEY</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Idempotency-Key: </span><span class="k">$(</span>uuidgen<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{"expected_total": "4.00"}'</span>
+</code></pre></div>
+<p>Response <code>202</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"queued"</span><span class="p">,</span><span class="w"> </span><span class="nt">"ordered"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"skipped_without_proofs"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">}</span>
+</code></pre></div>
+<p><code>ordered</code> is how many items the launch will try to order. <code>skipped_without_proofs</code> is the number of Risk Removal items without at least one "screenshot + source" pair; they're skipped and not charged.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>409</td>
+<td><code>plan_total_mismatch</code></td>
+<td><code>expected_total</code> doesn't equal <code>plan.total</code>; nothing was charged — re-read the batch</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>reverify_expired</code></td>
+<td>The batch has expired, is finished or wasn't found, or the retry window has closed</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>proofs_missing</code></td>
+<td>Risk Removal: there was no <a href="#put-reverify-proofs"><code>PUT …/proofs</code></a></td>
+</tr>
+<tr>
+<td>422</td>
+<td><code>team_price_required</code></td>
+<td>A positive <code>team_price</code> is required</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>reverify_in_progress</code></td>
+<td>Another launch of yours is already running</td>
+</tr>
+<tr>
+<td>503</td>
+<td><code>queue_unavailable</code></td>
+<td>The queue is busy, nothing was done — retry in a minute</td>
+</tr>
+</tbody>
+</table>
+<h3 id="post-reverify-retry">Retry the remainder<a class="headerlink" href="#post-reverify-retry" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--post">POST</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/reverify/batches/{batch_id}/retry</code></div>
+
+<p>Launches what's left after the previous launch, with the same decision on team items and the same <code>team_price</code>. The retry window lasts until <code>plan.retry_deadline</code>: 2 hours after the first launch that left items remaining.</p>
+<p>Right: <code>money</code> · <a href="../errors/#idempotency"><code>Idempotency-Key</code></a> required</p>
+<table>
+<thead>
+<tr>
+<th>Body field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>expected_total</code></td>
+<td>amount</td>
+<td>yes</td>
+<td>Again, <code>plan.total</code> from <code>GET /reverify/batches/{batch_id}</code></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://app.kycportal.org/api/v1/reverify/batches/a1b2c3d4e5f6/retry<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$KP_API_KEY</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Idempotency-Key: </span><span class="k">$(</span>uuidgen<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{"expected_total": "4.00"}'</span>
+</code></pre></div>
+<p>Response <code>202</code> — same as for <a href="#post-reverify-execute"><code>execute</code></a>. The errors are the same too, except <code>team_price_required</code>; <code>409 reverify_expired</code> is also returned when there's nothing to retry.</p>
+<h3 id="get-reverify-execution">Get the launch result<a class="headerlink" href="#get-reverify-execution" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--get">GET</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/reverify/batches/{batch_id}/execution</code></div>
+
+<p>The launch outcome.</p>
+<p>Right: <code>read</code></p>
+<p>Response <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"done"</span><span class="p">,</span><span class="w"> </span><span class="nt">"done"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"published"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"failed"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"unpaid"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"skipped_team"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"tier_changed"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"subscription_required"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"team_membership_required"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"type_unavailable"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"skipped_without_proofs"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"remaining"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"retryable"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nt">"error"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Response field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>state</code></td>
+<td><code>idle</code> — there was no launch; <code>queued</code>, <code>running</code>, <code>done</code> or <code>failed</code></td>
+</tr>
+<tr>
+<td><code>published</code></td>
+<td>Orders created and paid for</td>
+</tr>
+<tr>
+<td><code>failed</code></td>
+<td>Failed to create</td>
+</tr>
+<tr>
+<td><code>unpaid</code></td>
+<td>Not enough balance — can be retried</td>
+</tr>
+<tr>
+<td><code>skipped_team</code></td>
+<td>Team items not included</td>
+</tr>
+<tr>
+<td><code>tier_changed</code></td>
+<td>The price changed because of the subscription — can be retried after renewal</td>
+</tr>
+<tr>
+<td><code>subscription_required</code></td>
+<td>Team items need a subscription — can be retried after renewal</td>
+</tr>
+<tr>
+<td><code>team_membership_required</code></td>
+<td>Your team has no active member — can be retried after adding one</td>
+</tr>
+<tr>
+<td><code>type_unavailable</code></td>
+<td>The type is unavailable — a retry won't help</td>
+</tr>
+<tr>
+<td><code>skipped_without_proofs</code></td>
+<td>No screenshots — upload these accounts in a new batch</td>
+</tr>
+<tr>
+<td><code>remaining</code></td>
+<td>How many items are left</td>
+</tr>
+<tr>
+<td><code>retryable</code></td>
+<td>You can call <a href="#post-reverify-retry"><code>retry</code></a></td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td>Why the launch stopped, or <code>null</code></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../../assets/api.js"></script>
+      
+    
+  </body>
+</html>

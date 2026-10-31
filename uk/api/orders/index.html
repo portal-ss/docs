@@ -1,0 +1,2192 @@
+
+<!doctype html>
+<html lang="uk" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation and Terms of Use">
+      
+      
+      
+        <link rel="canonical" href="https://portal-ss.github.io/docs/uk/api/orders/">
+      
+      
+        <link rel="prev" href="../account/">
+      
+      
+        <link rel="next" href="../upload/">
+      
+      
+        
+          <link rel="alternate" href="../../../api/orders/" hreflang="ru">
+        
+          <link rel="alternate" href="./" hreflang="uk">
+        
+          <link rel="alternate" href="../../../en/api/orders/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Замовлення й слоти - KYC Portal</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/api.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти до змісту
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Хедер">
+    <a href="../../" title="KYC Portal" class="md-header__button md-logo" aria-label="KYC Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            KYC Portal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Замовлення й слоти
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Обрати мову">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../api/orders/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="uk" class="md-select__link">
+              Українська
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../en/api/orders/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Пошук" placeholder="Пошук" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Шукати">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистити" aria-label="Очистити" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Пошук розпочато
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навігація" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="KYC Portal" class="md-nav__button md-logo" aria-label="KYC Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    KYC Portal
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Головна
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../guide/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Документація
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Документація
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Огляд платформи
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Початок роботи
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/balance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Баланс і поповнення
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Замовлення
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Завантаження акаунтів
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/lifecycle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Виконання замовлення й строки
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/cancel-refunds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Скасування та повернення
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реверифікації
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/risk-removal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risk Removal на MEXC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/sellers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Виконавці та розподіл
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/team/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Своя команда
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/subscription/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Підписка
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Вебверсія
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/referral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реферальна програма
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Акаунт і баланс
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Замовлення й слоти
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Замовлення й слоти
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отримати каталог
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Купити замовлення
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отримати список замовлень
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отримати замовлення
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отримати список слотів
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отримати слот
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../upload/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Завантаження й публікація
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slot-actions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Дії зі слотом
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reverify/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Реверифікація
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cancel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Скасування
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../events/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Стрічка подій
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../codes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Статуси й коди
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Помилки й ліміти
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Умови використання
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Зміст">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Зміст
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отримати каталог
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Купити замовлення
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отримати список замовлень
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отримати замовлення
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отримати список слотів
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-slot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отримати слот
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">Замовлення й слоти<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h3 id="get-catalog">Отримати каталог<a class="headerlink" href="#get-catalog" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--get">GET</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/catalog</code></div>
+
+<p>Ціни, наявність і що вам доступно для купівлі. Ціни змінюються — читайте каталог безпосередньо перед купівлею.</p>
+<p>Право <code>read</code></p>
+<p>Відповідь <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"max_quantity"</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"has_active_subscription"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"subscription_ends_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-11-18T10:00:00Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"has_active_team"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"exchanges"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mexc"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MEXC"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"services"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"service_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UA"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"price_standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12.50"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"price_wholesale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10.00"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"out_of_stock_standard"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"out_of_stock_wholesale"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"reverify"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="p">{</span><span class="nt">"verification_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MEXC_FACE_SECURITY"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price_standard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5.00"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price_wholesale"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4.00"</span><span class="p">,</span><span class="w"> </span><span class="nt">"needs_proofs"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">}</span>
+<span class="w">          </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"team_regions"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UA"</span><span class="p">,</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ukraine"</span><span class="p">}],</span>
+<span class="w">  </span><span class="nt">"deadline"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"min_hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="nt">"max_hours"</span><span class="p">:</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w"> </span><span class="nt">"choices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">72</span><span class="p">]}</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>max_quantity</code></td>
+<td>Максимум слотів в одному замовленні</td>
+</tr>
+<tr>
+<td><code>has_active_subscription</code></td>
+<td>Є активна підписка — потрібна для оптового й командного замовлення</td>
+</tr>
+<tr>
+<td><code>has_active_team</code></td>
+<td>У команді є активний учасник — потрібен для командного замовлення</td>
+</tr>
+<tr>
+<td><code>exchanges[].exchange</code></td>
+<td>Код біржі: <code>bybit</code>, <code>mexc</code>, <code>kucoin</code> або <code>bingx</code></td>
+</tr>
+<tr>
+<td><code>services[].service_id</code></td>
+<td>Товар (біржа й країна) для стандартного й оптового замовлення</td>
+</tr>
+<tr>
+<td><code>services[].price_standard</code>, <code>price_wholesale</code></td>
+<td>Ціна за слот у стандартному й оптовому замовленні</td>
+</tr>
+<tr>
+<td><code>services[].out_of_stock_standard</code>, <code>out_of_stock_wholesale</code></td>
+<td><code>true</code> — за цією ціною зараз не купити</td>
+</tr>
+<tr>
+<td><code>services[].reverify[]</code></td>
+<td>Реверифікації для цієї країни; <code>needs_proofs</code> — потрібні скриншоти</td>
+</tr>
+<tr>
+<td><code>team_regions[].code</code></td>
+<td>Регіон для командного замовлення</td>
+</tr>
+<tr>
+<td><code>deadline</code></td>
+<td>Допустимий строк виконання слота в годинах; <code>choices</code> — варіанти, які пропонують боти</td>
+</tr>
+</tbody>
+</table>
+<h3 id="post-orders">Купити замовлення<a class="headerlink" href="#post-orders" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--post">POST</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders</code></div>
+
+<p>Купує замовлення й одразу списує всю суму: спочатку з реферального балансу, потім з основного. Слоти замовлення порожні — далі <a href="../upload/#post-upload">завантажте акаунти</a>.</p>
+<p>Право <code>money</code> · потрібен <a href="../errors/#idempotency"><code>Idempotency-Key</code></a></p>
+<table>
+<thead>
+<tr>
+<th>Поле тіла</th>
+<th>Тип</th>
+<th>Обов'язково</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td>рядок</td>
+<td>так</td>
+<td><code>standard</code>, <code>wholesale</code> або <code>team</code></td>
+</tr>
+<tr>
+<td><code>quantity</code></td>
+<td>ціле</td>
+<td>так</td>
+<td>Від 1 до 100</td>
+</tr>
+<tr>
+<td><code>service_id</code></td>
+<td>ціле</td>
+<td>для <code>standard</code>, <code>wholesale</code></td>
+<td>Товар із <a href="#get-catalog"><code>GET /catalog</code></a></td>
+</tr>
+<tr>
+<td><code>expected_price_per_slot</code></td>
+<td>сума</td>
+<td>для <code>standard</code>, <code>wholesale</code></td>
+<td>До 2 знаків після крапки. Нижча за поточну ціну — відмова, інакше списується поточна</td>
+</tr>
+<tr>
+<td><code>exchange</code></td>
+<td>рядок</td>
+<td>для <code>team</code></td>
+<td><code>bybit</code>, <code>mexc</code>, <code>kucoin</code> або <code>bingx</code></td>
+</tr>
+<tr>
+<td><code>region</code></td>
+<td>рядок</td>
+<td>для <code>team</code></td>
+<td>Код із <code>team_regions</code> каталогу</td>
+</tr>
+<tr>
+<td><code>team_price</code></td>
+<td>сума</td>
+<td>для <code>team</code></td>
+<td>Ваша ціна за слот: більша за нуль, до 2 знаків після крапки</td>
+</tr>
+<tr>
+<td><code>deadline_hours</code></td>
+<td>ціле</td>
+<td>ні</td>
+<td><a href="../../guide/lifecycle/#deadline">Строк виконання</a> слота від публікації, 4–72 години; без поля — без строку</td>
+</tr>
+</tbody>
+</table>
+<p>Командне замовлення коштує <code>team_price × quantity</code>.</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://app.kycportal.org/api/v1/orders<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Authorization: Bearer </span><span class="nv">$KP_API_KEY</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Idempotency-Key: </span><span class="k">$(</span>uuidgen<span class="k">)</span><span class="s2">"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">"Content-Type: application/json"</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">'{"type": "standard", "service_id": 42, "quantity": 5, "expected_price_per_slot": "12.50", "deadline_hours": 24}'</span>
+</code></pre></div>
+<p>Відповідь <code>201</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8402-9173"</span><span class="p">,</span><span class="w"> </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="s2">"62.50"</span><span class="p">}</span>
+</code></pre></div>
+<p><code>total</code> — скільки списано.</p>
+<table>
+<thead>
+<tr>
+<th>HTTP</th>
+<th><code>code</code></th>
+<th>Коли</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>409</td>
+<td><code>price_changed</code></td>
+<td>Ціна зросла, нічого не списано; <code>price</code> і <code>total</code> — поточні</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>insufficient_balance</code></td>
+<td>Бракує балансу</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>purchase_in_progress</code></td>
+<td>Триває інша ваша купівля; повторіть через кілька секунд</td>
+</tr>
+<tr>
+<td>409</td>
+<td><code>service_unavailable</code></td>
+<td>Товару немає в продажу або в наявності</td>
+</tr>
+<tr>
+<td>403</td>
+<td><code>subscription_required</code></td>
+<td>Оптове або командне замовлення без активної підписки</td>
+</tr>
+<tr>
+<td>403</td>
+<td><code>team_membership_required</code></td>
+<td>Командне замовлення, а активних учасників у команді немає</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-orders">Отримати список замовлень<a class="headerlink" href="#get-orders" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--get">GET</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders</code></div>
+
+<p>Ваші замовлення, нові першими. Замовлень реверифікації тут немає — їхні слоти в <a href="../reverify/#get-reverify"><code>GET /reverify</code></a>.</p>
+<p>Право <code>read</code></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Обов'язково</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tab</code></td>
+<td>рядок</td>
+<td>ні</td>
+<td><code>active</code> (за замовчуванням): <code>PAID</code>, <code>SESSION_UPLOADED</code>, <code>IN_PROGRESS</code>; <code>completed</code> — решта</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>рядок</td>
+<td>ні</td>
+<td><a href="../codes/#order-statuses">Статус замовлення</a> всередині вкладки; статус іншої вкладки не враховується</td>
+</tr>
+<tr>
+<td><code>q</code></td>
+<td>рядок</td>
+<td>ні</td>
+<td>Номер замовлення або його слота, до 128 символів</td>
+</tr>
+<tr>
+<td><code>attention</code></td>
+<td>так/ні</td>
+<td>ні</td>
+<td><code>true</code> — замовлення із замороженим слотом або слотом, який чекає на вас; лише <code>active</code></td>
+</tr>
+<tr>
+<td><code>limit</code>, <code>offset</code></td>
+<td>ціле</td>
+<td>ні</td>
+<td><a href="../#pagination">Сторінка</a></td>
+</tr>
+</tbody>
+</table>
+<p>Відповідь <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8402-9173"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mexc"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"verification_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INITIAL_KYC"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UA"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN_PROGRESS"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"price_per_slot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12.50"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T09:00:00Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"total_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"completed_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"in_progress_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"failed_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"reupload_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"free_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"cancelled_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"is_reverify"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"is_frozen"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"frozen_total_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"frozen_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"refunded"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"slot_counts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"in_work"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="nt">"waiting"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"frozen"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"done"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span>
+<span class="p">}],</span><span class="w"> </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>verification_type</code></td>
+<td><code>INITIAL_KYC</code> — первинна верифікація; інакше тип реверифікації, наприклад <code>MEXC_FACE_SECURITY</code></td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td><a href="../codes/#order-statuses">Статус замовлення</a></td>
+</tr>
+<tr>
+<td><code>in_progress_slots</code></td>
+<td>У роботі, зокрема перевірка біржею, повтор спроби й кроки після KYC</td>
+</tr>
+<tr>
+<td><code>failed_slots</code></td>
+<td>Слоти Risk Removal з відхиленою апеляцією</td>
+</tr>
+<tr>
+<td><code>reupload_slots</code></td>
+<td>Чекають вашого повторного завантаження</td>
+</tr>
+<tr>
+<td><code>free_slots</code></td>
+<td>Ніхто не взяв</td>
+</tr>
+<tr>
+<td><code>is_frozen</code></td>
+<td>Підписка не активна, і в замовленні є заморожений слот</td>
+</tr>
+<tr>
+<td><code>frozen_total_slots</code></td>
+<td>Заморожених слотів усього</td>
+</tr>
+<tr>
+<td><code>frozen_slots</code></td>
+<td>З них — без чужої заявки на закриття: їх стосується <a href="../cancel/#post-cancel-frozen">скасування заморожених</a></td>
+</tr>
+<tr>
+<td><code>refunded</code></td>
+<td>Скільки загалом повернулося на баланс за замовленням; <code>null</code> — нічого</td>
+</tr>
+<tr>
+<td><code>slot_counts</code></td>
+<td><code>in_work</code> — у роботі, <code>waiting</code> — ніхто не взяв, <code>frozen</code>, <code>done</code>; скасовані не входять</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-order">Отримати замовлення<a class="headerlink" href="#get-order" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--get">GET</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders/{order_id}</code></div>
+
+<p>Картка замовлення. Працює й для замовлення реверифікації.</p>
+<p>Право <code>read</code></p>
+<p>Відповідь <code>200</code> — усі поля замовлення з <a href="#get-orders"><code>GET /orders</code></a>, а також:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"is_wholesale"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"is_team_order"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"published_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T09:30:00Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"source_order_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"free_empty_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"free_loaded_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"missing_proxy_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"missing_proxy_slot_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="nt">"frozen_checking_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"frozen_cancel_pending_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"frozen_checking_reupload_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"frozen_needs_check"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"frozen_refund"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"frozen_refund_now"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"freezes_on_publish"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"history"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"status_from"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">"status_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PAID"</span><span class="p">,</span><span class="w"> </span><span class="nt">"actor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client"</span><span class="p">,</span><span class="w"> </span><span class="nt">"at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T09:00:00Z"</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"status_from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PAID"</span><span class="p">,</span><span class="w"> </span><span class="nt">"status_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SESSION_UPLOADED"</span><span class="p">,</span><span class="w"> </span><span class="nt">"actor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client"</span><span class="p">,</span><span class="w"> </span><span class="nt">"at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T09:20:11Z"</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"status_from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SESSION_UPLOADED"</span><span class="p">,</span><span class="w"> </span><span class="nt">"status_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN_PROGRESS"</span><span class="p">,</span><span class="w"> </span><span class="nt">"actor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"client"</span><span class="p">,</span><span class="w"> </span><span class="nt">"at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T09:30:00Z"</span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source_order_id</code></td>
+<td>У реверифікації — замовлення, яке вона повторює</td>
+</tr>
+<tr>
+<td><code>free_empty_slots</code></td>
+<td>Вільні слоти без акаунта</td>
+</tr>
+<tr>
+<td><code>free_loaded_slots</code></td>
+<td>Вільні слоти із завантаженим акаунтом</td>
+</tr>
+<tr>
+<td><code>missing_proxy_slots</code>, <code>missing_proxy_slot_ids</code></td>
+<td>Слоти з акаунтом, але без проксі (номери — перші з них); публікація не пройде</td>
+</tr>
+<tr>
+<td><code>frozen_checking_slots</code></td>
+<td>Із <code>frozen_slots</code>: ваші скасування заморожених, які чекають перевірки біржі</td>
+</tr>
+<tr>
+<td><code>frozen_cancel_pending_slots</code></td>
+<td>Ваші незавершені скасування заморожених, зокрема після поновлення підписки</td>
+</tr>
+<tr>
+<td><code>frozen_checking_reupload_slots</code></td>
+<td>З них — чекають вашого повторного завантаження</td>
+</tr>
+<tr>
+<td><code>frozen_needs_check</code></td>
+<td>Скільки слотів скасування заморожених спершу перевірить на біржі</td>
+</tr>
+<tr>
+<td><code>frozen_refund</code></td>
+<td>Скільки поверне скасування заморожених, якщо жоден слот не виявиться виконаним</td>
+</tr>
+<tr>
+<td><code>frozen_refund_now</code></td>
+<td>З цього — скільки повернеться одразу</td>
+</tr>
+<tr>
+<td><code>freezes_on_publish</code></td>
+<td>Підписка не активна: після публікації слоти одразу буде заморожено</td>
+</tr>
+<tr>
+<td><code>history[]</code></td>
+<td>Історія статусів; <code>actor</code> — <code>client</code>, <code>worker</code>, <code>system</code> або <code>admin</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-slots">Отримати список слотів<a class="headerlink" href="#get-slots" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--get">GET</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/slots</code></div>
+
+<p>Слоти всіх ваших замовлень, зокрема реверифікацій, нові першими.</p>
+<p>Право <code>read</code></p>
+<table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Тип</th>
+<th>Обов'язково</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tab</code></td>
+<td>рядок</td>
+<td>ні</td>
+<td><code>all</code> (за замовчуванням), <code>active</code> або <code>completed</code> (<code>COMPLETED</code>, <code>CANCELLED</code>)</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td>рядок</td>
+<td>ні</td>
+<td><a href="../codes/#slot-statuses">Статус слота</a> всередині вкладки; статус іншої вкладки не враховується</td>
+</tr>
+<tr>
+<td><code>q</code></td>
+<td>рядок</td>
+<td>ні</td>
+<td>Номер слота, номер замовлення (усі його слоти) або акаунт повністю</td>
+</tr>
+<tr>
+<td><code>attention</code></td>
+<td>так/ні</td>
+<td>ні</td>
+<td><code>true</code> — лише слоти, які чекають на вас (непорожній <code>waiting_for_client</code>)</td>
+</tr>
+<tr>
+<td><code>limit</code>, <code>offset</code></td>
+<td>ціле</td>
+<td>ні</td>
+<td><a href="../#pagination">Сторінка</a></td>
+</tr>
+</tbody>
+</table>
+<p>Відповідь <code>200</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5120-3562"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8402-9173"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"account_identity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mexc"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UA"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"verification_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INITIAL_KYC"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"is_reverify"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REUPLOAD_REQUIRED"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"order_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN_PROGRESS"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"has_session"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"verification_result"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T09:00:00Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"is_frozen"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"risk_proofs_requested_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"waiting_for_client"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"reupload"</span><span class="p">]</span>
+<span class="p">}],</span><span class="w"> </span><span class="nt">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="nt">"offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">"limit"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">}</span>
+</code></pre></div>
+<p>Поля — як у <a href="#get-slot">картці слота</a>.</p>
+<h3 id="get-slot">Отримати слот<a class="headerlink" href="#get-slot" title="Permanent link">&para;</a></h3>
+<div class="api-endpoint"><span class="api-method api-method--get">GET</span><code><span class="api-base">https://app.kycportal.org/api/v1</span>/orders/{order_id}/slots/{slot_id}</code></div>
+
+<p>Картка слота: статус, строки й чого слот чекає від вас.</p>
+<p>Право <code>read</code></p>
+<p>Відповідь <code>200</code> (слот BingX на другому етапі):</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5120-3562"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"order_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8402-9173"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"order_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN_PROGRESS"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"exchange"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bingx"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"region"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UA"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"verification_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"INITIAL_KYC"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"price_per_slot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12.50"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"is_reverify"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"slot_number"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"total_slots"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BINGX_FACE_OFF"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"verification_result"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"account_identity"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"account_uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1384920577"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"session_format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"manual"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"adspower_profile_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"has_session"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"has_proxy"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"reupload_scope"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"retry_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"worker_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7731-0045"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T09:00:00Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"claimed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T10:12:40Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"first_claimed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T10:12:40Z"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"verified_first_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"verified_last_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"verified_country"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"mexc_hold_started_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"mexc_face_deadline_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"clocks_paused"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"check_kyc_available"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"is_frozen"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"order_is_frozen"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"close_request_open"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"risk_proofs_requested_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"waiting_for_client"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"bingx_code"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"close_reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"bingx"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"step"</span><span class="p">:</span><span class="w"> </span><span class="s2">"awaiting_code"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"code_ask_reason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"first"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"code_sent_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T11:02:15Z"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"client_time_left_seconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">3240</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"client_clock_running"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"client_deadline_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T12:02:15Z"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"fresh_code_available"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"face_login"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"cancel"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"available"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nt">"unavailable_reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">"open_reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">"min_hours"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"opens_at"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">"paused_left_seconds"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nt">"pending"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nt">"checking"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="nt">"operator_hold"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"source_slot_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"source_order_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"deadlines"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"slot_deadline"</span><span class="p">,</span><span class="w"> </span><span class="nt">"at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-31T09:30:00Z"</span><span class="p">,</span><span class="w"> </span><span class="nt">"reason"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">}],</span>
+<span class="w">  </span><span class="nt">"history"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"status_from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FREE"</span><span class="p">,</span><span class="w"> </span><span class="nt">"status_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN_PROGRESS"</span><span class="p">,</span><span class="w"> </span><span class="nt">"actor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"worker"</span><span class="p">,</span><span class="w"> </span><span class="nt">"at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T10:12:40Z"</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="nt">"status_from"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IN_PROGRESS"</span><span class="p">,</span><span class="w"> </span><span class="nt">"status_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BINGX_FACE_OFF"</span><span class="p">,</span><span class="w"> </span><span class="nt">"actor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"system"</span><span class="p">,</span><span class="w"> </span><span class="nt">"at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-10-30T11:01:58Z"</span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>slot_number</code>, <code>total_slots</code></td>
+<td>Слот N із M у замовленні</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td><a href="../codes/#slot-statuses">Статус слота</a></td>
+</tr>
+<tr>
+<td><code>verification_result</code></td>
+<td><a href="../codes/#verification-results">Підсумок верифікації</a> або <code>null</code></td>
+</tr>
+<tr>
+<td><code>account_identity</code>, <code>account_uid</code></td>
+<td>Логін акаунта й UID на біржі</td>
+</tr>
+<tr>
+<td><code>session_format</code></td>
+<td>Як завантажено акаунт: <code>manual</code> або <code>adspower</code></td>
+</tr>
+<tr>
+<td><code>reupload_scope</code></td>
+<td>Що надіслати під час <a href="../slot-actions/#post-reupload">повторного завантаження</a>: <code>proxy</code>, <code>session</code> (cookies) або <code>full</code></td>
+</tr>
+<tr>
+<td><code>retry_count</code></td>
+<td>Скільки спроб уже відхилено</td>
+</tr>
+<tr>
+<td><code>worker_id</code></td>
+<td>Поточний виконавець або <code>null</code></td>
+</tr>
+<tr>
+<td><code>claimed_at</code>, <code>first_claimed_at</code></td>
+<td>Коли слот узяв поточний виконавець / коли його взяли вперше</td>
+</tr>
+<tr>
+<td><code>verified_first_name</code>, <code>verified_last_name</code>, <code>verified_country</code></td>
+<td>Хто пройшов верифікацію; лише у виконаного слота</td>
+</tr>
+<tr>
+<td><code>mexc_hold_started_at</code>, <code>mexc_face_deadline_at</code></td>
+<td>MEXC: початок спостереження після KYC і строк перевірки обличчя</td>
+</tr>
+<tr>
+<td><code>clocks_paused</code></td>
+<td>Відлік усіх строків слота зупинено: слот чекає вашого повторного завантаження або відповіді біржі</td>
+</tr>
+<tr>
+<td><code>check_kyc_available</code></td>
+<td>Чи можна зараз <a href="../slot-actions/#post-check-kyc">перевірити статус</a></td>
+</tr>
+<tr>
+<td><code>is_frozen</code>, <code>order_is_frozen</code></td>
+<td>Заморожено слот / його замовлення</td>
+</tr>
+<tr>
+<td><code>close_request_open</code></td>
+<td>Заплановано закриття слота; коли — у <code>deadlines</code></td>
+</tr>
+<tr>
+<td><code>risk_proofs_requested_at</code></td>
+<td>Коли запитано нові скриншоти Risk Removal</td>
+</tr>
+<tr>
+<td><code>waiting_for_client</code></td>
+<td><a href="../codes/#waiting">Чого слот чекає від вас</a>; порожній список — нічого</td>
+</tr>
+<tr>
+<td><code>close_reason</code></td>
+<td><a href="../codes/#close-reasons">Чому слот скасовано</a></td>
+</tr>
+<tr>
+<td><code>source_slot_id</code>, <code>source_order_id</code></td>
+<td>У реверифікації — слот і замовлення, які вона повторює</td>
+</tr>
+<tr>
+<td><code>deadlines[]</code></td>
+<td>Строки за зростанням <code>at</code>: <code>kind</code> — <a href="../codes/#deadline-kinds">вид</a>, <code>reason</code> — <a href="../codes/#deadline-reasons">причина</a> у <code>close_request</code></td>
+</tr>
+<tr>
+<td><code>history[]</code></td>
+<td>Історія статусів; <code>actor</code> — <code>client</code>, <code>worker</code>, <code>system</code> або <code>admin</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>bingx</code> — у слота BingX із другого етапу, в інших <code>null</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>step</code></td>
+<td><a href="../codes/#bingx-steps">Крок другого етапу</a></td>
+</tr>
+<tr>
+<td><code>code_ask_reason</code></td>
+<td>На кроці <code>awaiting_code</code>: <a href="../codes/#ask-reasons">чому просять код</a></td>
+</tr>
+<tr>
+<td><code>code_sent_at</code></td>
+<td>На кроці <code>awaiting_code</code>: коли BingX надіслав потрібний лист</td>
+</tr>
+<tr>
+<td><code>client_time_left_seconds</code></td>
+<td>Залишок ваших 60 хвилин на коди; час закінчився — слот завершиться з увімкненим входом за обличчям</td>
+</tr>
+<tr>
+<td><code>client_clock_running</code></td>
+<td>Чи йде ваш час зараз</td>
+</tr>
+<tr>
+<td><code>client_deadline_at</code></td>
+<td>Коли ваш час закінчиться</td>
+</tr>
+<tr>
+<td><code>fresh_code_available</code></td>
+<td>Коду понад 10 хвилин: можна <a href="../slot-actions/#post-bingx-refresh">запросити новий лист</a></td>
+</tr>
+<tr>
+<td><code>face_login</code></td>
+<td>Підсумок у виконаного слота: <a href="../codes/#bingx-endings"><code>off</code>, <code>left_on</code> або <code>unknown</code></a></td>
+</tr>
+</tbody>
+</table>
+<p><code>cancel</code> — чи можна <a href="../cancel/#post-cancel-reverify">скасувати реверифікацію</a>; в інших слотів усе <code>false</code> і <code>null</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Опис</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>available</code></td>
+<td>Скасувати можна зараз</td>
+</tr>
+<tr>
+<td><code>unavailable_reason</code></td>
+<td>Чому не можна: <code>too_early</code>, <code>pending</code>, <code>needs_reupload</code>, <code>face_passed</code> або <code>forbidden_status</code></td>
+</tr>
+<tr>
+<td><code>open_reason</code></td>
+<td><code>worker_left_team</code> — скасування відкрилося достроково</td>
+</tr>
+<tr>
+<td><code>min_hours</code></td>
+<td>Якщо <code>too_early</code>: через скільки годин від початку спроби відкриється скасування</td>
+</tr>
+<tr>
+<td><code>opens_at</code></td>
+<td>Коли відкриється; <code>null</code>, поки таймер на паузі</td>
+</tr>
+<tr>
+<td><code>paused_left_seconds</code></td>
+<td>Залишок таймера, поки він на паузі</td>
+</tr>
+<tr>
+<td><code>pending</code>, <code>checking</code>, <code>operator_hold</code></td>
+<td>Ваше скасування прийнято / чекає відповіді біржі / чекає ручної перевірки</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Повернутись нагору
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tracking", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0456\u0439\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u0421\u043a\u043e\u043f\u0456\u044e\u0432\u0430\u0442\u0438 \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0429\u0435 1 \u0437\u0431\u0456\u0433 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.more.other": "\u0429\u0435 # \u0437\u0431\u0456\u0433\u0456\u0432 \u043d\u0430 \u0446\u0456\u0439 \u0441\u0442\u043e\u0440\u0456\u043d\u0446\u0456", "search.result.none": "\u0417\u0431\u0456\u0433\u0456\u0432 \u043d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0437\u0431\u0456\u0433", "search.result.other": "\u0417\u043d\u0430\u0439\u0434\u0435\u043d\u043e # \u0437\u0431\u0456\u0433\u0456\u0432", "search.result.placeholder": "\u0420\u043e\u0437\u043f\u043e\u0447\u043d\u0456\u0442\u044c \u043f\u0438\u0441\u0430\u0442\u0438 \u0434\u043b\u044f \u043f\u043e\u0448\u0443\u043a\u0443", "search.result.term.missing": "\u041d\u0435 \u0437\u043d\u0430\u0439\u0434\u0435\u043d\u043e \u0437\u0430\u043f\u0438\u0442\u0443", "select.version": "\u041e\u0431\u0440\u0430\u0442\u0438 \u0432\u0435\u0440\u0441\u0456\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../../assets/api.js"></script>
+      
+    
+  </body>
+</html>
